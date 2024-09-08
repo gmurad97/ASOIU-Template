@@ -100,7 +100,6 @@ body {
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 12px;
     background-color: #101828;
     border-right: 1px solid #464646;
     padding: 30px;
@@ -115,6 +114,7 @@ body {
     background-color: transparent;
     border: none;
     outline: none;
+    color: #FFFFFF;
     opacity: 1;
     transition: opacity 320ms linear;
     cursor: pointer;
@@ -123,8 +123,9 @@ body {
 .navbar__search-btn>i[class^="fi"] {
     display: flex;
     font-size: 18px;
-    color: #FFFFFF;
+    color: inherit;
     margin-right: 12px;
+    transition: color 160ms linear;
 }
 
 .navbar__search-btn-name {
@@ -133,8 +134,12 @@ body {
     font-weight: 500;
     line-height: 26px;
     text-align: center;
-    color: #FFFFFF;
+    color: inherit;
     transition: color 160ms linear;
+}
+
+.navbar__search-btn:hover {
+    color: #1570EF;
 }
 
 .navbar__search-input-container {
@@ -173,6 +178,11 @@ body {
     font-size: 20px;
     color: #FFFFFF;
     cursor: pointer;
+    transition: color 160ms linear;
+}
+
+.navbar__search-input-container>i[class^="fi"]:nth-of-type(1):hover {
+    color: #1570EF;
 }
 
 .navbar__search-input-container>i[class^="fi"]:nth-of-type(2) {
@@ -183,6 +193,11 @@ body {
     font-size: 20px;
     color: #FFFFFF;
     cursor: pointer;
+    transition: color 160ms linear;
+}
+
+.navbar__search-input-container>i[class^="fi"]:nth-of-type(2):hover {
+    color: #1570EF;
 }
 
 .navbar__burger {
@@ -202,7 +217,9 @@ body {
     background-color: transparent;
     border: none;
     outline: none;
+    color: #FFFFFF;
     cursor: pointer;
+    transition: color 160ms linear;
 }
 
 .navbar__burger-btn>i[class^="fi"] {
@@ -213,7 +230,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 16px;
-    color: #FFFFFF;
+    color: inherit;
     margin-right: 12px;
 }
 
@@ -223,8 +240,32 @@ body {
     font-weight: 500;
     line-height: 26px;
     text-align: center;
-    color: #FFFFFF;
+    color: inherit;
 }
+
+.navbar__burger-btn:hover {
+    color: #1570EF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .navbar__menu {
     position: absolute;
@@ -232,7 +273,7 @@ body {
     left: 0px;
     width: 100%;
     min-height: 100vh;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
@@ -321,9 +362,37 @@ body {
     align-items: flex-start;
     list-style-type: none;
     padding-right: 32px;
+    overflow-y: scroll;
 }
 
-.menu__list::before {
+/* Размер scrollbar */
+.menu__list::-webkit-scrollbar {
+    width: 12px;
+    /* Ширина вертикального */
+    height: 12px;
+    /* Высота горизонтального */
+    border-radius: 10px;
+}
+
+/* Стилизация бегунка */
+.menu__list::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* Цвет ползунка */
+    border-radius: 10px;
+    /* Закругленные углы */
+    border: 2px solid #555;
+    /* Обводка */
+}
+
+/* Стилизация области трека */
+.menu__list::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    /* Цвет трека */
+    border-radius: 10px;
+}
+
+
+/* .menu__list::before {
     content: "";
     position: absolute;
     top: 0px;
@@ -343,7 +412,7 @@ body {
     height: 50%;
     background-color: #909090;
     border-radius: 8px;
-}
+} */
 
 .menu__item {
     display: flex;
@@ -378,7 +447,7 @@ body {
 
 
 
-.dropdown-content{
+.dropdown-content {
     display: none;
 }
 
@@ -402,7 +471,7 @@ body {
     padding: 0px 32px;
 }
 
-.menu__dropdown-list::before {
+/* .menu__dropdown-list::before {
     content: "";
     position: absolute;
     top: 0px;
@@ -422,7 +491,7 @@ body {
     height: 50%;
     background-color: #909090;
     border-radius: 8px;
-}
+} */
 
 .menu__dropdown-item {
     display: flex;

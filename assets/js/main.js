@@ -32,7 +32,16 @@ $(document).ready(function () {
     /***************** NAVBAR SEARCH & MENU BUTTONS - ENDED *****************/
 
 
-    $('#menu').on('click', 'a[data-dropdown-observed]', function(event) {
+
+
+
+
+
+
+
+
+    
+    $('#menu').on('click', 'a[data-dropdown-observed]', function (event) {
         event.preventDefault(); // предотвращаем переход по ссылке
 
         var $this = $(this);
@@ -54,7 +63,7 @@ $(document).ready(function () {
     });
 
     // Обработчик для второго и третьего уровней
-    $('.menu').on('click', '.menu__dropdown-link[data-dropdown-observed]', function(event) {
+    $('.menu').on('click', '.menu__dropdown-link[data-dropdown-observed]', function (event) {
         event.preventDefault(); // предотвращаем переход по ссылке
 
         var $this = $(this);
@@ -73,7 +82,7 @@ $(document).ready(function () {
         $this.closest('ul').find('a').not($this).removeClass('active');
     });
 
-    
+
 });
 
 
