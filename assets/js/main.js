@@ -31,58 +31,34 @@ $(document).ready(function () {
     });
     /***************** NAVBAR SEARCH & MENU BUTTONS - ENDED *****************/
 
-
-
-
-
-
-
-
-
-
-    
-    $('#menu').on('click', 'a[data-dropdown-observed]', function (event) {
-        event.preventDefault(); // предотвращаем переход по ссылке
-
+    /***************** NAVBAR MENU LOGICS - START *****************/
+    $("#menu").on("click", "a[data-dropdown-observed]", function (event) {
+        event.preventDefault();
         var $this = $(this);
-        var targetId = $this.data('dropdown-observed');
-        var $dropdown = $('#' + targetId);
-
-        // Переключаем видимость первого уровня dropdown
-        if ($dropdown.is(':visible')) {
-            $dropdown.hide(); // если видимый, скрыть
+        var targetId = $this.data("dropdown-observed");
+        var $dropdown = $("#" + targetId);
+        $(".menu a").removeClass("active");
+        if ($dropdown.is(":visible")) {
+            $dropdown.hide();
         } else {
-            $('.dropdown-content').hide(); // скрываем все остальные dropdown
-            $('.menu__dropdown-list ul').hide(); // скрываем все вложенные списки
-            $dropdown.show(); // показываем текущий dropdown
+            $(".menu__dropdown").hide();
+            $(".menu__dropdown-list ul").hide();
+            $dropdown.show();
         }
-
-        // Добавляем/убираем класс active у текущего элемента меню
-        $this.toggleClass('active');
-        $this.closest('ul').find('a').not($this).removeClass('active');
+        $this.addClass('active');
     });
 
-    // Обработчик для второго и третьего уровней
-    $('.menu').on('click', '.menu__dropdown-link[data-dropdown-observed]', function (event) {
-        event.preventDefault(); // предотвращаем переход по ссылке
-
+    $(".menu").on("click", ".menu__dropdown-link[data-dropdown-observed]", function (event) {
+        event.preventDefault();
         var $this = $(this);
-        var targetId = $this.data('dropdown-observed');
-        var $dropdown = $('#' + targetId);
-
-        // Переключаем видимость второго и третьего уровня dropdown
-        if ($dropdown.is(':visible')) {
-            $dropdown.hide(); // если видимый, скрыть
-        } else {
-            $dropdown.show(); // показываем текущее подменю
-        }
-
-        // Добавляем/убираем класс active у текущего элемента подменю
-        $this.toggleClass('active');
-        $this.closest('ul').find('a').not($this).removeClass('active');
+        var targetId = $this.data("dropdown-observed");
+        var $dropdown = $("#" + targetId);
+        $(".menu__dropdown-link").removeClass("active");
+        if ($dropdown.is(":visible"))
+            $dropdown.hide();
+        else
+            $dropdown.show();
+        $this.addClass("active");
     });
-
-
+    /***************** NAVBAR MENU LOGICS - ENDED *****************/
 });
-
-
