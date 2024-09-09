@@ -24,10 +24,12 @@ $(document).ready(function () {
 
     menuBurgerButton.on("click", function () {
         navbarMenu.css("display", "flex");
+        $("body").css("overflow", "hidden");
     });
 
     navbarMenuCloseButton.on("click", function () {
         navbarMenu.css("display", "none");
+        $("body").css("overflow", "auto");
     });
     /***************** NAVBAR SEARCH & MENU BUTTONS - ENDED *****************/
 
@@ -45,7 +47,7 @@ $(document).ready(function () {
             $(".menu__dropdown-list ul").hide();
             $dropdown.show();
         }
-        $this.addClass('active');
+        $this.addClass("active");
     });
 
     $(".menu").on("click", ".menu__dropdown-link[data-dropdown-observed]", function (event) {
@@ -61,4 +63,19 @@ $(document).ready(function () {
         $this.addClass("active");
     });
     /***************** NAVBAR MENU LOGICS - ENDED *****************/
+
+    /***************** OWL-CAROUSEL-2 INITIALIZATION - START *****************/
+    $("#latest_news_carousel").owlCarousel({
+        loop: true,
+        margin: 30,
+        nav: true,
+        navText: [
+            "<i class='fi fi-ts-angle-small-left'></i>",
+            "<i class='fi fi-ts-angle-small-right'></i>",
+
+        ],
+        autoplay: false,
+        autoplayHoverPause: true
+    });
+    /***************** OWL-CAROUSEL-2 INITIALIZATION - ENDED *****************/
 });
