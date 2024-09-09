@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASOIU - Blank Page Without Header</title>
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+    <header class="header header__compact">
+        <nav class="navbar">
+            <figure class="navbar__logo">
+                <a class="navbar__logo-link" href="#">
+                    <img class="navbar__logo-img" src="assets/img/logo.png" alt="Logo">
+                </a>
+            </figure>
+            <div class="navbar__navigation">
+                <div class="navbar__search">
+                    <button class="navbar__search-btn" id="navbar_search_btn">
+                        <i class="fi fi-rr-search"></i>
+                        <span class="navbar__search-btn-name">Search</span>
+                    </button>
+                    <form class="navbar__search-input-container" id="navbar_search_input_container">
+                        <input class="navbar__search-input" type="text" name="navbar_search" placeholder="Search ASOIU">
+                        <i class="fi fi-rs-search"></i>
+                        <i class="fi fi-rs-circle-xmark" id="navbar_search_close_btn"></i>
+                    </form>
+                </div>
+                <div class="navbar__burger">
+                    <button class="navbar__burger-btn" id="navbar_burger_btn">
+                        <i class="fi fi-sr-menu-burger"></i>
+                        <span class="navbar__burger-btn-name">Menu</span>
+                    </button>
+                </div>
+            </div>
+            <div class="navbar__menu" id="navbar_menu">
+                <div class="menu__heading">
+                    <div class="menu__logo">
+                        <img class="menu__logo-img" src="assets/img/logo.png" alt="Logo">
+                    </div>
+                    <button class="menu__close-btn" id="navbar_menu_close_btn">
+                        <span class="menu__close-btn-name">Close</span>
+                        <i class="fi fi-br-cross"></i>
+                    </button>
+                </div>
+                <div class="menu__container">
+                    <div class="menu" id="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a class="menu__link" href="#" data-dropdown-observed="adnsu">
+                                    ADNSU
+                                </a>
+                                <i class="fi fi-br-angle-right"></i>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#" data-dropdown-observed="struktur">
+                                    Struktur
+                                </a>
+                                <i class="fi fi-br-angle-right"></i>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    Akademik Fəaliyyət
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    Xidmətlər
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    Tələbə
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    Example 1
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    Example 2
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    Example 3
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu menu__dropdown" id="adnsu">
+                        <ul class="menu__dropdown-list">
+                            <li class="menu__dropdown-item">
+                                <a class="menu__dropdown-link" href="#" data-dropdown-observed="example">
+                                    Haqqımızda
+                                </a>
+                                <i class="fi fi-br-angle-right"></i>
+                            </li>
+                            <li class="menu__dropdown-item">
+                                <a class="menu__dropdown-link" href="#">
+                                    Tariximiz
+                                </a>
+                            </li>
+                            <li class="menu__dropdown-item">
+                                <a class="menu__dropdown-link" href="#">
+                                    Rəsmi sənədlər
+                                </a>
+                            </li>
+                            <li class="menu__dropdown-item">
+                                <a class="menu__dropdown-link" href="#">
+                                    Keyfiyyət təminatı
+                                </a>
+                            </li>
+                            <li class="menu__dropdown-item">
+                                <a class="menu__dropdown-link" href="#">
+                                    İdarə heyəti
+                                </a>
+                            </li>
+                            <li class="menu__dropdown-item">
+                                <a class="menu__dropdown-link" href="#">
+                                    Administrasiya
+                                </a>
+                            </li>
+                            <li class="menu__dropdown-item">
+                                <a class="menu__dropdown-link" href="#">
+                                    Mərkəzlər
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu menu__dropdown" id="struktur">
+                        <ul class="menu__dropdown-list">
+                            <li class="menu__dropdown-item">
+                                <a class="menu__dropdown-link" href="#">
+                                    Beynəlxalq əlaqələr şöbəsi
+                                </a>
+                            </li>
+                            <li class="menu__dropdown-item">
+                                <a class="menu__dropdown-link" href="#">
+                                    İctimaiyyətlə Əlaqələr və MarketinqDepartamenti
+                                </a>
+                            </li>
+                            <li class="menu__dropdown-item">
+                                <a class="menu__dropdown-link" href="#">
+                                    Tədris-metodika şöbəsi
+                                </a>
+                            </li>
+                            <li class="menu__dropdown-item">
+                                <a class="menu__dropdown-link" href="#">
+                                    Mühasibatlıq
+                                </a>
+                            </li>
+                            <li class="menu__dropdown-item">
+                                <a class="menu__dropdown-link" href="#">
+                                    Kadrlar şöbəsi
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu menu__dropdown" id="example">
+                        <ul class="menu__dropdown-list">
+                            <li class="menu__dropdown-item">
+                                <a class="menu__dropdown-link" href="#">
+                                    Example 1
+                                </a>
+                            </li>
+                            <li class="menu__dropdown-item">
+                                <a class="menu__dropdown-link" href="#">
+                                    Example 2
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu__quick-links">
+                    <div class="quick-links__heading">
+                        <span class="quick-links__title">Quick Links</span>
+                        <i class="fi fi-rr-arrow-small-right"></i>
+                    </div>
+                    <div class="quick-links__links">
+                        <a class="quick-links__link" href="#">Warwick Dual Diploma</a>
+                        <a class="quick-links__link" href="#">UFAZ</a>
+                        <a class="quick-links__link" href="#">News</a>
+                        <a class="quick-links__link" href="#">I have an idea</a>
+                        <a class="quick-links__link" href="#">Contact us</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="section__notification">
+            <h1 class="section__notification-title">
+                Blank Page
+            </h1>
+            <p class="section__notification-description">
+                This is a blank page reserved for the development of other components.
+            </p>
+            <a class="section__notification-link" href="#">
+                Back to home
+            </a>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__grid-layout">
+            <div class="footer__section">
+                <div class="footer__section-logo">
+                    <a class="footer__section-logo-link" href="#">
+                        <img class="footer__section-logo-img" src="assets/img/logo.png" alt="Footer Logo">
+                    </a>
+                </div>
+                <div class="footer__section-about">
+                    <p class="footer__section-about-text">
+                        Sənaye üçün peşəkarlar yetişdirən mühəndis təmayüllü təhsilin lideri
+                    </p>
+                </div>
+                <div class="footer__section-icon">
+                    <a class="footer__section-icon-link" href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a class="footer__section-icon-link" href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a class="footer__section-icon-link" href="#">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a class="footer__section-icon-link" href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__section">
+                <nav class="footer__nav">
+                    <div class="footer__nav-section">
+                        <h1 class="footer__nav-section-title">Haqqimizda</h1>
+                    </div>
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link active" href="#">Tariximiz</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">Fakültələr</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">Müəllimlər</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">İnsan resusrları</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">Əlaqə</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__section">
+                <nav class="footer__nav">
+                    <div class="footer__nav-section">
+                        <h1 class="footer__nav-section-title">Sürətli keçidlər</h1>
+                    </div>
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">Warwick Dual Diploma</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">UFAZ</a>
+                        </li>
+                        <li class="footer__nav-item ">
+                            <a class="footer__nav-link active" href="#">Xəbərlər</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">Təklifim var</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__section">
+                <nav class="footer__nav">
+                    <div class="footer__nav-section">
+                        <h1 class="footer__nav-section-title">Contact</h1>
+                    </div>
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">
+                                <i class="bi bi-geo-alt"></i>
+                                <span class="footer__nav-link-name">Baku, Azadliq Avenue, 20</span>
+                            </a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link active" href="#">
+                                <i class="fi fi-rr-envelope"></i>
+                                <span class="footer__nav-link-name">info@asoiu.edu.az</span>
+                            </a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">
+                                <i class="bi bi-telephone"></i>
+                                <span class="footer__nav-link-name">+994 12 493 45 57</span>
+                            </a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">
+                                <i class="fi fi-bs-building"></i>
+                                <span class="footer__nav-link-name">+994 12 598 29 41</span>
+                            </a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">
+                                <i class="fi fi-ts-house-circle-check"></i>
+                                <span class="footer__nav-link-name">Post code: AZ1010</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="footer__separator"></div>
+        <div class="footer__copyright">
+            <div class="footer__partners">
+                <div class="partner__logo">
+                    <a class="partner__link" href="#">
+                        <img class="partner__logo-img" src="assets/img/partners/1.png" alt="Partner Logo">
+                    </a>
+                </div>
+                <div class="partner__logo">
+                    <a class="partner__link" href="#">
+                        <img class="partner__logo-img" src="assets/img/partners/2.png" alt="Partner Logo">
+                    </a>
+                </div>
+                <div class="partner__logo">
+                    <a class="partner__link" href="#">
+                        <img class="partner__logo-img" src="assets/img/partners/3.png" alt="Partner Logo">
+                    </a>
+                </div>
+                <div class="partner__logo">
+                    <a class="partner__link" href="#">
+                        <img class="partner__logo-img" src="assets/img/partners/4.png" alt="Partner Logo">
+                    </a>
+                </div>
+                <div class="partner__logo">
+                    <a class="partner__link" href="#">
+                        <img class="partner__logo-img" src="assets/img/partners/2.png" alt="Partner Logo">
+                    </a>
+                </div>
+                <div class="partner__logo">
+                    <a class="partner__link" href="#">
+                        <img class="partner__logo-img" src="assets/img/partners/5.png" alt="Partner Logo">
+                    </a>
+                </div>
+            </div>
+            <div class="footer__copyright-data">
+                <p class="footer__copyright-text">&copy; 2024. Bütün hüquqlar qorunur</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/plugins/jquery-ui-1.14.0.min.js"></script>
+    <script defer src="assets/js/main.js"></script>
+</body>
+
+</html>
