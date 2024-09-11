@@ -347,6 +347,23 @@ body {
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.menu__container::-webkit-scrollbar {
+    height: 8px;
+    border-radius: 8px;
+}
+
+.menu__container::-webkit-scrollbar-thumb {
+    background-color: #909090;
+    border-radius: 8px;
+}
+
+.menu__container::-webkit-scrollbar-track {
+    background-color: #D9D9D9;
+    border-radius: 8px;
 }
 
 .menu {
@@ -451,6 +468,21 @@ body {
     overflow-y: auto;
 }
 
+.menu__dropdown-list::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 8px;
+}
+
+.menu__dropdown-list::-webkit-scrollbar-thumb {
+    background-color: #909090;
+    border-radius: 8px;
+}
+
+.menu__dropdown-list::-webkit-scrollbar-track {
+    background-color: #D9D9D9;
+    border-radius: 8px;
+}
+
 .menu__dropdown-item {
     width: 100%;
     height: auto;
@@ -478,6 +510,7 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     text-decoration: none;
+    text-wrap: nowrap;
     font-size: 20px;
     font-weight: 500;
     line-height: 32px;
