@@ -1,37 +1,71 @@
 $(document).ready(function () {
+
     /***************** NAVBAR SEARCH & MENU BUTTONS - START *****************/
-    const searchButton = $("#navbar_search_btn");
-    const inputContainer = $("#navbar_search_input_container");
-    const closeInputContainerButton = $("#navbar_search_close_btn");
-    const menuBurgerButton = $("#navbar_burger_btn");
-    const navbarMenu = $("#navbar_menu");
-    const navbarMenuCloseButton = $("#navbar_menu_close_btn");
+    var $searchButton = $("#navbar_search_btn");
+    var $inputContainer = $("#navbar_search_input_container");
+    var $closeInputContainerButton = $("#navbar_search_close_btn");
+    var $menuBurgerButton = $("#navbar_burger_btn");
+    var $navbarMenu = $("#navbar_menu");
+    var $navbarMenuCloseButton = $("#navbar_menu_close_btn");
 
-    searchButton.on("click", function () {
-        searchButton.fadeOut(160);
-        inputContainer.animate({
-            width: "380px"
-        }, 320);
-    });
-
-    closeInputContainerButton.on("click", function () {
-        inputContainer.animate({
-            width: "0px"
-        }, 320, function () {
-            searchButton.fadeIn(160);
+    if ($searchButton.length) {
+        $searchButton.on("click", function () {
+            $searchButton.css({
+                width: "0px"
+            });
+            $inputContainer.css({
+                width: "380px"
+            });
         });
-    });
+    }
 
-    menuBurgerButton.on("click", function () {
-        navbarMenu.css("display", "flex");
-        $("body").css("overflow", "hidden");
-    });
+    if ($closeInputContainerButton.length) {
+        $closeInputContainerButton.on("click", function () {
+            $inputContainer.css({
+                width: "0px"
+            });
+            $searchButton.css({
+                width: "90px"
+            });
+        });
+    }
 
-    navbarMenuCloseButton.on("click", function () {
-        navbarMenu.css("display", "none");
-        $("body").css("overflow", "auto");
-    });
+    if ($menuBurgerButton.length) {
+        $menuBurgerButton.on("click", function () {
+            $navbarMenu.css("display", "flex");
+            $("body").css("overflow", "hidden");
+        });
+    }
+
+    if ($menuBurgerButton.length) {
+        $navbarMenuCloseButton.on("click", function () {
+            $navbarMenu.css("display", "none");
+            $("body").css("overflow", "auto");
+        });
+    }
+
     /***************** NAVBAR SEARCH & MENU BUTTONS - ENDED *****************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     /***************** NAVBAR MENU LOGICS - START *****************/
     $("#menu").on("click", "a[data-dropdown-observed]", function (event) {
@@ -65,6 +99,9 @@ $(document).ready(function () {
     /***************** NAVBAR MENU LOGICS - ENDED *****************/
 
     /***************** OWL-CAROUSEL-2 INITIALIZATION - START *****************/
+    var $carousel = $("#latest_news_carousel");
+
+
     $("#latest_news_carousel").owlCarousel({
         loop: true,
         margin: 30,
@@ -88,6 +125,7 @@ $(document).ready(function () {
         smartSpeed: 512,
         autoplayHoverPause: true
     });
+
     $("#projects_owl_carousel").owlCarousel({
         loop: true,
         margin: 32,
@@ -98,6 +136,14 @@ $(document).ready(function () {
         smartSpeed: 512,
         autoplayHoverPause: true
     });
+
+
+
+
+
+
+
+
 
     /*
     
@@ -142,3 +188,5 @@ $(document).ready(function () {
     });
     /***************** FAQ DROPDOWN - ENDED *****************/
 });
+
+new WOW().init();

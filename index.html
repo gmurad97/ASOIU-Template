@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASOIU - Home</title>
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/plugins/owl_carousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/plugins/owl_carousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/plugins/owlcarousel@2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/plugins/wow@1.1.3/animate.min.css">
+    <link rel="stylesheet" href="assets/plugins/bootstrap@5.3.3/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body>
-
     <header class="header" style="background-image: url('assets/img/header/1.png');">
-        <nav class="navbar">
+        <nav class="header__navbar">
             <figure class="navbar__logo">
                 <a class="navbar__logo-link" href="#">
                     <img class="navbar__logo-img" src="assets/img/logo.png" alt="Logo">
@@ -205,7 +205,7 @@
         </div>
     </header>
     <main class="main">
-        <section class="section">
+        <section class="section wow animate__animated animate__slideInLeft" data-wow-offset="100">
             <div class="section__latest-news-heading">
                 <h1 class="section__latest-news-title">Son xəbərlər</h1>
             </div>
@@ -312,7 +312,7 @@
                 </div>
             </section>
         </section>
-        <section class="section">
+        <section class="section wow animate__animated animate__slideInRight" data-wow-offset="100">
             <div class="section__recent-posts-heading">
                 <h1 class="section__recent-posts-heading-title">Son paylaşılan elanlar</h1>
                 <a class="section__recent-posts-heading-link" href="#">Hamısını gör</a>
@@ -369,7 +369,7 @@
                 </article>
             </section>
         </section>
-        <section class="section">
+        <section class="section wow animate__animated animate__slideInLeft" data-wow-offset="100">
             <div class="section__profession-heading">
                 <h1 class="section__profession-heading-title">İxtisas sahələrimiz</h1>
             </div>
@@ -412,7 +412,7 @@
                 </article>
             </section>
         </section>
-        <section class="section">
+        <section class="section wow animate__animated animate__slideInRight" data-wow-offset="100">
             <section class="faq__list">
                 <article class="faq__item active">
                     <div class="faq__question">
@@ -507,7 +507,7 @@
                 </article>
             </section>
         </section>
-        <section class="section">
+        <section class="section wow animate__animated animate__slideInLeft" data-wow-offset="100">
             <div class="section__partners-heading">
                 <h1 class="section__partners-heading-title">Tərəfdaşlarımız</h1>
                 <div class="section__partners-heading-separator"></div>
@@ -540,22 +540,7 @@
                 </div>
             </section>
         </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <section class="section">
+        <section class="section wow animate__animated animate__slideInRight" data-wow-offset="100">
             <div class="section__projects-heading">
                 <h1 class="section__projects-heading-title">Layihələr</h1>
                 <div class="section__projects-heading-separator"></div>
@@ -582,25 +567,13 @@
                 </div>
             </section>
         </section>
-
-
-
-
-
-
-
-
-
-
-
-
     </main>
     <footer class="footer">
         <div class="footer__grid-layout">
             <div class="footer__section">
                 <div class="footer__section-logo">
                     <a class="footer__section-logo-link" href="#">
-                        <img class="footer__section-logo-img" src="assets/img/logo.png" alt="Footer Logo">
+                        <img class="footer__section-logo-img" src="assets/img/logo.png" alt="Logo">
                     </a>
                 </div>
                 <div class="footer__section-about">
@@ -747,9 +720,11 @@
             </div>
         </div>
     </footer>
-    <script src="assets/js/jquery-3.7.1.min.js"></script>
-    <script src="assets/plugins/jquery-ui-1.14.0.min.js"></script>
-    <script src="assets/plugins/owl_carousel/owl.carousel.min.js"></script>
+    <script src="assets/plugins/jquery@3.7.1/jquery.min.js"></script>
+    <script src="assets/plugins/jqueryui@1.14.0/jquery-ui.min.js"></script>
+    <script src="assets/plugins/owlcarousel@2.3.4/owl.carousel.min.js"></script>
+    <script src="assets/plugins/wow@1.1.3/wow.min.js"></script>
+    <script src="assets/plugins/bootstrap@5.3.3/bootstrap.bundle.min.js"></script>
     <script defer src="assets/js/main.js"></script>
 </body>
 
