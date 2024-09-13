@@ -159,33 +159,53 @@ $(document).ready(function () {
     */
     /***************** OWL-CAROUSEL-2 INITIALIZATION - ENDED *****************/
 
-    /***************** FAQ DROPDOWN - START *****************/
+
+
+
+
+
+
+
+
+
+
+    
+    /***************** FAQ DROPDOWN - START (new test algo)*****************/
+    //не нужен проверочный код только количество,если кол-во нет то и цикла нет
     // Устанавливаем высоту для активных элементов на старте
-    $(".faq__item.active .faq__answer").each(function () {
-        $(this).css("max-height", $(this).prop("scrollHeight") + "px");
+    $(".faq__list").each(function() {
+        // Контекст конкретного блока FAQ
+        var $faqList = $(this);
+    
+        // Инициализация: раскрытие активных элементов
+        $faqList.find(".faq__item.active .faq__answer").each(function () {
+            $(this).css("max-height", $(this).prop("scrollHeight") + "px");
+        });
+    
+        // Обработка кликов на вопросах внутри конкретного списка FAQ
+        $faqList.find(".faq__question").on("click", function () {
+            var parentItem = $(this).parent();
+            var answer = parentItem.find(".faq__answer");
+    
+            // Если текущий элемент активен, то закрываем его
+            if (parentItem.hasClass("active")) {
+                answer.css("max-height", "0px");
+                parentItem.removeClass("active");
+            } else {
+                // Закрываем все другие активные элементы в текущем блоке FAQ
+                $faqList.find(".faq__item.active").each(function () {
+                    var otherAnswer = $(this).find(".faq__answer");
+                    otherAnswer.css("max-height", "0px");
+                    $(this).removeClass("active");
+                });
+    
+                // Открываем текущий элемент
+                answer.css("max-height", answer.prop("scrollHeight") + "px");
+                parentItem.addClass("active");
+            }
+        });
     });
-
-    $(".faq__question").on("click", function () {
-        var parentItem = $(this).parent();
-        var answer = parentItem.find(".faq__answer");
-
-        // Если текущий элемент активен, то закрываем его
-        if (parentItem.hasClass("active")) {
-            answer.css("max-height", "0px");
-            parentItem.removeClass("active");
-        } else {
-            // Закрываем все другие активные элементы
-            $(".faq__item.active").each(function () {
-                var otherAnswer = $(this).find(".faq__answer");
-                otherAnswer.css("max-height", "0px");
-                $(this).removeClass("active");
-            });
-
-            // Открываем текущий элемент
-            answer.css("max-height", answer.prop("scrollHeight") + "px");
-            parentItem.addClass("active");
-        }
-    });
+    
     /***************** FAQ DROPDOWN - ENDED *****************/
 });
 

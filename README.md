@@ -1,13 +1,13 @@
 | Page Name                                        | Status  |
 |--------------------------------------------------|---------|
-| Home                                             | ❌      |
-| Akademik fəaliyyət                               | ❌      |
+| Home                                             | ✅      |
+| Akademik fəaliyyət                               | ✅      |
 | Haqqımızda                                       | ❌      |
-| Fakültələr                                       | ❌      |
+| Fakültələr                                       | ✅      |
 | Fakültə səhifəsi                                 | ❌      |
-| Klublar                                          | ❌      |
+| Klublar                                          | ✅      |
 | Tariximiz                                        | ❌      |
-| Rəsmi sənədlər                                   | ❌      |
+| Rəsmi sənədlər                                   | ✅      |
 | Kitabxana                                        | ❌      |
 | Beynəlxalq əlaqələr şöbəsi                       | ❌      |
 | Tələbə Gənclər Təşkilatı                         | ❌      |
@@ -21,7 +21,7 @@
 | akt zal                                          | ❌      |
 | Müəllimlər                                       | ❌      |
 | Full-page modal                                  | ❌      |
-| Keyfiyyət təminatı                               | ❌      |
+| Keyfiyyət təminatı                               | ✅      |
 | İctimaiyyətlə Əlaqələr və Marketinq Departamenti | ❌      |
 | Xeberler                                         | ❌      |
 | Layihə Menecmenti Ofisi                          | ❌      |
@@ -32,7 +32,10 @@
 | ASOIU Summer School (Accomodation)               | ❌      |
 | ASOIU Summer School (Apply)                      | ❌      |
 | ASOIU Summer School (Visa)                       | ❌      |
-| Konfrans                                         | ❌      |
-| Error                                            | ❌      |
-| Not found                                        | ❌      |
+| Konfrans                                         | ✅      |
+| Error                                            | ✅      |
+| Not found                                        | ✅      |
 | Login                                            | ❌      |
+| Extra Pages                                      | ✅      |
+
+
