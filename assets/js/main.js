@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     /***************** NAVBAR SEARCH & MENU BUTTONS - START *****************/
     var $searchButton = $("#navbar_search_btn");
     var $inputContainer = $("#navbar_search_input_container");
@@ -209,4 +208,5 @@ $(document).ready(function () {
     /***************** FAQ DROPDOWN - ENDED *****************/
 });
 
-new WOW().init();
+new WOW().init(); // not if
+Fancybox.bind("[data-fancybox='laboratory']"); // not if

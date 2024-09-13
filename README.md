@@ -4,9 +4,9 @@
 | Akademik fəaliyyət                               | ✅      |
 | Haqqımızda                                       | ❌      |
 | Fakültələr                                       | ✅      |
-| Fakültə səhifəsi                                 | ❌      |
+| Fakültə səhifəsi                                 | ✅      |
 | Klublar                                          | ✅      |
-| Tariximiz                                        | ❌      |
+| Tariximiz                                        | ✅      |
 | Rəsmi sənədlər                                   | ✅      |
 | Kitabxana                                        | ❌      |
 | Beynəlxalq əlaqələr şöbəsi                       | ❌      |
@@ -15,11 +15,11 @@
 | Tələbə Həmkarlar İttifaqı Komitəsi               | ❌      |
 | Rəqəmsal İnkişaf və İnnovasiyalar Mərkəzi        | ❌      |
 | Tələbə elmi cəmiyyəti                            | ❌      |
-| Vətəbdaşların qəbulu                             | ❌      |
-| Təklifim var                                     | ❌      |
+| Vətəbdaşların qəbulu                             | ✅      |
+| Təklifim var                                     | ✅      |
 | eazi START                                       | ❌      |
 | akt zal                                          | ❌      |
-| Müəllimlər                                       | ❌      |
+| Müəllimlər                                       | ✅      |
 | Full-page modal                                  | ❌      |
 | Keyfiyyət təminatı                               | ✅      |
 | İctimaiyyətlə Əlaqələr və Marketinq Departamenti | ❌      |
@@ -35,7 +35,7 @@
 | Konfrans                                         | ✅      |
 | Error                                            | ✅      |
 | Not found                                        | ✅      |
-| Login                                            | ❌      |
+| Login                                            | ✅      |
 | Extra Pages                                      | ✅      |
 
 
