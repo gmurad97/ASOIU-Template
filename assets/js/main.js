@@ -210,3 +210,24 @@ $(document).ready(function () {
 
 new WOW().init(); // not if
 Fancybox.bind("[data-fancybox='laboratory']"); // not if
+
+
+
+
+
+
+
+$('button[data-password-toggle]').on('click', function () {
+    // Получаем идентификатор из data-password-toggle
+    const targetId = $(this).data('password-toggle');
+    // Находим поле ввода по этому идентификатору
+    const passwordField = $(targetId);
+    // Переключаем тип поля ввода
+    const type = passwordField.attr('type') === 'password' ? 'text' : 'password';
+    passwordField.attr('type', type);
+    // Переключаем иконку
+    $(this).find('i').toggleClass('fi-rr-eye fi-rr-eye-crossed');
+});
+
+
+

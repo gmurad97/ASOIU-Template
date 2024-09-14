@@ -750,103 +750,137 @@ body {
 
 
 
+
 .login__section {
     width: 100%;
     height: 100dvh;
     display: grid;
-    grid-template-columns: 1.4fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
+    overflow: hidden;
 }
 
 .login__illustration {
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: red;
-    background-image: linear-gradient(180deg, rgba(5, 117, 230, 1) 0%, rgba(2, 41, 138, 1) 50%, rgba(2, 27, 121, 1) 100%);
-    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0575E6;
+    background-image: linear-gradient(180deg, #0575E6 0%, #02298A 50%, #021B79 100%);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    filter: grayscale(100%);
+    padding: 48px 80px;
     overflow: hidden;
+    animation: illustrationAnimation 8192ms linear infinite alternate;
 }
 
-.login__illustration::before {
-    content: "";
-    position: absolute;
-    bottom: -200px;
-    left: -200px;
-    width: 555px;
-    height: 555px;
-    border: 1px solid #0575E6;
-    border-radius: 50%;
+@keyframes illustrationAnimation {
+    from {
+        filter: grayscale(100%);
+    }
+
+    to {
+        filter: grayscale(0%);
+    }
 }
 
-.login__illustration::after {
-    content: "";
-    position: absolute;
-    bottom: -250px;
-    left: -120px;
-    width: 555px;
-    height: 555px;
-    border: 1px solid #0575E6;
-    border-radius: 50%;
+.login__illustration-title {
+    font-family: "Playfair Display", serif;
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 64px;
+    color: #FFFFFF;
 }
 
-.login__illustration-title {}
+.login__panel {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 48px 80px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 
-.login__credentials {}
+.login__panel-form-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
 
-.login__form-container {}
+.login__panel-form {
+    width: 100%;
+    height: auto;
+}
 
-.login__form {}
+.login__panel-copyright {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-.login__form-group {}
+.login__panel-copyright-content {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #6C6C6C;
+}
 
-.login__form-label {}
-
-.login__form-input {}
-
-.login__form-password {}
-
-.fi-fi-rs-eye {}
-
-
-
-
-
-
-
-
-
-
-.input-wrapper {
+.input__wrapper {
     position: relative;
 }
 
-.icon {
+.input__wrapper>button {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: transparent;
+    border: none;
+    outline: none;
     cursor: pointer;
 }
 
-.closed:before {
-    content: "\F340";
-    font-family: "Bootstrap-icons";
-    font-style: normal;
-    font-size: 1.2rem;
+.input__wrapper>button>i {
+    color: #D0D5DD;
 }
 
-.open:before {
-    content: "\F341";
-    font-family: "Bootstrap-icons";
-    font-style: normal;
-    font-size: 1.2rem;
-}
 
-.bi-check-circle-fill {
-    font-size: 6rem;
-    color: #A9BB57;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1045,7 +1079,7 @@ body {
 }
 
 .faculty-teachers__see-more-link:hover {
-    color: #101828;
+    color: #B53471;
 }
 
 .faculty-teachers__see-more-link>i {
@@ -1133,11 +1167,11 @@ body {
     font-weight: 400;
     line-height: 32px;
     color: #0055CC;
-    transition: color 160 linear;
+    transition: color 160ms linear;
 }
 
 .faculty-curriculum__link:hover {
-    color: #101828;
+    color: #B53471;
 }
 
 
@@ -1236,7 +1270,7 @@ body {
 }
 
 .faculty-department__detail-link:hover {
-    color: #101828;
+    color: #B53471;
 }
 
 .faculty-department__detail-link>i {
@@ -1321,12 +1355,30 @@ body {
 }
 
 .faculty-laboratory__gallery-fancybox {
+    position: relative;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    overflow: hidden;
+}
+
+.faculty-laboratory__gallery-fancybox:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 0%;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(21, 112, 239, 0.5) 100%);
+    opacity: 0.5;
+    transition: height 160ms linear;
+}
+
+.faculty-laboratory__gallery-fancybox:hover::before {
+    height: 100%;
 }
 
 .faculty-laboratory__gallery-item-img {
@@ -2295,6 +2347,22 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .section__teachers-heading {
     width: 100%;
     height: auto;
@@ -2305,7 +2373,7 @@ body {
     margin-bottom: 40px;
 }
 
-.section__teachers__heading-title {
+.section__teachers-heading-title {
     font-family: "Playfair Display", serif;
     font-size: 46px;
     font-weight: 500;
@@ -2362,16 +2430,25 @@ body {
     font-weight: 500;
     line-height: 24px;
     color: #101828;
+    margin-bottom: 8px;
 }
 
-.teacher__job {
+.teacher__position {
+    background-color: #F2F2F2;
+    border-radius: 2px;
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
     color: #ABABAB;
+    padding: 4px 10px;
 }
 
-.teacher__socials {}
+.teacher__socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
 
 .teacher__social-link {
     text-decoration: none;
@@ -2387,46 +2464,150 @@ body {
     color: #1570EF;
 }
 
-
-.modal {
-    display: none;
-    /* Скрыто по умолчанию */
+.teacher__modal {
     position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
+    top: 0px;
+    left: -100%;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Прозрачный фон */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #FFFFFF;
+    z-index: 1024;
+    transition: left 160ms linear;
+    overflow: hidden;
 }
 
-.modal-content {
-    background-color: white;
-    margin: 10% auto;
-    padding: 20px;
+.teacher__modal-poster {
     width: 100%;
-    max-width: 600px;
-    border-radius: 5px;
+    height: 100%;
 }
 
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
+.teacher__modal-poster-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
 }
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
+.teacher__modal-detail {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 80px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
-.modal-body {
-    padding: 10px;
+.teacher__modal-control {
+    position: absolute;
+    top: 0px;
+    right: 0px;
 }
+
+.teacher__modal-close {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #133E72;
+    outline: none;
+    border: none;
+    padding: 16px;
+    transition: background-color 160ms linear;
+}
+
+.teacher__modal-close>i {
+    display: flex;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.teacher__modal-close:hover {
+    background-color: #0055CC;
+}
+
+.teacher__modal-heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.teacher__modal-heading-title {
+    font-family: "Helvetica", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #333333;
+    margin-bottom: 12px;
+}
+
+.teacher__modal-heading-position {
+    background-color: #F2F2F2;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #666666;
+    padding: 4px 10px;
+}
+
+.teacher-modal__bio {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.teacher__modal-bio-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.teacher__modal-bio-list {
+    list-style-type: disc;
+    padding: 24px;
+}
+
+.teacher__modal-bio-item {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.teacher__modal-bio-item:not(:last-of-type) {
+    margin-bottom: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3748,3 +3929,136 @@ body {
 }
 
 /*FOOTER STYLE - ENDED*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Большие экраны (1200px и больше) */
+@media screen and (min-width: 1200px) {
+    body {
+        /*         background-color: red; */
+    }
+}
+
+/* Ноутбуки и десктопы (992px - 1199px) */
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+    body {
+        /*   */
+    }
+}
+
+/* Планшеты (768px - 991px) */
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    body {
+        /*         background-color: green; */
+    }
+}
+
+/* Смартфоны в горизонтальной ориентации (576px - 767px) */
+@media screen and (max-width: 767px) and (min-width: 576px) {
+    body {
+        /*         background-color: orange; */
+    }
+}
+
+/* Смартфоны в портретной ориентации (до 575px) */
+@media screen and (max-width: 575px) {
+    body {
+        /*         background-color: purple; */
+    }
+}
