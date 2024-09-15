@@ -4608,6 +4608,12 @@ color: #353535;
 
 }
 
+.about__carousel > .owl-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .about__carousel-item {
     margin-right: 40px;
 }
@@ -4636,6 +4642,530 @@ color: #353535;
 .about__video-wrapper {
     margin-top: 80px;
 }
+
+
+
+
+
+
+
+
+
+
+
+.apply__heading {
+    margin-bottom: 42px;
+}
+
+.apply__heading-title {
+    width: 100%;
+    height: auto;
+    font-family: 'Playfair Display';
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 50px;
+    margin-bottom: 16px;
+    color: #000000;
+
+}
+
+.apply__heading-description {
+    width: 100%;
+    height: auto;
+    font-family: 'DM Sans';
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 16px;
+    color: #353535;
+}
+
+.apply__heading-description-content {
+    width: 100%;
+    height: auto;
+    font-family: 'DM Sans';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #353535;
+}
+
+.apply__main {
+    font-family: 'DM Sans';
+}
+
+.apply__requirements-title {
+
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+    color: #353535;
+    margin-bottom: 16px;
+}
+
+.apply__requirements-language-list {
+    margin-bottom: 42px;
+}
+
+.apply__requirements-language-item {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #1C1C1C;
+    margin-bottom: 42px;
+}
+
+.apply__language-requirements-title {
+
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+    color: #353535;
+    margin-bottom: 16px;
+
+}
+
+.apply__language-requirement-list {
+    margin-bottom: 42px;
+}
+
+.apply__language-requirements-item {
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #353535;
+
+}
+
+.apply__language-requirements-table {
+    width: 100%;
+    height: 0 auto;
+    padding: 24px;
+    /* gap: 88px; */
+    border-radius: 4px;
+    border: 1px solid #B2B2B2;
+    background: #D1E9FF33;
+    margin-bottom: 12px;
+    color: #353535;
+}
+
+.apply__language-requirements-table-header {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+}
+
+.apply__language-requirements-table-cell {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    margin-right: 88px;
+}
+
+.apply__language-requirements-note {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 42px;
+    color: #353535;
+}
+
+.apply__deadline-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+    color: #353535;
+}
+
+.apply__deadline-description-list {
+    margin-bottom: 42px;
+}
+
+.apply__deadline-description-item>span {
+    font-family: 'DM Sans';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+
+}
+
+.apply__deadline-description-item {
+    font-family: 'DM Sans';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #353535;
+
+}
+
+.apply__document-list-title {
+
+    font-family: 'DM Sans';
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 16px;
+}
+
+.apply__document-list {
+    margin-bottom: 12px;
+}
+
+.apply__document-item {
+
+    font-family: 'DM Sans';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
+}
+
+.apply__document-item:not(:last-of-type) {
+    margin-bottom: 12px;
+}
+
+.apply__document-list-note {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.apply__start-link {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #1570EF;
+}
+
+
+
+
+
+
+
+.cultural_programme__heading-title {
+    font-family: 'Playfair Display';
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 50px;
+    margin-bottom: 24px;
+
+}
+
+.cultural_programme__heading-description {
+    font-family: 'DM Sans';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 40px;
+}
+
+.cultural_programme__event-title {
+    font-family: 'DM Sans';
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 24px;
+}
+
+.cultural_programme__event-list {
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-size: 16px;
+    color: #353535;
+    line-height: 24px;
+}
+
+.cultural_programme__event-item:not(:last-of-type) {
+    margin-bottom: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fees__heading {
+    margin-bottom: 42px;
+}
+
+.fees__heading-title {
+    font-family: 'Playfair Display';
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 50px;
+    margin-bottom: 16px;
+}
+
+.fees__heading-description {
+    font-family: 'DM Sans';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.fees__heading-document-list {
+    width: 100%;
+    height: 0 auto;
+}
+
+.fees__heading-document-item {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #353535;
+
+}
+
+.fees__main {
+    width: 100%;
+    height: 0 auto;
+    font-family: 'DM Sans';
+}
+
+.fees__main-deadline-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+    color: #353535;
+
+}
+
+.fees__deadline-description-list {
+    margin-bottom: 42px;
+}
+
+.fees__deadline-description-item {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
+}
+
+.fees__deadline-description-item>span {
+    font-weight: bold;
+}
+
+.fees__main-fee-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+    color: #353535;
+
+}
+
+.fees__main-fee-description-list {
+    margin-bottom: 42px;
+}
+
+.fees__main-fee-description-item {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #353535;
+}
+
+.fees__main-payment-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+    color: #353535;
+    margin-bottom: 16px;
+}
+
+.fees__main-payment-list {
+    margin-bottom: 42px;
+}
+
+.fees__main-payment-item {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #353535;
+}
+
+.fees__main-including-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 16px;
+}
+
+.fees__main-including-list {
+    margin-bottom: 42px;
+}
+
+.fees__main-including-item {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #353535;
+}
+
+.fees__main-excluding-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+}
+
+.fees__main-excluding-item {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.visa__heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 24px;
+}
+
+.visa__heading-title {
+    font-family: 'Playfair Display';
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 50px;
+    margin-bottom: 12px;
+}
+
+.visa__heading-description {
+    font-family: 'DM Sans';
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+}
+
+.visa__content {
+    margin-bottom: 95px;
+}
+
+.visa__content-embassy-info {
+    font-family: 'DM Sans';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.visa__contact {
+    width: 288px;
+    height: 296px;
+    padding: 12px;
+    gap: 16px;
+    border-radius: 4px 0px 0px 0px;
+    border: 1px 0px 0px 0px;
+    border: 1px solid #E4E4E4;
+}
+
+.visa__contact-title {
+    font-family: 'DM Sans';
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: left;
+}
+
+.visa__contact-description {
+    font-family: 'DM Sans';
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+.visa__contact-description-description {
+    font-weight: 400;
+    color: #4E4E4E;
+}
+
+.visa__contact-list {
+    list-style-type: none;
+}
+
+.visa__contact-item:not(:last-of-type) {
+    margin-bottom: 26px;
+}
+
+
+
 
 
 
@@ -4735,4 +5265,60 @@ color: #353535;
     font-family: DM Sans;
     font-weight: 500;
     color: #1570EF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.info__heading{
+    padding-bottom: 40px;
+}
+
+.info__heading-title{
+    font-family: 'Playfair Display';
+    font-size: 32px;
+    font-weight: 500;
+    padding-bottom: 40px;
+}
+
+.info__heading-content{
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.info__mean-content-text{
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.info__mean-content-image{
+    margin-right: 30px;
+}
+
+.info__end{
+    
+}
+
+.info__end-item-content{
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-size: 18px;
+    float: left;
 }

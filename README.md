@@ -14,10 +14,10 @@
 | Tədris metodiki şöbə                             | ✅      |
 | Tələbə Həmkarlar İttifaqı Komitəsi               | ✅      |
 | Rəqəmsal İnkişaf və İnnovasiyalar Mərkəzi        | ✅      |
-| Tələbə elmi cəmiyyəti                            | ❌      |
+| Tələbə elmi cəmiyyəti                            | ✅      |
 | Vətəbdaşların qəbulu                             | ✅      |
 | Təklifim var                                     | ✅      |
-| eazi START                                       | ❌      |
+| eazi START                                       | ✅      |
 | akt zal                                          | ✅      |
 | Müəllimlər                                       | ✅      |
 | Full-page modal                                  | ✅      |
@@ -26,7 +26,7 @@
 | Xeberler                                         | ✅      |
 | Layihə Menecmenti Ofisi                          | ✅      |
 | ASOIU Summer School (About Us)                   | ✅      |
-| ASOIU Summer School (Academic Programme)         | ❌      |
+| ASOIU Summer School (Academic Programme)         | ✅      |
 | ASOIU Summer School (Cultural Programme)         | ✅      |
 | ASOIU Summer School (Fees)                       | ✅      |
 | ASOIU Summer School (Accomodation)               | ✅      |
