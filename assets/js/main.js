@@ -266,6 +266,7 @@ new WOW().init(); // not if
 Fancybox.bind("[data-fancybox='laboratory']"); // not if
 Fancybox.bind("[data-fancybox='gallery']"); // not if
 Fancybox.bind("[data-fancybox='rest']"); // not if
+Fancybox.bind("[data-fancybox='news']"); // not if
 
 
 
