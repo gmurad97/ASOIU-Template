@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
-11
+
 <body>
     <header class="header" style="background-image: url('assets/img/header/7.png');">
         <nav class="header__navbar">
@@ -204,115 +204,102 @@
         </div>
     </header>
     <main class="main">
-        
 
-
-
-
-
-
-
-
-
-
-        <div class="container my-5">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2>Qeydiyyatdan keçin</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                </div>
+        <section class="section__suggestion">
+            <div class="section__suggestion-heading">
+                <h1 class="section__suggestion-heading-title">Təklifim var!</h1>
+                <p class="section__suggestion-heading-description">
+                    Xanaları Azərbaycan şriftləri ilə doldurmağınız xahiş olunur
+                </p>
+                <p class="section__suggestion-heading-description">
+                    *-bu işarə ilə qeyd olunan xanaları doldurmaq vacibdir. Həmin xanalarda göstərilən məlumatlar düzgün
+                    olarsa, müraciətinizə baxilmasınin effektivliyi artacaqdır.
+                </p>
             </div>
-            <form>
-                <div class="row mb-3">
-                    <div class="col-md-4">
-                        <label for="ad" class="form-label">Ad</label>
-                        <input type="text" class="form-control" id="ad" placeholder="Placeholder">
+
+            <div class="section__suggestion-form-container">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="name">Ad</label>
+                            <input type="text" class="form-control" id="name" placeholder="Placeholder">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="surname">Soyad</label>
+                            <input type="text" class="form-control" id="surname" placeholder="Placeholder">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="fathername">Ata adı</label>
+                            <input type="text" class="form-control" id="fathername" placeholder="Placeholder">
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <label for="soyad" class="form-label">Soyad</label>
-                        <input type="text" class="form-control" id="soyad" placeholder="Placeholder">
+                    <div class="form-group">
+                        <label for="idNumber">Şəxsiyyət vəsiqəsinin nömrəsi/Pasport nömrəsi</label>
+                        <input type="text" class="form-control" id="idNumber" placeholder="Placeholder">
                     </div>
-                    <div class="col-md-4">
-                        <label for="ata-adi" class="form-label">Ata adı</label>
-                        <input type="text" class="form-control" id="ata-adi" placeholder="Placeholder">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="country">Ölkə</label>
+                            <input type="text" class="form-control" id="country" placeholder="Placeholder">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="city">Şəhər</label>
+                            <input type="text" class="form-control" id="city" placeholder="Placeholder">
+                        </div>
                     </div>
-                </div>
-        
-                <div class="mb-3">
-                    <label for="passport" class="form-label">Şəxsiyyət vəsiqəsinin nömrəsi/Passport nömrəsi</label>
-                    <input type="text" class="form-control" id="passport" placeholder="Placeholder">
-                </div>
-        
-                <div class="row mb-3">
-                    <div class="col-md-6">
-                        <label for="country" class="form-label">Ölko</label>
-                        <input type="text" class="form-control" id="country" placeholder="Placeholder">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="foreignCountry">Xarici ölkə</label>
+                            <input type="text" class="form-control" id="foreignCountry" placeholder="Placeholder">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="foreignCity">Xarici şəhər adı daxil edin</label>
+                            <input type="text" class="form-control" id="foreignCity" placeholder="Placeholder">
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <label for="city" class="form-label">Şəhər</label>
-                        <input type="text" class="form-control" id="city" placeholder="Placeholder">
+                    <div class="form-group">
+                        <label for="address">Ünvan</label>
+                        <input type="text" class="form-control" id="address" placeholder="Placeholder">
                     </div>
-                </div>
-        
-                <div class="row mb-3">
-                    <div class="col-md-6">
-                        <label for="foreign-country" class="form-label">Xarici ölkə</label>
-                        <input type="text" class="form-control" id="foreign-country" placeholder="Placeholder">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="phone">Telefon</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Placeholder">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="email">Telefon</label>
+                            <input type="email" class="form-control" id="email" placeholder="Placeholder">
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <label for="foreign-city" class="form-label">Xarici şəhər adı daxil edin</label>
-                        <input type="text" class="form-control" id="foreign-city" placeholder="Placeholder">
+                    <div class="form-group">
+                        <label for="category">Kateqoriya</label>
+                        <input type="text" class="form-control" id="category" placeholder="Placeholder">
                     </div>
-                </div>
-        
-                <div class="mb-3">
-                    <label for="address" class="form-label">Ünvan</label>
-                    <input type="text" class="form-control" id="address" placeholder="Placeholder">
-                </div>
-        
-                <div class="row mb-3">
-                    <div class="col-md-6">
-                        <label for="first-name" class="form-label">First name</label>
-                        <input type="text" class="form-control" id="first-name" placeholder="Placeholder">
+                    <div class="form-group">
+                        <label for="offerTitle">Təklifin başlığı</label>
+                        <input type="text" class="form-control" id="offerTitle" placeholder="Placeholder">
                     </div>
-                    <div class="col-md-6">
-                        <label for="label" class="form-label">Label</label>
-                        <input type="text" class="form-control" id="label" placeholder="Placeholder">
+                    <div class="form-group">
+                        <label for="details">Təklif haqqında ətraflı məlumat yazın.</label>
+                        <textarea class="form-control" id="details" rows="4" placeholder="Placeholder"></textarea>
                     </div>
-                </div>
-        
-                <div class="row mb-3">
-                    <div class="col-md-6">
-                        <label for="age" class="form-label">Yaşınız</label>
-                        <input type="number" class="form-control" id="age" placeholder="Placeholder">
+                    <div class="form-group">
+                        <label for="fileUpload">Şəkil yükləyin (təklifinizə uyğun şəkil yükləməyiniz xahiş olunur).</label>
+                        <input type="file" class="form-control-file" id="fileUpload">
                     </div>
-                    <div class="col-md-6">
-                        <label for="gender" class="form-label">Cinsiniz</label>
-                        <input type="text" class="form-control" id="gender" placeholder="Placeholder">
-                    </div>
-                </div>
-        
-                <div class="row mb-3">
-                    <div class="col-md-6">
-                        <label for="status" class="form-label">Sosial durum</label>
-                        <input type="text" class="form-control" id="status" placeholder="Placeholder">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="special-status" class="form-label">Vəziyyətli qısx</label>
-                        <input type="text" class="form-control" id="special-status" placeholder="Placeholder">
-                    </div>
-                </div>
-        
-                <div class="mb-3">
-                    <label for="message" class="form-label">Mesaj</label>
-                    <textarea class="form-control" id="message" rows="3" placeholder="Placeholder"></textarea>
-                </div>
-        
-                <div class="mb-3">
-                    <button type="submit" class="btn btn-primary">Göndər</button>
-                </div>
-            </form>
-        </div>
+                    <button type="submit" class="btn btn-primary btn-block">Göndər</button>
+                </form>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
 
 
 

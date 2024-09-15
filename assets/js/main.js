@@ -111,7 +111,24 @@ $(document).ready(function () {
             "<i class='fi fi-ts-angle-small-right'></i>",
         ],
         autoplay: false,
-        autoplayHoverPause: true
+        autoplayHoverPause: true,
+        responsive: {
+            1200: {
+                items: 4
+            },
+            992: {
+                items: 3
+            },
+            768: {
+                items: 2
+            },
+            576: {
+                items: 1
+            },
+            0: {
+                items: 1
+            }
+        }
     });
 
     $("#partners_owl_carousel").owlCarousel({
@@ -122,7 +139,33 @@ $(document).ready(function () {
         autoplay: true,
         autoplayTimeout: 2048,
         smartSpeed: 512,
-        autoplayHoverPause: true
+        autoplayHoverPause: true,
+        responsive: {
+            1200: {
+                items: 6
+            },
+            992: {
+                items: 3
+            },
+            768: {
+                items: 3
+            },
+            576: {
+                items: 2
+            },
+            0: {
+                items: 1
+            }
+        }
+    });
+
+    $("#about__carousel").owlCarousel({
+        items: 5, 
+        loop: true,
+        margin: 10,
+        nav: false,
+        dots: false,
+        autoplay: true
     });
 
     $("#projects_owl_carousel").owlCarousel({
@@ -133,7 +176,18 @@ $(document).ready(function () {
         autoplay: true,
         autoplayTimeout: 2048,
         smartSpeed: 512,
-        autoplayHoverPause: true
+        autoplayHoverPause: true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            }
+        }
     });
 
 
@@ -210,6 +264,8 @@ $(document).ready(function () {
 
 new WOW().init(); // not if
 Fancybox.bind("[data-fancybox='laboratory']"); // not if
+Fancybox.bind("[data-fancybox='gallery']"); // not if
+Fancybox.bind("[data-fancybox='rest']"); // not if
 
 
 
@@ -231,3 +287,33 @@ $('button[data-password-toggle]').on('click', function () {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ // Open modal when eye icon is clicked
+ $('.teacher__social-link[data-modal]').on('click', function (event) {
+    event.preventDefault();
+
+    // Get the modal ID and show the modal
+    var modalId = $(this).data('modal');
+    $('#' + modalId).css('display', 'grid');
+    $('body').css('overflow', 'hidden'); // Disable body scroll
+});
+
+// Close modal when close button is clicked or when clicking outside the modal content
+$('.teacher__modal').on('click', function (event) {
+    if ($(event.target).is('.teacher__modal, .teacher__modal-close, .teacher__modal-close *')) {
+        $(this).css('display', 'none');
+        $('body').css('overflow', ''); // Enable body scroll
+    }
+});

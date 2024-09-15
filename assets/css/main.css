@@ -2,6 +2,11 @@
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+
+
+
+
 @import url('https://cdn-uicons.flaticon.com/2.5.1/uicons-regular-straight/css/uicons-regular-straight.css');
 @import url('https://cdn-uicons.flaticon.com/2.5.1/uicons-thin-straight/css/uicons-thin-straight.css');
 @import url('https://cdn-uicons.flaticon.com/2.5.1/uicons-solid-rounded/css/uicons-solid-rounded.css');
@@ -10,9 +15,15 @@
 @import url('https://cdn-uicons.flaticon.com/2.5.1/uicons-bold-straight/css/uicons-bold-straight.css');
 @import url('https://cdn-uicons.flaticon.com/2.5.1/uicons-solid-straight/css/uicons-solid-straight.css');
 @import url('https://cdn-uicons.flaticon.com/2.5.1/uicons-bold-rounded/css/uicons-bold-rounded.css');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 @import url('https://cdn-uicons.flaticon.com/2.5.1/uicons-regular-rounded/css/uicons-regular-rounded.css');
+
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+
 
 /*IMPORTS - ENDED*/
 
@@ -844,6 +855,10 @@ body {
     position: relative;
 }
 
+.input__wrapper>input {
+    padding-right: 32px;
+}
+
 .input__wrapper>button {
     position: absolute;
     top: 50%;
@@ -860,6 +875,7 @@ body {
 }
 
 .input__wrapper>button>i {
+    display: flex;
     color: #D0D5DD;
 }
 
@@ -1898,6 +1914,7 @@ body {
     transform: rotate(0deg);
     font-size: 24px;
     color: #353535;
+    padding: 24px;
     transition: transform 160ms linear;
 }
 
@@ -2467,14 +2484,13 @@ body {
 .teacher__modal {
     position: fixed;
     top: 0px;
-    left: -100%;
+    left: 0%;
     width: 100%;
     height: 100vh;
-    display: grid;
+    display: none;
     grid-template-columns: 1fr 1fr;
     background-color: #FFFFFF;
     z-index: 1024;
-    transition: left 160ms linear;
     overflow: hidden;
 }
 
@@ -2593,12 +2609,55 @@ body {
     margin-bottom: 16px;
 }
 
+.teacher__see-more {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.teacher__see-more-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #1570EF;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #FFFFFF;
+    padding: 12px 80px;
+    transition: background-color 160ms linear;
+}
+
+.teacher__see-more-btn:hover {
+    background-color: #133E72;
+}
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+.section__form {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
 
 
@@ -2786,6 +2845,191 @@ body {
 .owl-nav>.owl-next:hover>i {
     color: #FFFFFF;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section__register-page {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 40px;
+}
+
+.section__register-form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.section__form-heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.section__form-heading-title {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 40px;
+    color: #101828;
+    margin-bottom: 20px;
+}
+
+.section__form-heading-description {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #667085;
+    margin-bottom: 80px;
+}
+
+.register__form-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.section__register-quick-transition {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.register-quick-transition__form{
+    width: 100%;
+    height: auto;
+}
+
+.register-quick-transition__btn {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #101828;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    color: #FFFFFF;
+    padding: 8px 16px;
+}
+
+.register-quick-transition__btn:not(:last-of-type){
+    margin-bottom: 12px;
+}
+
+.register-quick-transition__name {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    color: inherit;
+}
+
+.register-quick-transition__btn>i {
+    display: flex;
+    font-size: 24px;
+    color: inherit;
+}
+
+
+
+
+
+
+
+
+
+
+.section__suggestion {
+    /* Styles for the main suggestion section */
+}
+
+.section__suggestion-heading {
+    /* Styles for the heading section */
+}
+
+.section__suggestion-heading-title {
+    /* Styles for the heading title */
+}
+
+.section__suggestion-heading-description {
+    /* Styles for the heading description */
+}
+
+.section__suggestion-form-container {
+    /* Styles for the form container */
+}
+
+.form-row {
+    /* Styles for form row */
+}
+
+.form-group {
+    /* Styles for form group */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4030,35 +4274,465 @@ body {
 
 /* Большие экраны (1200px и больше) */
 @media screen and (min-width: 1200px) {
-    body {
-        /*         background-color: red; */
+    .section {
+        padding: 48px 80px;
     }
 }
 
 /* Ноутбуки и десктопы (992px - 1199px) */
 @media screen and (max-width: 1199px) and (min-width: 992px) {
-    body {
-        /*   */
+    .section {
+        padding: 40px 64px;
     }
 }
 
 /* Планшеты (768px - 991px) */
 @media screen and (max-width: 991px) and (min-width: 768px) {
-    body {
-        /*         background-color: green; */
+    .section {
+        padding: 32px 48px;
     }
 }
 
 /* Смартфоны в горизонтальной ориентации (576px - 767px) */
 @media screen and (max-width: 767px) and (min-width: 576px) {
-    body {
-        /*         background-color: orange; */
+    .section {
+        padding: 32px 32px;
     }
 }
 
 /* Смартфоны в портретной ориентации (до 575px) */
 @media screen and (max-width: 575px) {
-    body {
-        /*         background-color: purple; */
+    .section {
+        padding: 32px 16px;
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.about__content {
+    margin-bottom: 40px;
+}
+
+.about__content-heading {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+    color: #292929;
+    margin-bottom: 30px;
+}
+
+.about__heading-title {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 34px;
+    text-align: left;
+}
+
+.about__content-image {
+    float: left;
+    margin-right: 12px;
+}
+
+.about__content-title {
+    font-size: 32px;
+    font-weight: 500 !important;
+    line-height: 34px;
+    text-align: left;
+    color: #000000;
+}
+
+.about__content-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #292929;
+    /* text-align: center; */
+}
+
+.about__content-text-second {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    clear: both;
+    color: #292929;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.accomodation__heading {
+    font-family: 'DM Sans';
+    margin-bottom: 42px;
+}
+
+.accomodation__heading-warning-info {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+    color: #EF0521;
+    margin-bottom: 16px;
+}
+
+.accomodation__heading-location-list {
+    list-style-type: none;
+}
+
+.accomodation__heading-location-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.accomodation__heading-location-item>i {
+    margin-right: 12px;
+}
+
+.accomodation__heading-location-item>div {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.accomodation__content {
+    margin-bottom: 60px;
+
+}
+
+.campus__content {
+    font-family: 'DM Sans';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.campus__rooms {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    margin-bottom: 60px;
+    
+}
+
+.campus__dormitory-room-content {
+    width: 288px;
+    height: 262px;
+    border-radius: 12px;
+    border: 1px solid #E4E4E4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.campus__room-image {
+    object-fit: contain;
+
+}
+
+.campus__room-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F8F8F8;
+    min-height: 64px;
+    text-align: center;
+    font-weight: 500;
+    
+
+}
+
+.campus__single-room-content {
+    width: 288px;
+    height: 262px;
+    border-radius: 12px;
+    border: 1px solid #E4E4E4;
+    overflow: hidden;
+}
+
+.campus__about {
+    
+color: #353535;
+
+}
+
+.facility__list {
+    color: #353535;
+}
+
+.facility__item:not(:last-of-type) {
+    margin-bottom: 12px;
+}
+
+.campus__gallery {
+    margin-bottom: 60px;
+}
+
+.campus__gallery-images {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 32px;
+}
+
+.gallery__image {
+   
+    border-radius: 8px;
+    margin-bottom: 24px;
+    object-fit: cover;
+}
+
+
+
+
+
+.about__header {
+    font-family: 'Playfair Display';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 120px;
+
+}
+
+.about__header-title {
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 50px;
+    margin-bottom: 89px;
+}
+
+.about__header-image {
+    width: 1030px;
+    height: 399px;
+    object-fit: cover;
+}
+
+.about__gallery {
+    width: 100%;
+    height: auto;
+    /* font-family: 'DM Sans'; */
+    margin-bottom: 80px;
+
+}
+
+.about__gallery-title {
+    font-size: 38px;
+    font-weight: 500;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 112px;
+    color: #1C1C1C;
+}
+
+.about__carousel {
+    width: 100%;
+    height: auto;
+    list-style-type: none;
+
+}
+
+.about__carousel-item {
+    margin-right: 40px;
+}
+
+.about__carousel-image {
+    object-fit: cover;
+}
+
+.about__video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__video-title {
+    font-size: 38px;
+    font-weight: 500;
+    line-height: 36px;
+    text-align: center;
+    color: #3A4F39;
+    margin-top: 80px;
+
+}
+
+.about__video-wrapper {
+    margin-top: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*VAGIF DEVELOPMENT*/
+
+.digital__development {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.digital__development-transition {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    margin: 22px 0;
+
+}
+
+.digital__development-transition-links {
+    font-size: 16px;
+    font-family: DM Sans;
+    font-weight: 500;
+    text-wrap: nowrap;
+    color: #353535;
+    padding: 0px 16px 8px 16px;
+    transition: color 0.3s ease;
+    border-bottom: 1px solid silver;
+    text-decoration: none;
+}
+
+.digital__development-transition-links.active {
+    border-bottom: 0.20em solid #1570EF;
+}
+
+
+
+.digital__development-transition-links:hover {
+    font-size: 16px;
+    font-family: DM Sans;
+    font-weight: 500;
+    color: #1570EF;
 }
