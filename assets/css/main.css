@@ -10,6 +10,20 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #909090;
+
+}
+
+::-webkit-scrollbar-track {
+    background-color: #D9D9D9;
+
+}
+
 body {
     font-family: "DM Sans", sans-serif;
     background-color: #FFFFFF;
@@ -22,12 +36,22 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
 /*HEADER STYLE - START*/
 
 .header {
     position: relative;
     width: 100%;
-    height: 100dvh;
+    height: 100vh;
     background-color: #FFFFFF;
     background-size: cover;
     background-repeat: no-repeat;
@@ -40,7 +64,7 @@ body {
 }
 
 .header__half {
-    height: 50dvh;
+    height: 50vh;
 }
 
 .header__compact>.header__navbar {
@@ -100,14 +124,14 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
 .navbar__search {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     background-color: #101828;
     border-right: 1px solid #464646;
     padding: 30px;
@@ -115,7 +139,7 @@ body {
 }
 
 .navbar__search-btn {
-    width: 90px;
+    max-width: 90px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -124,14 +148,14 @@ body {
     border: none;
     outline: none;
     color: #FFFFFF;
-    transition: width 160ms linear;
+    transition: max-width 160ms linear;
     overflow: hidden;
     cursor: pointer;
 }
 
 .navbar__search-btn>i {
     display: flex;
-    font-size: 18px;
+    font-size: 22px;
     color: inherit;
     margin-right: 12px;
     transition: color 160ms linear;
@@ -232,13 +256,11 @@ body {
 }
 
 .navbar__burger-btn>i {
-    width: 24px;
-    height: 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 16px;
+    font-size: 22px;
     color: inherit;
     margin-right: 12px;
 }
@@ -261,7 +283,7 @@ body {
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 100dvh;
+    height: 100vh;
     display: none;
     flex-direction: column;
     justify-content: space-between;
@@ -530,7 +552,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     padding: 24px 0px;
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
 }
 
@@ -761,7 +783,7 @@ body {
 
 .login__section {
     width: 100%;
-    height: 100dvh;
+    height: 100vh;
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     overflow: hidden;
@@ -2511,13 +2533,13 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
-    padding: 80px;
+    padding: 0px 0px 0px 12px;
     overflow-x: hidden;
     overflow-y: auto;
 }
 
 .teacher__modal-control {
-    position: absolute;
+    position: sticky;
     top: 0px;
     right: 0px;
 }
@@ -2530,8 +2552,9 @@ body {
     background-color: #133E72;
     outline: none;
     border: none;
+    opacity: 0.24;
     padding: 16px;
-    transition: background-color 160ms linear;
+    transition: opacity 160ms linear;
 }
 
 .teacher__modal-close>i {
@@ -2541,7 +2564,7 @@ body {
 }
 
 .teacher__modal-close:hover {
-    background-color: #0055CC;
+    opacity: 1;
 }
 
 .teacher__modal-heading {
@@ -2788,11 +2811,17 @@ body {
 }
 
 .latest-news__detail-title {
+    text-decoration: none;
     text-align: left;
     font-size: 16px;
     font-weight: 500;
     color: #222222;
     margin-bottom: 8px;
+    transition: color 160ms linear;
+}
+
+.latest-news__detail-title:hover{
+    color: #003E94;
 }
 
 .latest-news__detail-description {
@@ -4135,6 +4164,10 @@ body {
 .partner__logo {
     width: auto;
     height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .partner__link {
@@ -7023,7 +7056,7 @@ body {
         padding: 64px 96px;
     }
 
-    .header__navbar{
+    .header__navbar {
         padding-left: 96px;
     }
 
@@ -7037,7 +7070,7 @@ body {
         padding: 32px 48px;
     }
 
-    .header__navbar{
+    .header__navbar {
         padding-left: 48px;
     }
 
@@ -7051,7 +7084,7 @@ body {
         padding: 32px 24px;
     }
 
-    .header__navbar{
+    .header__navbar {
         padding-left: 24px;
     }
 
@@ -7065,7 +7098,7 @@ body {
         padding: 32px 12px;
     }
 
-    .header__navbar{
+    .header__navbar {
         padding-left: 12px;
     }
 
@@ -7079,7 +7112,7 @@ body {
         padding: 32px 12px;
     }
 
-    .header__navbar{
+    .header__navbar {
         padding-left: 12px;
     }
 
@@ -7088,57 +7121,91 @@ body {
     }
 
     .navbar__search {
-        padding: 30px 0px;
+        border: none;
+        padding: 16px;
     }
 
-    .navbar__search-btn-name{
+    .navbar__search-btn {
+        width: auto;
+    }
+
+    .navbar__search-btn-name {
         display: none;
     }
 
-    .navbar__search-btn>i{
+    .navbar__search-btn>i {
         margin: 0px;
     }
 
     .navbar__burger {
-        padding: 31px 0px;
+        padding: 16px;
     }
 
-    .navbar__burger-btn-name{
+    .navbar__burger-btn-name {
         display: none;
     }
 
-    .navbar__burger-btn>i{
+    .navbar__burger-btn>i {
         margin: 0px;
     }
 
 
-
-
-
-    .recent-post__item{
+    .recent-post__item {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .profession__list{
+    .profession__list {
         grid-template-columns: repeat(1, 1fr);
     }
 
 
-    .footer__grid-layout{
+
+    .footer{
+        padding: 32px 12px;
+    }
+
+    .footer__grid-layout {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .footer__copyright{
+    .footer__copyright {
         flex-direction: column;
     }
 
-    .footer__partners{
+    .footer__partners {
         width: 100%;
         height: auto;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .partner__logo {
+        justify-content: center;
+        align-items: center;
+    }
 
+    .document__list{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .teacher__list{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .teacher__modal{
+        grid-template-columns: 1fr;
+    }
+
+    .teacher__modal-detail{
+        order: -1;
+    }
+
+    .teacher__modal-control{
+        position: sticky;
+    }
+
+    .teacher__modal-detail{
+        padding: 0px 0px 12px 12px;
+    }
 
 }

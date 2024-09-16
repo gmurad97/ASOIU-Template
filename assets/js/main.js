@@ -10,7 +10,7 @@ $(document).ready(function () {
     if ($searchButton.length) {
         $searchButton.on("click", function () {
             $searchButton.css({
-                width: "0px"
+                maxWidth: "0px"
             });
             $inputContainer.css({
                 width: "380px"
@@ -24,7 +24,7 @@ $(document).ready(function () {
                 width: "0px"
             });
             $searchButton.css({
-                width: "90px"
+                maxWidth: "90px"
             });
         });
     }
@@ -98,7 +98,7 @@ $(document).ready(function () {
     /***************** NAVBAR MENU LOGICS - ENDED *****************/
 
     /***************** OWL-CAROUSEL-2 INITIALIZATION - START *****************/
-    var $carousel = $("#latest_news_carousel");
+    /* var $carousel = $("#latest_news_carousel"); */
 
 
     $("#latest_news_carousel").owlCarousel({
@@ -111,6 +111,34 @@ $(document).ready(function () {
             "<i class='ri-arrow-right-s-line'></i>",
         ],
         autoplay: false,
+        autoplayHoverPause: true,
+        responsive: {
+            1200: {
+                items: 4
+            },
+            992: {
+                items: 3
+            },
+            768: {
+                items: 2
+            },
+            576: {
+                items: 1
+            },
+            0: {
+                items: 1
+            }
+        }
+    });
+
+    $("#partners_owl_carousel").owlCarousel({
+        loop: true,
+        margin: 32,
+        nav: false,
+        items: 7,
+        autoplay: true,
+        autoplayTimeout: 2048,
+        smartSpeed: 512,
         autoplayHoverPause: true,
         responsive: {
             1200: {
@@ -131,42 +159,14 @@ $(document).ready(function () {
         }
     });
 
-    $("#partners_owl_carousel").owlCarousel({
-        loop: true,
-        margin: 32,
-        nav: false,
-        items: 7,
-        autoplay: true,
-        autoplayTimeout: 2048,
-        smartSpeed: 512,
-        autoplayHoverPause: true,
-        responsive: {
-            1200: {
-                items: 6
-            },
-            992: {
-                items: 3
-            },
-            768: {
-                items: 3
-            },
-            576: {
-                items: 2
-            },
-            0: {
-                items: 1
-            }
-        }
-    });
-
-    $("#about__carousel").owlCarousel({
-        items: 5, 
-        loop: true,
-        margin: 10,
-        nav: false,
-        dots: false,
-        autoplay: true
-    });
+    /*     $("#about__carousel").owlCarousel({
+            items: 5, 
+            loop: true,
+            margin: 10,
+            nav: false,
+            dots: false,
+            autoplay: true
+        }); */
 
     $("#projects_owl_carousel").owlCarousel({
         loop: true,
@@ -176,16 +176,23 @@ $(document).ready(function () {
         autoplay: true,
         autoplayTimeout: 2048,
         smartSpeed: 512,
+        rtl: true,
         autoplayHoverPause: true,
-        responsive:{
-            0:{
-                items:1
+        responsive: {
+            1200: {
+                items: 7
             },
-            600:{
-                items:3
+            992: {
+                items: 5
             },
-            1000:{
-                items:5
+            768: {
+                items: 3
+            },
+            576: {
+                items: 2
+            },
+            0: {
+                items: 1
             }
         }
     });
@@ -222,24 +229,24 @@ $(document).ready(function () {
 
 
 
-    
+
     /***************** FAQ DROPDOWN - START (new test algo)*****************/
     //не нужен проверочный код только количество,если кол-во нет то и цикла нет
     // Устанавливаем высоту для активных элементов на старте
-    $(".faq__list").each(function() {
+    $(".faq__list").each(function () {
         // Контекст конкретного блока FAQ
         var $faqList = $(this);
-    
+
         // Инициализация: раскрытие активных элементов
         $faqList.find(".faq__item.active .faq__answer").each(function () {
             $(this).css("max-height", $(this).prop("scrollHeight") + "px");
         });
-    
+
         // Обработка кликов на вопросах внутри конкретного списка FAQ
         $faqList.find(".faq__question").on("click", function () {
             var parentItem = $(this).parent();
             var answer = parentItem.find(".faq__answer");
-    
+
             // Если текущий элемент активен, то закрываем его
             if (parentItem.hasClass("active")) {
                 answer.css("max-height", "0px");
@@ -251,14 +258,14 @@ $(document).ready(function () {
                     otherAnswer.css("max-height", "0px");
                     $(this).removeClass("active");
                 });
-    
+
                 // Открываем текущий элемент
                 answer.css("max-height", answer.prop("scrollHeight") + "px");
                 parentItem.addClass("active");
             }
         });
     });
-    
+
     /***************** FAQ DROPDOWN - ENDED *****************/
 });
 
@@ -301,8 +308,8 @@ $('button[data-password-toggle]').on('click', function () {
 
 
 
- // Open modal when eye icon is clicked
- $('.teacher__social-link[data-modal]').on('click', function (event) {
+// Open modal when eye icon is clicked
+$('.teacher__social-link[data-modal]').on('click', function (event) {
     event.preventDefault();
 
     // Get the modal ID and show the modal
