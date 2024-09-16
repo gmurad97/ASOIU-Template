@@ -118,7 +118,7 @@ body {
     width: 90px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     background-color: transparent;
     border: none;
@@ -212,8 +212,8 @@ body {
 .navbar__burger {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     background-color: #101828;
     padding: 30px;
 }
@@ -221,7 +221,7 @@ body {
 .navbar__burger-btn {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     background-color: transparent;
     border: none;
@@ -4120,6 +4120,7 @@ body {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    gap: 32px;
 }
 
 .footer__partners {
@@ -7018,47 +7019,126 @@ body {
 
 
 @media screen and (min-width: 1200px) {
-    .section{
+    .section {
         padding: 64px 96px;
     }
 
-    .navbar__menu{
+    .header__navbar{
+        padding-left: 96px;
+    }
+
+    .navbar__menu {
         padding: 0px 96px;
     }
 }
 
 @media screen and (max-width: 1199px) and (min-width: 992px) {
-    .section{
+    .section {
         padding: 32px 48px;
     }
-    .navbar__menu{
+
+    .header__navbar{
+        padding-left: 48px;
+    }
+
+    .navbar__menu {
         padding: 0px 48px;
     }
 }
 
 @media screen and (max-width: 991px) and (min-width: 768px) {
-    .section{
+    .section {
         padding: 32px 24px;
     }
-    .navbar__menu{
+
+    .header__navbar{
+        padding-left: 24px;
+    }
+
+    .navbar__menu {
         padding: 0px 24px;
     }
 }
 
 @media screen and (max-width: 767px) and (min-width: 576px) {
-    .section{
+    .section {
         padding: 32px 12px;
     }
-    .navbar__menu{
+
+    .header__navbar{
+        padding-left: 12px;
+    }
+
+    .navbar__menu {
         padding: 0px 12px;
     }
 }
 
 @media screen and (max-width: 575px) {
-    .section{
+    .section {
         padding: 32px 12px;
     }
-    .navbar__menu{
+
+    .header__navbar{
+        padding-left: 12px;
+    }
+
+    .navbar__menu {
         padding: 0px 12px;
     }
+
+    .navbar__search {
+        padding: 30px 0px;
+    }
+
+    .navbar__search-btn-name{
+        display: none;
+    }
+
+    .navbar__search-btn>i{
+        margin: 0px;
+    }
+
+    .navbar__burger {
+        padding: 31px 0px;
+    }
+
+    .navbar__burger-btn-name{
+        display: none;
+    }
+
+    .navbar__burger-btn>i{
+        margin: 0px;
+    }
+
+
+
+
+
+    .recent-post__item{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .profession__list{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+    .footer__grid-layout{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer__copyright{
+        flex-direction: column;
+    }
+
+    .footer__partners{
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+
 }
