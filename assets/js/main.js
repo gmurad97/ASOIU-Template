@@ -107,23 +107,23 @@ $(document).ready(function () {
         nav: true,
         items: 3,
         navText: [
-            "<i class='fi fi-ts-angle-small-left'></i>",
-            "<i class='fi fi-ts-angle-small-right'></i>",
+            "<i class='ri-arrow-left-s-line'></i>",
+            "<i class='ri-arrow-right-s-line'></i>",
         ],
         autoplay: false,
         autoplayHoverPause: true,
         responsive: {
             1200: {
-                items: 4
+                items: 7
             },
             992: {
-                items: 3
+                items: 5
             },
             768: {
-                items: 2
+                items: 3
             },
             576: {
-                items: 1
+                items: 2
             },
             0: {
                 items: 1

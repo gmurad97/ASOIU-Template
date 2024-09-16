@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
-@import url(../icons/remixicon/remixicon.css);
+@import url("../icons/remixicon@4.3.0/remixicon.css");
 
 *,
 *::before,
@@ -269,7 +269,7 @@ body {
     background-color: rgba(0, 21, 40, 0.80);
     backdrop-filter: blur(8px);
     opacity: 1;
-    padding: 0px 80px;
+    padding: 0px 96px;
 }
 
 .menu__heading {
@@ -344,7 +344,7 @@ body {
 }
 
 .menu__container::-webkit-scrollbar {
-    height: 8px;
+    height: 4px;
     border-radius: 8px;
 }
 
@@ -365,11 +365,12 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    padding-bottom: 32px;
 }
 
 .menu__list {
     width: auto;
-    height: 396px;
+    height: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -407,7 +408,7 @@ body {
 
 .menu__item>i {
     display: flex;
-    font-size: 20px;
+    font-size: 32px;
     color: #B1B1B1;
 }
 
@@ -449,7 +450,7 @@ body {
 
 .menu__dropdown-list {
     width: auto;
-    height: 396px;
+    height: 100%;
     position: relative;
     flex-direction: column;
     justify-content: flex-start;
@@ -486,7 +487,7 @@ body {
 
 .menu__dropdown-item>i {
     display: flex;
-    font-size: 18px;
+    font-size: 28px;
     color: #B1B1B1;
 }
 
@@ -529,6 +530,23 @@ body {
     justify-content: flex-start;
     align-items: center;
     padding: 24px 0px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.menu__quick-links::-webkit-scrollbar {
+    height: 4px;
+    border-radius: 8px;
+}
+
+.menu__quick-links::-webkit-scrollbar-thumb {
+    background-color: #909090;
+    border-radius: 8px;
+}
+
+.menu__quick-links::-webkit-scrollbar-track {
+    background-color: #D9D9D9;
+    border-radius: 8px;
 }
 
 .quick-links__heading {
@@ -542,6 +560,7 @@ body {
 }
 
 .quick-links__title {
+    text-wrap: nowrap;
     font-size: 28px;
     font-weight: 400;
     line-height: 40px;
@@ -566,6 +585,7 @@ body {
 
 .quick-links__link {
     text-decoration: none;
+    text-wrap: nowrap;
     font-size: 24px;
     font-weight: 500;
     line-height: 36px;
@@ -610,7 +630,7 @@ body {
 
 .header__heading-description {
     max-width: 656px;
-    /* text-align: center; */
+    text-align: center;
     font-size: 18px;
     font-weight: 400;
     line-height: 26px;
@@ -678,7 +698,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 48px 80px;
+    padding: 64px 96px;
     overflow: hidden;
 }
 
@@ -1884,14 +1904,14 @@ body {
     line-height: 40px;
     color: #353535;
     user-select: none;
+    padding-right: 32px;
 }
 
 .faq__question>i {
     display: flex;
     transform: rotate(0deg);
-    font-size: 24px;
+    font-size: 42px;
     color: #353535;
-    padding: 24px;
     transition: transform 160ms linear;
 }
 
@@ -3992,7 +4012,7 @@ body {
     text-decoration: none;
 }
 
-.footer__section-icon-link>i[class^="fa"] {
+.footer__section-icon-link>i {
     width: 24px;
     height: 24px;
     display: flex;
@@ -4004,11 +4024,11 @@ body {
     transition: color 160ms linear;
 }
 
-.footer__section-icon-link:hover>i[class^="fa"] {
+.footer__section-icon-link:hover>i {
     color: #1570EF;
 }
 
-.footer__section-icon-link:not(:last-of-type)>i[class^="fa"] {
+.footer__section-icon-link:not(:last-of-type)>i {
     margin-right: 12px;
 }
 
@@ -6941,4 +6961,104 @@ body {
     font-weight: 400;
     font-size: 18px;
     float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1200px) {
+    .section{
+        padding: 64px 96px;
+    }
+
+    .navbar__menu{
+        padding: 0px 96px;
+    }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+    .section{
+        padding: 32px 48px;
+    }
+    .navbar__menu{
+        padding: 0px 48px;
+    }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    .section{
+        padding: 32px 24px;
+    }
+    .navbar__menu{
+        padding: 0px 24px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 576px) {
+    .section{
+        padding: 32px 12px;
+    }
+    .navbar__menu{
+        padding: 0px 12px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .section{
+        padding: 32px 12px;
+    }
+    .navbar__menu{
+        padding: 0px 12px;
+    }
 }

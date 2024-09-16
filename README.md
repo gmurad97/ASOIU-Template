@@ -2,7 +2,7 @@
 
 | Page Name                                        | Status  | Responsive |
 |--------------------------------------------------|---------|-------------|
-| Home(Index)                                      | ✅      | ❌          |
+| Home(Index)                                      | ✅      | ✅-development          |
 | Akademik fəaliyyət                               | ✅      | ❌          |
 | Haqqımızda                                       | ✅      | ❌          |
 | Fakültələr                                       | ✅      | ❌          |
