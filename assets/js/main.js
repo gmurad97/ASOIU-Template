@@ -159,14 +159,14 @@ $(document).ready(function () {
         }
     });
 
-    /*     $("#about__carousel").owlCarousel({
+        $("#about-carousel").owlCarousel({
             items: 5, 
             loop: true,
             margin: 10,
             nav: false,
             dots: false,
             autoplay: true
-        }); */
+        });
 
     $("#projects_owl_carousel").owlCarousel({
         loop: true,
@@ -272,7 +272,7 @@ $(document).ready(function () {
 new WOW().init(); // not if
 Fancybox.bind("[data-fancybox='laboratory']"); // not if
 Fancybox.bind("[data-fancybox='gallery']"); // not if
-Fancybox.bind("[data-fancybox='rest']"); // not if
+Fancybox.bind("[data-fancybox='summer_school_about_us']"); // not if
 Fancybox.bind("[data-fancybox='news']"); // not if
 
 

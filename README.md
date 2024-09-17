@@ -8,9 +8,9 @@
 | Fakültələr                                       | ✅      | ✅          |
 | Fakültə səhifəsi                                 | ✅      | ✅          |
 | Klublar                                          | ✅      | ✅          |
-| Tariximiz                                        | ✅      | ❌          |
+| Tariximiz                                        | ✅      | ✅          |
 | Rəsmi sənədlər                                   | ✅      | ✅          |
-| Kitabxana                                        | ✅      | ❌          |
+| Kitabxana                                        | ✅      | ✅          |
 | Beynəlxalq əlaqələr şöbəsi                       | ✅      | ✅          |
 | Tələbə Gənclər Təşkilatı                         | ✅      | ❌          |
 | Tədris metodiki şöbə                             | ✅      | ❌          |
@@ -26,7 +26,7 @@
 | Keyfiyyət təminatı                               | ✅      | ✅          |
 | İctimaiyyətlə Əlaqələr və Marketinq Departamenti | ✅      | ❌          |
 | Xeberler                                         | ✅      | ❌          |
-| Layihə Menecmenti Ofisi                          | ✅      | ❌          |
+| Layihə Menecmenti Ofisi                          | ✅      | ✅          |
 | ASOIU Summer School (About Us)                   | ✅      | ❌          |
 | ASOIU Summer School (Academic Programme)         | ✅      | ✅          |
 | ASOIU Summer School (Cultural Programme)         | ✅      | ❌          |
