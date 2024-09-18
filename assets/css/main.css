@@ -68,7 +68,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-left: 80px;
+    /* padding-left: 80px; */
     z-index: 512;
 }
 
@@ -228,13 +228,11 @@ body {
 }
 
 .navbar__burger-btn>i {
-    width: 24px;
-    height: 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 16px;
+    font-size: 18px;
     color: inherit;
     margin-right: 12px;
 }
@@ -526,7 +524,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     padding: 24px 0px;
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
 }
 
@@ -6971,12 +6969,14 @@ body {
     color: #000000;
     margin-bottom: 40px;
 }
-.student__committee-main-poster-description{
+
+.student__committee-main-poster-description {
     font-family: "DM Sans";
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
 }
+
 .student__committee-heading-description {
     font-family: "DM Sans";
     font-size: 18px;
@@ -6998,7 +6998,8 @@ body {
     height: auto;
     margin-bottom: 40px;
 }
-.student__committee-main-text{
+
+.student__committee-main-text {
     margin-bottom: 40px;
 }
 
@@ -7040,9 +7041,9 @@ body {
         padding: 64px 96px;
     }
 
-    .header__navbar {
+/*     .header__navbar {
         padding-left: 96px;
-    }
+    } */
 
     .navbar__menu {
         padding: 0px 96px;
@@ -7054,9 +7055,9 @@ body {
         padding: 32px 48px;
     }
 
-    .header__navbar {
+/*     .header__navbar {
         padding-left: 48px;
-    }
+    } */
 
     .navbar__menu {
         padding: 0px 48px;
@@ -7068,9 +7069,9 @@ body {
         padding: 32px 24px;
     }
 
-    .header__navbar {
+/*     .header__navbar {
         padding-left: 24px;
-    }
+    } */
 
     .navbar__menu {
         padding: 0px 24px;
@@ -7082,9 +7083,9 @@ body {
         padding: 32px 12px;
     }
 
-    .header__navbar {
+/*     .header__navbar {
         padding-left: 12px;
-    }
+    } */
 
     .navbar__menu {
         padding: 0px 12px;
@@ -7095,10 +7096,9 @@ body {
     .section {
         padding: 32px 12px;
     }
-
-    .header__navbar {
+/*     .header__navbar {
         padding-left: 12px;
-    }
+    } */
 
     .navbar__menu {
         padding: 0px 12px;
@@ -7196,7 +7196,7 @@ body {
 
 
 
-    
+
     /* login */
     .login__section {
         grid-template-columns: 1fr;

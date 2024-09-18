@@ -159,14 +159,14 @@ $(document).ready(function () {
         }
     });
 
-        $("#about-carousel").owlCarousel({
-            items: 5, 
-            loop: true,
-            margin: 10,
-            nav: false,
-            dots: false,
-            autoplay: true
-        });
+    $("#about-carousel").owlCarousel({
+        items: 5,
+        loop: true,
+        margin: 10,
+        nav: false,
+        dots: false,
+        autoplay: true
+    });
 
     $("#projects_owl_carousel").owlCarousel({
         loop: true,
