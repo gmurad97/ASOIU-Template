@@ -290,10 +290,8 @@ $('button[data-password-toggle]').on('click', function () {
     const type = passwordField.attr('type') === 'password' ? 'text' : 'password';
     passwordField.attr('type', type);
     // Переключаем иконку
-    $(this).find('i').toggleClass('fi-rr-eye fi-rr-eye-crossed');
+    $(this).find('i').toggleClass('ri-eye-fill ri-eye-off-fill');
 });
-
-
 
 
 

@@ -624,7 +624,7 @@ body {
 
 .header__heading-description {
     max-width: 656px;
-    text-align: center;
+    text-align: left;
     font-size: 18px;
     font-weight: 400;
     line-height: 26px;
@@ -2509,13 +2509,13 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
-    padding: 80px;
+    padding: 0px 0px 12px 12px;
     overflow-x: hidden;
     overflow-y: auto;
 }
 
 .teacher__modal-control {
-    position: absolute;
+    position: sticky;
     top: 0px;
     right: 0px;
 }
@@ -2526,10 +2526,11 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #133E72;
+    opacity: 0.32;
     outline: none;
     border: none;
     padding: 16px;
-    transition: background-color 160ms linear;
+    transition: opacity 160ms linear;
 }
 
 .teacher__modal-close>i {
@@ -2539,7 +2540,7 @@ body {
 }
 
 .teacher__modal-close:hover {
-    background-color: #0055CC;
+    opacity: 1;
 }
 
 .teacher__modal-heading {
@@ -2954,7 +2955,7 @@ body {
     margin-bottom: 12px;
 }
 
-.register-quick-transition__name {
+.register-quick-transition__btn-name {
     font-size: 18px;
     font-weight: 400;
     line-height: 26px;
@@ -3535,7 +3536,7 @@ body {
     color: #101214;
 }
 
-.faculty__link>[class^="fi"] {
+.faculty__link>i {
     display: flex;
     font-size: 32px;
     color: inherit;
@@ -7041,7 +7042,7 @@ body {
         padding: 64px 96px;
     }
 
-/*     .header__navbar {
+    /*     .header__navbar {
         padding-left: 96px;
     } */
 
@@ -7055,7 +7056,7 @@ body {
         padding: 32px 48px;
     }
 
-/*     .header__navbar {
+    /*     .header__navbar {
         padding-left: 48px;
     } */
 
@@ -7069,7 +7070,7 @@ body {
         padding: 32px 24px;
     }
 
-/*     .header__navbar {
+    /*     .header__navbar {
         padding-left: 24px;
     } */
 
@@ -7083,7 +7084,7 @@ body {
         padding: 32px 12px;
     }
 
-/*     .header__navbar {
+    /*     .header__navbar {
         padding-left: 12px;
     } */
 
@@ -7096,7 +7097,8 @@ body {
     .section {
         padding: 32px 12px;
     }
-/*     .header__navbar {
+
+    /*     .header__navbar {
         padding-left: 12px;
     } */
 
@@ -7184,9 +7186,9 @@ body {
         order: -1;
     }
 
-    .teacher__modal-control {
+/*     .teacher__modal-control {
         position: sticky;
-    }
+    } */
 
     .teacher__modal-detail {
         padding: 0px 0px 12px 12px;
@@ -7219,7 +7221,7 @@ body {
 
     }
 
-    .faculty__link>i[class^="fi"] {
+    .faculty__link>i {
         margin-right: 0px;
     }
 
