@@ -5,29 +5,110 @@ $(document).ready(function () {
     var $closeInputContainerButton = $("#navbar_search_close_btn");
     var $menuBurgerButton = $("#navbar_burger_btn");
     var $navbarMenu = $("#navbar_menu");
+    var $navbarNavigation = $(".navbar__navigation");
     var $navbarMenuCloseButton = $("#navbar_menu_close_btn");
+    var $bdish = $(".navbar__logo"); // Логотип
+    var $navbarSearch = $(".navbar__search"); // Родительский контейнер навигации
+
+
+    var initialLogoWidth = $bdish.outerWidth(); // Изначальная ширина логотипа
+    var initialLogoMargin = $bdish.css('margin-left'); // Изначальный margin логотипа
 
     if ($searchButton.length) {
         $searchButton.on("click", function () {
-            $searchButton.css({
-                maxWidth: "0px"
+            // Скрыть логотип
+            $bdish.css({
+                width: "0px",
+                marginLeft: "0px",
             });
+
+            $navbarSearch.css({
+                window: "100%",
+            });
+
+
+            // Расширить форму поиска на всю ширину
             $inputContainer.css({
-                width: "380px"
+                width: "100%" // Устанавливаем ширину формы на 100%
+            });
+
+            // Убедиться, что родительский контейнер навигации тоже занимает всю ширину
+            $navbarNavigation.css({
+                width: "100%" // Устанавливаем ширину навигационного контейнера на 100%
+            });
+
+            // Скрыть саму кнопку поиска
+            $searchButton.css({
+                width: "0px"
             });
         });
     }
 
     if ($closeInputContainerButton.length) {
         $closeInputContainerButton.on("click", function () {
+            // Показать логотип обратно
+            $bdish.css({
+                width: "175px",
+                marginLeft: initialLogoMargin
+            });
+
+
+            $navbarNavigation.css({
+                width: "0%" // Устанавливаем ширину навигационного контейнера на 100%
+            });
+
+            // Свернуть форму поиска обратно
             $inputContainer.css({
                 width: "0px"
             });
+
+            // Вернуть кнопку поиска к исходной ширине
             $searchButton.css({
-                maxWidth: "90px"
+                width: "90px"
             });
         });
     }
+
+
+    /*     if ($searchButton.length) {
+            $searchButton.on("click", function () {
+                $searchButton.css({
+                    width: "0px"
+                });
+                $inputContainer.css({
+                    width: "380px"
+                });
+            });
+        }
+        if ($searchButton.length) {
+            $searchButton.on("click", function () {
+                $searchButton.css({
+                    width: "0px"
+                });
+                $inputContainer.css({
+                    width: "380px"
+                });
+            });
+        }
+     */
+    /*     if ($closeInputContainerButton.length) {
+            $closeInputContainerButton.on("click", function () {
+                $inputContainer.css({
+                    width: "0px"
+                });
+                $searchButton.css({
+                    width: "90px"
+                });
+            });
+        } */
+
+
+
+
+
+
+
+
 
     if ($menuBurgerButton.length) {
         $menuBurgerButton.on("click", function () {
@@ -105,6 +186,7 @@ $(document).ready(function () {
         loop: true,
         margin: 30,
         nav: true,
+        dots: false,
         items: 3,
         navText: [
             "<i class='ri-arrow-left-s-line'></i>",
@@ -266,7 +348,56 @@ $(document).ready(function () {
         });
     });
 
+
     /***************** FAQ DROPDOWN - ENDED *****************/
+
+
+    // Размер таблицы
+    const rows = 16;
+    const cols = 16;
+
+    // Создаем таблицу
+    for (let i = 0; i <= rows; i++) {
+        let row = '<tr>';
+        for (let j = 0; j <= cols; j++) {
+            if (i === 0 && j === 0) {
+                // Верхний левый угол, пустой
+                row += '<th></th>';
+            } else if (i === 0) {
+                // Верхние цифры (номера колонок)
+                row += `<th class="col-header">${j}</th>`;
+            } else if (j === 0) {
+                // Левые цифры (номера рядов)
+                row += `<th class="row-header">${i}</th>`;
+            } else {
+                // Заполняем ячейки цифрами от 1 до 16 и добавляем класс "filled" или "empty"
+                let cellClass = (Math.random() > 0.7) ? 'filled' : 'empty'; // Рандомно выбираем занятость
+                let cellContent = cellClass === 'filled' ? '<i class="ri-close-circle-fill"></i>' : j; // Иконка для занятых мест
+                row += `<td class="${cellClass}" data-row="${i}" data-col="${j}">${cellContent}</td>`;
+            }
+        }
+        row += '</tr>';
+        $('#reservationTable').append(row);
+    }
+
+    // Клик по ячейке
+    $('#reservationTable').on('click', 'td', function () {
+        // Проверяем, занята ли ячейка
+        if ($(this).hasClass('filled')) {
+            return; // Если занята, ничего не делаем
+        }
+
+        // Если ячейка не занята, сбрасываем выделение с других ячеек
+        $('#reservationTable td.selected').removeClass('selected');
+
+        // Устанавливаем новую выбранную ячейку
+        $(this).addClass('selected');
+
+        // Обновляем скрытый инпут значением выбранной ячейки
+        let row = $(this).data('row');
+        let col = $(this).data('col');
+        $('#selectedCell').val(`${row}-${col}`);
+    });
 });
 
 new WOW().init(); // not if
@@ -274,8 +405,6 @@ Fancybox.bind("[data-fancybox='laboratory']"); // not if
 Fancybox.bind("[data-fancybox='gallery']"); // not if
 Fancybox.bind("[data-fancybox='summer_school_about_us']"); // not if
 Fancybox.bind("[data-fancybox='news']"); // not if
-
-
 
 
 
@@ -292,14 +421,6 @@ $('button[data-password-toggle]').on('click', function () {
     // Переключаем иконку
     $(this).find('i').toggleClass('ri-eye-fill ri-eye-off-fill');
 });
-
-
-
-
-
-
-
-
 
 
 

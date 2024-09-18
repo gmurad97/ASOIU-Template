@@ -68,13 +68,13 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* padding-left: 80px; */
     z-index: 512;
 }
 
 .navbar__logo {
     width: 175px;
     height: 30px;
+    margin-left: 96px;
     overflow: hidden;
 }
 
@@ -95,19 +95,24 @@ body {
 .navbar__navigation {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: flex-end;
+    align-items: stretch;
+    transition: width 160ms linear;
 }
 
 .navbar__search {
+    width: 100%;
+    min-width: 151px;
+    height: auto;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
     background-color: #101828;
     border-right: 1px solid #464646;
     padding: 30px;
     overflow: hidden;
+    transition: width 160ms linear;
 }
 
 .navbar__search-btn {
@@ -624,7 +629,7 @@ body {
 
 .header__heading-description {
     max-width: 656px;
-    text-align: left;
+    text-align: center;
     font-size: 18px;
     font-weight: 400;
     line-height: 26px;
@@ -2086,7 +2091,7 @@ body {
 
 .profession__detail-link>i {
     display: flex;
-    font-size: 24px;
+    font-size: 32px;
     color: inherit;
     margin-right: 12px;
 }
@@ -2787,15 +2792,23 @@ body {
 }
 
 .latest-news__detail-title {
+    text-decoration: none;
     text-align: left;
     font-size: 16px;
     font-weight: 500;
     color: #222222;
+    line-height: 26px;
     margin-bottom: 8px;
+    transition: color 160ms linear;
+}
+
+.latest-news__detail-title:hover {
+    color: #1570EF;
 }
 
 .latest-news__detail-description {
     font-size: 14px;
+    line-height: 22px;
     color: #464646;
 }
 
@@ -2986,11 +2999,23 @@ body {
 }
 
 .section__suggestion-heading-title {
-    /* Styles for the heading title */
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: left;
+    color: #101828;
 }
 
 .section__suggestion-heading-description {
-    /* Styles for the heading description */
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+    color: #667085;
+}
+
+.section__suggestion-heading-description{
+    margin-bottom: 16px;
 }
 
 .section__suggestion-form-container {
@@ -4600,6 +4625,184 @@ body {
 .about__video-wrapper {
     margin-top: 80px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.act__zal {
+    width: 100%;
+    display: grid;
+    gap: 64px;
+    grid-template-columns: 1fr 2fr;
+}
+
+.act__zal-reservation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.act__zal-reservation-heading {
+    margin-bottom: 30px;
+}
+
+.act__zal-reservation-heading-title {
+    font-size: 46px;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    color: #000000;
+}
+
+.reservation__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1A2232;
+}
+
+.reservation__grid {
+    margin: 20px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 8px;
+    /* Расстояние между ячейками */
+}
+
+td,
+th {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 6px;
+    /* Скругление углов */
+    cursor: pointer;
+    color: #fff;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.empty {
+    background-color: #2A2D3E;
+}
+
+.filled {
+    background-color: #3E3E4E;
+}
+
+.selected {
+    background-color: #4666FF;
+}
+
+.empty_legend {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2A2D3E;
+}
+
+.filled_legend {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #3E3E4E;
+}
+
+.selected_legend {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #4666FF;
+}
+
+.legend {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.legend__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.reservation__cell {
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    background-color: #2A2D3E;
+}
+
+.legend__item-title {
+    font-size: 12px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+/* Стили для номеров рядов и столбцов */
+.row-header,
+.col-header {
+    background-color: transparent;
+    cursor: default;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7102,6 +7305,18 @@ body {
         padding-left: 12px;
     } */
 
+    .navbar__logo {
+        margin-left: 12px;
+    }
+
+    .navbar__logo {
+        margin-left: 12px;
+    }
+
+    .header__heading-title {
+        font-size: 56px;
+    }
+
     .navbar__menu {
         padding: 0px 12px;
     }
@@ -7109,6 +7324,7 @@ body {
     .navbar__search {
         border: none;
         padding: 16px;
+        min-width: 50px;
     }
 
     .navbar__search-btn {
@@ -7186,7 +7402,7 @@ body {
         order: -1;
     }
 
-/*     .teacher__modal-control {
+    /*     .teacher__modal-control {
         position: sticky;
     } */
 
