@@ -7,17 +7,17 @@ $(document).ready(function () {
     var $navbarMenu = $("#navbar_menu");
     var $navbarNavigation = $(".navbar__navigation");
     var $navbarMenuCloseButton = $("#navbar_menu_close_btn");
-    var $bdish = $(".navbar__logo"); // Логотип
+    var $logo = $(".navbar__logo"); // Логотип
     var $navbarSearch = $(".navbar__search"); // Родительский контейнер навигации
 
 
-    var initialLogoWidth = $bdish.outerWidth(); // Изначальная ширина логотипа
-    var initialLogoMargin = $bdish.css('margin-left'); // Изначальный margin логотипа
+    var initialLogoWidth = $logo.outerWidth(); // Изначальная ширина логотипа
+    var initialLogoMargin = $logo.css('margin-left'); // Изначальный margin логотипа
 
     if ($searchButton.length) {
         $searchButton.on("click", function () {
             // Скрыть логотип
-            $bdish.css({
+            $logo.css({
                 width: "0px",
                 marginLeft: "0px",
             });
@@ -47,7 +47,7 @@ $(document).ready(function () {
     if ($closeInputContainerButton.length) {
         $closeInputContainerButton.on("click", function () {
             // Показать логотип обратно
-            $bdish.css({
+            $logo.css({
                 width: "175px",
                 marginLeft: initialLogoMargin
             });
@@ -247,7 +247,24 @@ $(document).ready(function () {
         margin: 10,
         nav: false,
         dots: false,
-        autoplay: true
+        autoplay: true,
+        responsive: {
+            1200: {
+                items: 7
+            },
+            992: {
+                items: 5
+            },
+            768: {
+                items: 3
+            },
+            576: {
+                items: 2
+            },
+            0: {
+                items: 1
+            }
+        }
     });
 
     $("#projects_owl_carousel").owlCarousel({
