@@ -32,7 +32,19 @@ $(document).ready(function () {
                 width: "100%" // Устанавливаем ширину формы на 100%
             });
 
-            // Убедиться, что родительский контейнер навигации тоже занимает всю ширину
+            if ($(window).width() >= 575) {
+                $navbarNavigation.css({
+                    maxWidth: "512px" // Ширина 100% для экранов <= 524px
+                });
+                $logo.css({
+                    width: "175px",
+                    marginLeft: initialLogoMargin,
+                });
+            }
+
+            
+
+
             $navbarNavigation.css({
                 width: "100%" // Устанавливаем ширину навигационного контейнера на 100%
             });
@@ -153,29 +165,37 @@ $(document).ready(function () {
         var $this = $(this);
         var targetId = $this.data("dropdown-observed");
         var $dropdown = $("#" + targetId);
+        // Удаляем класс active со всех элементов
         $(".menu a").removeClass("active");
+        
         if ($dropdown.is(":visible")) {
             $dropdown.hide();
+            $this.removeClass("active"); // Убираем класс active при повторном нажатии
         } else {
             $(".menu__dropdown").hide();
             $(".menu__dropdown-list ul").hide();
             $dropdown.show();
+            $this.addClass("active"); // Добавляем класс active
         }
-        $this.addClass("active");
     });
-
+    
     $(".menu").on("click", ".menu__dropdown-link[data-dropdown-observed]", function (event) {
         event.preventDefault();
         var $this = $(this);
         var targetId = $this.data("dropdown-observed");
         var $dropdown = $("#" + targetId);
+        // Удаляем класс active со всех ссылок
         $(".menu__dropdown-link").removeClass("active");
-        if ($dropdown.is(":visible"))
+    
+        if ($dropdown.is(":visible")) {
             $dropdown.hide();
-        else
+            $this.removeClass("active"); // Убираем класс active при повторном нажатии
+        } else {
             $dropdown.show();
-        $this.addClass("active");
+            $this.addClass("active"); // Добавляем класс active
+        }
     });
+    
     /***************** NAVBAR MENU LOGICS - ENDED *****************/
 
     /***************** OWL-CAROUSEL-2 INITIALIZATION - START *****************/
