@@ -1,6 +1,44 @@
+$(document).ready(function(){
+    /***************** NAVBAR SEARCH & MENU BUTTONS - BEGIN *****************/
+    /***************** NAVBAR SEARCH & MENU BUTTONS - ENDED *****************/
+
+    /***************** NAVBAR MENU LOGICS - BEGIN *****************/
+    /***************** NAVBAR MENU LOGICS - ENDED *****************/
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $(document).ready(function () {
     // Скрываем все подменю по умолчанию
     $('.menu-mobile__dropdown-list').hide();
+
+    // Инициализация активных меню при загрузке страницы
+    $('.menu-mobile__link.active').each(function () {
+        var $submenu = $(this).next('.menu-mobile__dropdown-list');
+
+        // Открываем текущее подменю, если оно существует
+        if ($submenu.length) {
+            $submenu.show(); // Открываем подменю без анимации
+        }
+
+        // Раскрываем все родительские подменю, если это вложенное меню
+        $(this).parents('.menu-mobile__dropdown-list').show(); // Открываем все родительские подменю
+    });
 
     // Обработчик клика по элементу с подменю
     $('.menu-mobile__item > a').on('click', function (e) {
@@ -9,17 +47,32 @@ $(document).ready(function () {
         // Получаем текущее подменю
         var $submenu = $(this).next('.menu-mobile__dropdown-list');
         var $icon = $(this).find('i'); // Иконка внутри ссылки
+        var $currentLink = $(this); // Текущий элемент Link (a)
 
         // Если текущий элемент - верхнего уровня (нет родительского dropdown-list)
         if (!$(this).parents('.menu-mobile__dropdown-list').length) {
             // Закрываем все подменю верхнего уровня, кроме того, на которое кликаем
             $('.menu-mobile__dropdown-list').not($submenu).slideUp(160);
             $('.menu-mobile__link > i').not($icon).css('transform', 'rotate(0deg)'); // Возвращаем другие иконки в исходное положение
+
+            // Удаляем класс active со всех ссылок верхнего уровня
+            $('.menu-mobile__link').removeClass('active');
         }
 
         // Показать или скрыть текущее подменю
         if ($submenu.length) {
+            // Если подменю открыто, закрываем его и все вложенные подменю
+            if ($submenu.is(':visible')) {
+                $submenu.find('.menu-mobile__dropdown-list').slideUp(160); // Закрываем все вложенные подменю
+                // Убираем класс active у всех вложенных ссылок
+                $submenu.find('.menu-mobile__link').removeClass('active');
+            }
+
+            // Показать или скрыть текущее подменю
             $submenu.slideToggle(160);
+
+            // Добавляем/удаляем класс active для текущего элемента Link
+            $currentLink.toggleClass('active');
 
             // Проверяем текущее состояние иконки и изменяем угол поворота
             if ($icon.css('transform') === 'none' || $icon.css('transform') === 'matrix(1, 0, 0, 1, 0, 0)') {
@@ -45,11 +98,7 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
-    /***************** NAVBAR SEARCH & MENU BUTTONS - BEGIN *****************/
-    /***************** NAVBAR SEARCH & MENU BUTTONS - ENDED *****************/
 
-    /***************** NAVBAR MENU LOGICS - BEGIN *****************/
-    /***************** NAVBAR MENU LOGICS - ENDED *****************/
 
 
 
@@ -222,41 +271,62 @@ $(document).ready(function () {
 
 
     /***************** NAVBAR MENU LOGICS - START *****************/
-    $("#menu").on("click", "a[data-dropdown-observed]", function (event) {
-        event.preventDefault();
-        var $this = $(this);
-        var targetId = $this.data("dropdown-observed");
-        var $dropdown = $("#" + targetId);
-        // Удаляем класс active со всех элементов
-        $(".menu a").removeClass("active");
-
-        if ($dropdown.is(":visible")) {
-            $dropdown.hide();
-            $this.removeClass("active"); // Убираем класс active при повторном нажатии
-        } else {
-            $(".menu__dropdown").hide();
-            $(".menu__dropdown-list ul").hide();
-            $dropdown.show();
-            $this.addClass("active"); // Добавляем класс active
-        }
+    $(document).ready(function () {
+        // Инициализация активных меню при загрузке страницы
+        $(".menu__link.active, .menu__dropdown-link.active").each(function () {
+            var $this = $(this);
+            var targetId = $this.data("dropdown-observed");
+            var $dropdown = $("#" + targetId);
+    
+            // Если есть вложенное меню, показываем его
+            if ($dropdown.length) {
+                $dropdown.show(); // Открываем меню
+            }
+    
+            // Открываем все родительские dropdown, если это вложенный элемент
+            $this.parents('.menu__dropdown').show();
+        });
+    
+        // Обработчик клика по элементам с data-dropdown-observed
+        $("#menu").on("click", "a[data-dropdown-observed]", function (event) {
+            event.preventDefault();
+            var $this = $(this);
+            var targetId = $this.data("dropdown-observed");
+            var $dropdown = $("#" + targetId);
+            
+            // Удаляем класс active со всех элементов
+            $(".menu a").removeClass("active");
+    
+            if ($dropdown.is(":visible")) {
+                $dropdown.hide();
+                $this.removeClass("active"); // Убираем класс active при повторном нажатии
+            } else {
+                $(".menu__dropdown").hide();
+                $(".menu__dropdown-list ul").hide();
+                $dropdown.show();
+                $this.addClass("active"); // Добавляем класс active
+            }
+        });
+    
+        $(".menu").on("click", ".menu__dropdown-link[data-dropdown-observed]", function (event) {
+            event.preventDefault();
+            var $this = $(this);
+            var targetId = $this.data("dropdown-observed");
+            var $dropdown = $("#" + targetId);
+    
+            // Удаляем класс active со всех ссылок
+            $(".menu__dropdown-link").removeClass("active");
+    
+            if ($dropdown.is(":visible")) {
+                $dropdown.hide();
+                $this.removeClass("active"); // Убираем класс active при повторном нажатии
+            } else {
+                $dropdown.show();
+                $this.addClass("active"); // Добавляем класс active
+            }
+        });
     });
-
-    $(".menu").on("click", ".menu__dropdown-link[data-dropdown-observed]", function (event) {
-        event.preventDefault();
-        var $this = $(this);
-        var targetId = $this.data("dropdown-observed");
-        var $dropdown = $("#" + targetId);
-        // Удаляем класс active со всех ссылок
-        $(".menu__dropdown-link").removeClass("active");
-
-        if ($dropdown.is(":visible")) {
-            $dropdown.hide();
-            $this.removeClass("active"); // Убираем класс active при повторном нажатии
-        } else {
-            $dropdown.show();
-            $this.addClass("active"); // Добавляем класс active
-        }
-    });
+    
 
     /***************** NAVBAR MENU LOGICS - ENDED *****************/
 
