@@ -1,4 +1,67 @@
 $(document).ready(function () {
+    // Скрываем все подменю по умолчанию
+    $('.menu-mobile__dropdown-list').hide();
+
+    // Обработчик клика по элементу с подменю
+    $('.menu-mobile__item > a').on('click', function (e) {
+        e.preventDefault();
+
+        // Получаем текущее подменю
+        var $submenu = $(this).next('.menu-mobile__dropdown-list');
+        var $icon = $(this).find('i'); // Иконка внутри ссылки
+
+        // Если текущий элемент - верхнего уровня (нет родительского dropdown-list)
+        if (!$(this).parents('.menu-mobile__dropdown-list').length) {
+            // Закрываем все подменю верхнего уровня, кроме того, на которое кликаем
+            $('.menu-mobile__dropdown-list').not($submenu).slideUp(160);
+            $('.menu-mobile__link > i').not($icon).css('transform', 'rotate(0deg)'); // Возвращаем другие иконки в исходное положение
+        }
+
+        // Показать или скрыть текущее подменю
+        if ($submenu.length) {
+            $submenu.slideToggle(160);
+
+            // Проверяем текущее состояние иконки и изменяем угол поворота
+            if ($icon.css('transform') === 'none' || $icon.css('transform') === 'matrix(1, 0, 0, 1, 0, 0)') {
+                $icon.css({
+                    'transform': 'rotate(-180deg)',
+                    'transition': 'transform 0.3s ease'
+                });
+            } else {
+                $icon.css({
+                    'transform': 'rotate(0deg)',
+                    'transition': 'transform 0.3s ease'
+                });
+            }
+        }
+    });
+});
+
+
+
+
+
+
+
+
+$(document).ready(function () {
+    /***************** NAVBAR SEARCH & MENU BUTTONS - BEGIN *****************/
+    /***************** NAVBAR SEARCH & MENU BUTTONS - ENDED *****************/
+
+    /***************** NAVBAR MENU LOGICS - BEGIN *****************/
+    /***************** NAVBAR MENU LOGICS - ENDED *****************/
+
+
+
+
+
+
+
+
+
+
+
+
     /***************** NAVBAR SEARCH & MENU BUTTONS - START *****************/
     var $searchButton = $("#navbar_search_btn");
     var $inputContainer = $("#navbar_search_input_container");
@@ -42,7 +105,7 @@ $(document).ready(function () {
                 });
             }
 
-            
+
 
 
             $navbarNavigation.css({
@@ -158,7 +221,6 @@ $(document).ready(function () {
 
 
 
-
     /***************** NAVBAR MENU LOGICS - START *****************/
     $("#menu").on("click", "a[data-dropdown-observed]", function (event) {
         event.preventDefault();
@@ -167,7 +229,7 @@ $(document).ready(function () {
         var $dropdown = $("#" + targetId);
         // Удаляем класс active со всех элементов
         $(".menu a").removeClass("active");
-        
+
         if ($dropdown.is(":visible")) {
             $dropdown.hide();
             $this.removeClass("active"); // Убираем класс active при повторном нажатии
@@ -178,7 +240,7 @@ $(document).ready(function () {
             $this.addClass("active"); // Добавляем класс active
         }
     });
-    
+
     $(".menu").on("click", ".menu__dropdown-link[data-dropdown-observed]", function (event) {
         event.preventDefault();
         var $this = $(this);
@@ -186,7 +248,7 @@ $(document).ready(function () {
         var $dropdown = $("#" + targetId);
         // Удаляем класс active со всех ссылок
         $(".menu__dropdown-link").removeClass("active");
-    
+
         if ($dropdown.is(":visible")) {
             $dropdown.hide();
             $this.removeClass("active"); // Убираем класс active при повторном нажатии
@@ -195,7 +257,7 @@ $(document).ready(function () {
             $this.addClass("active"); // Добавляем класс active
         }
     });
-    
+
     /***************** NAVBAR MENU LOGICS - ENDED *****************/
 
     /***************** OWL-CAROUSEL-2 INITIALIZATION - START *****************/
