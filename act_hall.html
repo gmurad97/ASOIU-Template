@@ -302,10 +302,10 @@
     </header>
     <main class="main">
         <section class="section">
-            <section class="act__zal">
-                <div class="act__zal-reservation">
-                    <div class="act__zal-reservation-heading">
-                        <h1 class="act__zal-reservation-heading-title">
+            <section class="section__act-hall">
+                <div class="act-hall__reservation">
+                    <div class="act-hall__reservation-heading">
+                        <h1 class="act-hall__reservation-heading-title">
                             Qeydiyyat
                         </h1>
                     </div>
@@ -326,55 +326,55 @@
                             <label for="fin" class="form-label">Fin</label>
                             <input type="text" class="form-control" id="fin">
                         </div>
-                        <div class="row mb-3 position-relative">
+                        <div class="row mb-3">
                             <label for="fakulte" class="form-label">Fakültə/Əməkdaş</label>
-                            <div class="input__wrapper">
+                            <div class="input__wrapper p-0">
                                 <input type="text" class="form-control" id="fakulte">
                                 <button type="button" class="input__wrapper-btn">
-                                    <i class="fi fi-ts-users input-icon"></i>
+                                    <i class="ri-group-line"></i>
                                 </button>
                             </div>
                         </div>
-                        <div class="mb-3">
+                        <div class="row mb-3">
                             <label for="exampleInputEmail1" class="form-label">Email address</label>
                             <input type="email" class="form-control" id="exampleInputEmail1">
                         </div>
-                        <div class="mb-3">
+                        <div class="row mb-3">
                             <label for="exampleInputEmail2" class="form-label">Email address</label>
                             <input type="email" class="form-control" id="exampleInputEmail2"
                                 aria-describedby="emailHelp">
                             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                         </div>
-                        <div class="mb-3">
+                        <div class="row mb-3">
                             <label for="exampleInputEmail3" class="form-label">Email address</label>
                             <input type="email" class="form-control" id="exampleInputEmail3"
                                 aria-describedby="emailHelp">
                             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                         </div>
-                        <input type="hidden" id="selectedCell" name="selectedCell">
+                        <input type="hidden" id="reservation_selected_cell" name="selectedCell">
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
-                <div class="reservation__wrapper">
-                    <div class="reservation__grid">
-                        <table id="reservationTable">
-
+                <div class="reservation__container">
+                    <div class="reservation__table-wrapper">
+                        <table id="reservation_table" data-rows-count="16" data-column-count="16"
+                            data-filled="1-10,2-5,3-12,5-6">
                         </table>
                     </div>
-                    <div class="legend">
+                    <div class="reservation__legend">
                         <div class="legend__item">
-                            <div class="empty_legend"></div>
-                            <span class="legend__item-title">Пусто</span>
+                            <div class="legend__empty"></div>
+                            <span class="legend__item-title">Boş</span>
                         </div>
-                        <div class=" legend__item">
-                            <div class="filled_legend">
-                                <i class="ri-close-circle-fill"></i>
+                        <div class="legend__item">
+                            <div class="legend__filled">
+                                <i class="ri-close-large-line"></i>
                             </div>
-                            <span class="legend__item-title">Занято</span>
+                            <span class="legend__item-title">Dolu</span>
                         </div>
                         <div class="legend__item">
-                            <div class="selected_legend"></div>
-                            <span class="legend__item-title">Выбрано</span>
+                            <div class="legend__selected"></div>
+                            <span class="legend__item-title">Seçilmiş</span>
                         </div>
                     </div>
                 </div>

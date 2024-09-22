@@ -378,11 +378,11 @@ body {
     padding-left: 16px;
 }
 
-.menu-mobile__item:not(:last-of-type){
+.menu-mobile__item:not(:last-of-type) {
     margin-bottom: 16px;
 }
 
-.menu-mobile__dropdown-list .menu-mobile__item:first-child{
+.menu-mobile__dropdown-list .menu-mobile__item:first-child {
     margin-top: 16px;
 }
 
@@ -399,7 +399,7 @@ body {
     color: #FFFFFF;
 }
 
-.menu-mobile__link.active .menu-mobile__link-name{
+.menu-mobile__link.active .menu-mobile__link-name {
     text-decoration-line: underline;
     text-underline-offset: 10px;
     color: #FFFFFF;
@@ -945,6 +945,8 @@ body {
 }
 
 .input__wrapper {
+    width: 100%;
+    height: auto;
     position: relative;
 }
 
@@ -4888,108 +4890,100 @@ body {
 
 
 
-
-.act__zal {
+.section__act-hall {
     width: 100%;
+    height: auto;
     display: grid;
     gap: 64px;
     grid-template-columns: 1fr 2fr;
 }
 
-.act__zal-reservation {
+.act-hall__reservation {
     width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
 }
 
-.act__zal-reservation-heading {
-    margin-bottom: 30px;
+.act-hall__reservation-heading {
+    margin-bottom: 32px;
 }
 
-.act__zal-reservation-heading-title {
-    font-size: 46px;
+.act-hall__reservation-heading-title {
+    font-size: 32px;
     font-family: "Playfair Display", serif;
     font-weight: 600;
     color: #000000;
 }
 
-.reservation__wrapper {
+.reservation__container {
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #1A2232;
+    border-radius: 4px;
 }
 
-.reservation__grid {
+.reservation__table-wrapper {
     margin: 20px;
 }
 
-table {
+#reservation_table {
     border-collapse: separate;
     border-spacing: 8px;
-    /* Расстояние между ячейками */
 }
 
-td,
-th {
+#reservation_table td,
+#reservation_table th {
     width: 30px;
     height: 30px;
     text-align: center;
     vertical-align: middle;
-    border-radius: 6px;
-    /* Скругление углов */
+    border-radius: 8px;
     cursor: pointer;
     color: #fff;
     padding: 0;
     box-sizing: border-box;
     font-size: 14px;
+    overflow: hidden;
 }
 
-.empty {
-    background-color: #2A2D3E;
+#reservation_table td.empty {
+    background-color: #253554;
 }
 
-.filled {
+#reservation_table td.filled {
     background-color: #3E3E4E;
 }
 
-.selected {
+.reservation__filled-cell {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #253554;
+}
+
+.reservation__filled-cell>i {
+    display: flex;
+    background-color: #1F293D;
+    border-radius: 50%;
+    font-size: 8px;
+    color: #637394;
+    padding: 6px;
+}
+
+#reservation_table td.selected {
     background-color: #4666FF;
 }
 
-.empty_legend {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #2A2D3E;
-}
-
-.filled_legend {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #3E3E4E;
-}
-
-.selected_legend {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #4666FF;
-}
-
-.legend {
+.reservation__legend {
     display: flex;
     gap: 20px;
     margin-top: 20px;
@@ -5001,29 +4995,52 @@ th {
     gap: 10px;
 }
 
-.reservation__cell {
-    width: 30px;
-    height: 30px;
-    border-radius: 6px;
-    background-color: #2A2D3E;
+.legend__empty {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #222E46;
+    border-radius: 50%;
+}
+
+.legend__filled {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1F293D;
+    border-radius: 50%;
+}
+
+.legend__filled>i {
+    display: flex;
+    font-size: 8px;
+    color: #637394;
+}
+
+.legend__selected {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #4666FF;
+    border-radius: 50%;
 }
 
 .legend__item-title {
     font-size: 12px;
-    font-family: "DM Sans", sans-serif;
     font-weight: 500;
+    line-height: 20px;
+    text-align: center;
     color: #FFFFFF;
 }
-
-/* Стили для номеров рядов и столбцов */
-.row-header,
-.col-header {
-    background-color: transparent;
-    cursor: default;
-    font-size: 16px;
-    color: #FFFFFF;
-}
-
 
 
 

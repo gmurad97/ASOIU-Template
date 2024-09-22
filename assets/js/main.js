@@ -521,53 +521,76 @@ $(document).ready(function () {
     /***************** FAQ DROPDOWN - ENDED *****************/
 
 
-    // Размер таблицы
-    const rows = 16;
-    const cols = 16;
+    
+});
 
-    // Создаем таблицу
-    for (let i = 0; i <= rows; i++) {
+
+
+
+
+
+$(document).ready(function() {
+    const rows = parseInt($('#reservation_table').data('rows-count'));
+    const cols = parseInt($('#reservation_table').data('column-count'));
+    const filledData = $('#reservation_table').data('filled');
+
+    // Если data-filled не задан, используем пустой массив
+    const filledCells = filledData ? filledData.split(',') : [];
+
+    const tbody = $('<tbody></tbody>');
+    $('#reservation_table').append(tbody);
+
+    for (let i = 1; i <= rows; i++) {
         let row = '<tr>';
-        for (let j = 0; j <= cols; j++) {
-            if (i === 0 && j === 0) {
-                // Верхний левый угол, пустой
-                row += '<th></th>';
-            } else if (i === 0) {
-                // Верхние цифры (номера колонок)
-                row += `<th class="col-header">${j}</th>`;
-            } else if (j === 0) {
-                // Левые цифры (номера рядов)
-                row += `<th class="row-header">${i}</th>`;
-            } else {
-                // Заполняем ячейки цифрами от 1 до 16 и добавляем класс "filled" или "empty"
-                let cellClass = (Math.random() > 0.7) ? 'filled' : 'empty'; // Рандомно выбираем занятость
-                let cellContent = cellClass === 'filled' ? '<i class="ri-close-circle-fill"></i>' : j; // Иконка для занятых мест
-                row += `<td class="${cellClass}" data-row="${i}" data-col="${j}">${cellContent}</td>`;
-            }
+        for (let j = 1; j <= cols; j++) {
+            const cellId = `${i}-${j}`;
+            const isFilled = filledCells.includes(cellId);
+            const cellClass = isFilled ? 'filled' : 'empty';
+            const cellContent = isFilled ? '<div class="reservation__filled-cell"><i class="ri-close-large-fill"></i></div>' : j;
+
+            row += `<td class="${cellClass}" data-rows="${i}" data-columns="${j}" data-fill="${cellClass}" data-cell="${cellId}">${cellContent}</td>`;
         }
+        row += `<td class="row-number">${i}</td>`;
         row += '</tr>';
-        $('#reservationTable').append(row);
+        tbody.append(row);
     }
 
-    // Клик по ячейке
-    $('#reservationTable').on('click', 'td', function () {
-        // Проверяем, занята ли ячейка
+    // Устанавливаем класс в зависимости от состояния таблицы
+    $('#reservation_table').addClass(filledCells.length > 0 ? 'filled' : 'empty');
+
+    $('#reservation_table').on('click', 'td:not(.row-number)', function () {
         if ($(this).hasClass('filled')) {
-            return; // Если занята, ничего не делаем
+            return; // Если ячейка занята, ничего не делаем
         }
 
-        // Если ячейка не занята, сбрасываем выделение с других ячеек
-        $('#reservationTable td.selected').removeClass('selected');
+        // Если ячейка уже выделена, убираем выделение
+        if ($(this).hasClass('selected')) {
+            $(this).removeClass('selected');
+            $('#reservation_selected_cell').val(''); // Очищаем значение в скрытом инпуте
+        } else {
+            // Сброс выделения всех ячеек
+            $('#reservation_table td.selected').removeClass('selected');
 
-        // Устанавливаем новую выбранную ячейку
-        $(this).addClass('selected');
-
-        // Обновляем скрытый инпут значением выбранной ячейки
-        let row = $(this).data('row');
-        let col = $(this).data('col');
-        $('#selectedCell').val(`${row}-${col}`);
+            // Выделяем новую ячейку
+            $(this).addClass('selected');
+            let row = $(this).data('rows');
+            let col = $(this).data('columns');
+            $('#reservation_selected_cell').val(`${row}-${col}`); // Устанавливаем значение в скрытый инпут
+        }
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
 
 new WOW().init(); // not if
 Fancybox.bind("[data-fancybox='laboratory']"); // not if
