@@ -636,3 +636,26 @@ $('.teacher__modal').on('click', function (event) {
         $('body').css('overflow', ''); // Enable body scroll
     }
 });
+
+
+
+
+
+
+
+
+
+//Vaqif
+// OPEn DROp down bezpantovo
+
+$(document).ready(function () {
+    $(".register-quick-transition__btn").click(function () {
+        $(this).closest(".register-quick-transition__container").find(".register_info").slideToggle(160);
+        var icon = $(this).find("i");
+        if (icon.css("transform") === 'none') {
+            icon.css("transform", "rotate(90deg)");
+        } else {
+            icon.css("transform", "none");
+        }
+    });
+});
