@@ -4587,7 +4587,7 @@ body {
 }
 
 .accomodation__heading-location-link {
-    transition: color 0.3s ease;
+    transition: color 160ms ease;
     text-decoration: none;
     color: #0055CC;
 }
@@ -6358,7 +6358,7 @@ th {
     justify-content: flex-start;
     align-items: flex-start;
     position: relative;
-    margin: 22px 0;
+    margin: 22px 0px;
 
 }
 
@@ -6369,13 +6369,13 @@ th {
     text-wrap: nowrap;
     color: #353535;
     padding: 0px 16px 8px 16px;
-    transition: color 0.3s ease;
+    transition: color 160ms ease;
     border-bottom: 1px solid silver;
     text-decoration: none;
 }
 
 .digital__development-transition-links.active {
-    border-bottom: 0.20em solid #1570EF;
+    border-bottom: 4px solid #1570EF;
 }
 
 
