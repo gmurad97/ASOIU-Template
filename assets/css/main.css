@@ -69,6 +69,22 @@ body {
     z-index: 2;
 }
 
+.header__slider::before {
+    content: none !important;
+    display: none;
+}
+
+.header__slider .swiper .swiper-slide::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, rgba(186, 186, 186, 0.4) 0%, rgba(0, 0, 0, 0.8) 64%);
+    z-index: 2;
+}
+
 .header__navbar {
     position: absolute;
     width: 100%;
@@ -83,7 +99,7 @@ body {
 .navbar__logo {
     width: 175px;
     height: 30px;
-    margin-left: 96px;
+    margin-left: 80px;
     overflow: hidden;
 }
 
@@ -277,7 +293,7 @@ body {
     background-color: rgba(0, 21, 40, 0.80);
     backdrop-filter: blur(8px);
     opacity: 1;
-    padding: 0px 96px;
+    padding: 0px 80px;
 }
 
 .menu__heading {
@@ -793,6 +809,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    padding: 48px 80px;
     overflow: hidden;
 }
 
@@ -6937,6 +6954,7 @@ body {
 .news__poster-item {
     width: 100%;
     height: auto;
+    cursor: pointer;
 }
 
 .news__poster-img {
@@ -7978,59 +7996,42 @@ body {
 
 
 @media screen and (min-width: 1200px) {
-    .section {
-        padding: 64px 96px;
-    }
+
 
     /*     .header__navbar {
         padding-left: 96px;
     } */
 
-    .navbar__menu {
-        padding: 0px 96px;
-    }
+
 }
 
 @media screen and (max-width: 1199px) and (min-width: 992px) {
-    .section {
-        padding: 32px 48px;
-    }
+
 
     /*     .header__navbar {
         padding-left: 48px;
     } */
 
-    .navbar__menu {
-        padding: 0px 48px;
-    }
+
 }
 
 @media screen and (max-width: 991px) and (min-width: 768px) {
-    .section {
-        padding: 32px 24px;
-    }
+
 
     /*     .header__navbar {
         padding-left: 24px;
     } */
 
-    .navbar__menu {
-        padding: 0px 24px;
-    }
+
 }
 
 @media screen and (max-width: 767px) and (min-width: 576px) {
-    .section {
-        padding: 32px 12px;
-    }
+
 
     /*     .header__navbar {
         padding-left: 12px;
     } */
 
-    .navbar__menu {
-        padding: 0px 12px;
-    }
 }
 
 /* @media screen and (min-width: 575px){
@@ -8048,9 +8049,6 @@ body {
 } */
 
 @media screen and (max-width: 575px) {
-    .section {
-        padding: 32px 12px;
-    }
 
     /*     .header__navbar {
         padding-left: 12px;
@@ -8093,9 +8091,6 @@ body {
         font-size: 56px;
     }
 
-    .navbar__menu {
-        padding: 0px 12px;
-    }
 
     .navbar__search {
         border: none;
