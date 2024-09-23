@@ -765,6 +765,16 @@ body {
     color: #FDFDFD;
 }
 
+.header__heading-left-center {
+    top: 50%;
+    right: unset;
+    bottom: unset;
+    left: 0px;
+    align-items: flex-start;
+    transform: translateY(-50%);
+    padding: 48px 80px;
+}
+
 .header__heading-left-bottom {
     top: unset;
     right: unset;
@@ -785,6 +795,20 @@ body {
     padding: 0px 80px;
 }
 
+.header__heading-link-btn{
+    background-color: #0055CC;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #FFFFFF;
+    padding: 16px 48px;
+    transition: background-color 160ms linear;
+}
+
+.header__heading-link-btn:hover{
+    background-color: #003073;
+}
+
 .header__heading-content {
     display: flex;
     flex-direction: row;
@@ -792,8 +816,12 @@ body {
     align-items: center;
 }
 
+.header__heading-title--separation {
+    width: 444px;
+}
+
 .header__heading-description--separation {
-    max-width: 480px;
+    width: 444px;
     font-size: 32px;
     line-height: 34px;
     text-align: left;
@@ -803,7 +831,10 @@ body {
     width: 1px;
     height: 192px;
     background-color: #FFFFFF;
-    margin-right: 90px;
+}
+
+.header__heading-description--left {
+    text-align: left;
 }
 
 .main {
@@ -3305,12 +3336,25 @@ body {
     /* Styles for the form container */
 }
 
-.form-row {
-    /* Styles for form row */
+.file-upload-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
 }
 
-.form-group {
-    /* Styles for form group */
+.file-upload-button>img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    object-position: center center;
+}
+
+.file-upload-input {
+    display: none;
 }
 
 
@@ -6447,6 +6491,22 @@ body {
 }
 
 
+.digital__development-transition::-webkit-scrollbar {
+    height: 4px;
+    border-radius: 8px;
+}
+
+.digital__development-transition::-webkit-scrollbar-thumb {
+    background-color: #909090;
+    border-radius: 8px;
+}
+
+.digital__development-transition::-webkit-scrollbar-track {
+    background-color: #D9D9D9;
+    border-radius: 8px;
+}
+
+
 
 
 
@@ -6697,8 +6757,8 @@ body {
 }
 
 .digital__development-icon-title {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: 600;
     line-height: 26px;
     color: #353535;
     margin-bottom: 14px;
@@ -7334,10 +7394,6 @@ body {
     font-weight: 500;
     color: #1570EF;
 }
-
-
-
-
 
 
 .summer__school-academic {
@@ -8283,7 +8339,8 @@ body {
     .login__section {
         grid-template-columns: 1fr;
     }
-    .login__illustration{
+
+    .login__illustration {
         display: none;
     }
 
@@ -8351,9 +8408,11 @@ body {
     .login__section {
         grid-template-columns: 1fr;
     }
-    .login__illustration{
+
+    .login__illustration {
         display: none;
     }
+
     .teacher__list {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -8523,7 +8582,7 @@ body {
         height: auto;
     }
 
-    
+
 
 
     .navbar__search {
@@ -8685,6 +8744,7 @@ body {
     .club__poster {
         height: auto;
     }
+
     .club__link-name {
         font-size: 18px;
     }

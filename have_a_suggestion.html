@@ -301,10 +301,11 @@
         </div>
     </header>
     <main class="main">
-        <section class="section wow animate__animated animate__slideInLeft" data-wow-offset="100">
+        <section class="section">
             <div class="section__grow">
                 <section class="section__suggestion">
-                    <div class="section__suggestion-heading">
+                    <div class="section__suggestion-heading wow animate__animated animate__zoomIn"
+                        data-wow-offset="100">
                         <h1 class="section__suggestion-heading-title">Təklifim var!</h1>
                         <p class="section__suggestion-heading-description">
                             Xanaları Azərbaycan şriftləri ilə doldurmağınız xahiş olunur
@@ -316,7 +317,8 @@
                             olarsa, müraciətinizə baxilmasınin effektivliyi artacaqdır.
                         </p>
                     </div>
-                    <div class="section__suggestion-form-container">
+                    <div class="section__suggestion-form-container wow animate__animated animate__slideInUp"
+                        data-wow-offset="100">
                         <form>
                             <div class="row mb-3">
                                 <div class="form-group col-md-4">
@@ -398,10 +400,11 @@
                             </div>
                             <div class="row mb-3">
                                 <div class="form-group">
-                                    <label class="form-label" for="fileUpload">Şəkil yükləyin (təklifinizə uyğun şəkil
-                                        yükləməyiniz xahiş
-                                        olunur).</label>
-                                    <input type="file" class="form-control-file" id="fileUpload">
+                                    <button type="button" class="file-upload-button">
+                                        <img src="assets/img/others/5.png" alt="Upload Img">
+                                        <span>Şəkil yükləyin (təklifinizə uyğun şəkil yükləməyiniz xahiş olunur).</span>
+                                    </button>
+                                    <input type="file" class="file-upload-input" id="have_a_suggestion_file">
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary btn-block">Göndər</button>

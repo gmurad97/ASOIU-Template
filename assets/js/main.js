@@ -639,7 +639,10 @@ $('.teacher__modal').on('click', function (event) {
 
 
 
-
+$('.file-upload-button').click(function() {
+    // Кликаем на input для загрузки файлов
+    $('#have_a_suggestion_file').click();
+});
 
 
 
