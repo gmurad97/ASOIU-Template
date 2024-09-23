@@ -8318,9 +8318,7 @@ body {
     } */
 
     .navbar__logo {
-        width: 212px;
-        height: 40px;
-        margin-left: 16px;
+        margin-left: 20px;
     }
 
     .section {
@@ -8577,7 +8575,7 @@ body {
         padding-left: 24px;
     } */
     .navbar__logo {
-        margin-left: 16px;
+        margin-left: 20px;
     }
 
     .section {
@@ -8854,7 +8852,7 @@ body {
     }
 
     .navbar__logo {
-        margin-left: 16px;
+        margin-left: 20px;
     }
 
     .section {
@@ -9301,10 +9299,6 @@ body {
     }
 
     /* asoiu_summer_school_about_us */
-    .navbar__logo {
-        width: 136px;
-        height: auto;
-    }
 
 
 
