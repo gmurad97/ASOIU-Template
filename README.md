@@ -29,7 +29,7 @@ Otherwise, functionality is not guaranteed.
 | Müəllimlər                                       | ✅        |
 | Full-page modal                                  | ✅        |
 | Keyfiyyət təminatı                               | ✅        |
-| İctimaiyyətlə Əlaqələr və Marketinq Departamenti | ❌        |
+| İctimaiyyətlə Əlaqələr və Marketinq Departamenti | ✅        |
 | Xeberler                                         | ✅        |
 | Layihə Menecmenti Ofisi                          | ✅        |
 | ASOIU Summer School (About Us)                   | ✅        |

@@ -7112,6 +7112,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    list-style-type: disc;
 }
 
 .management__office-main-list {

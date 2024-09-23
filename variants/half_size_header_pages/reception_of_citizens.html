@@ -4,23 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASOIU - Project Management Office Page</title>
-    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/plugins/wow@1.1.3/animate.min.css">
-    <link rel="stylesheet" href="assets/plugins/owlcarousel@2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/plugins/fancybox@5.0.36/fancybox.min.css">
-    <link rel="stylesheet" href="assets/plugins/bootstrap@5.3.3/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/plugins/swiper@11.1.4/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <title>ASOIU - Reception of Citizens Page</title>
+    <link rel="shortcut icon" href="../../assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../assets/plugins/wow@1.1.3/animate.min.css">
+    <link rel="stylesheet" href="../../assets/plugins/owlcarousel@2.3.4/../../assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../assets/plugins/fancybox@5.0.36/fancybox.min.css">
+    <link rel="stylesheet" href="../../assets/plugins/bootstrap@5.3.3/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/plugins/swiper@11.1.4/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
 </head>
 
 <body>
-    <header class="header" style="background-image: url('assets/img/header/10.png');">
+    <header class="header header__half" style="background-image: url('../../assets/img/header/7.png');">
         <nav class="header__navbar">
             <figure class="navbar__logo">
                 <a class="navbar__logo-link" href="#">
-                    <img class="navbar__logo-img" src="assets/img/logo.png" alt="Logo">
+                    <img class="navbar__logo-img" src="../../assets/img/logo.png" alt="Logo">
                 </a>
             </figure>
             <div class="navbar__navigation">
@@ -45,7 +45,7 @@
             <div class="navbar__menu" id="navbar_menu">
                 <div class="menu__heading">
                     <div class="menu__logo">
-                        <img class="menu__logo-img" src="assets/img/logo.png" alt="Logo">
+                        <img class="menu__logo-img" src="../../assets/img/logo.png" alt="Logo">
                     </div>
                     <button class="menu__close-btn" id="navbar_menu_close_btn">
                         <span class="menu__close-btn-name">Çıxış</span>
@@ -296,144 +296,229 @@
         </nav>
         <div class="header__heading">
             <h1 class="header__heading-title">
-                Layihə Menecmenti Ofisi
+                Vətəndaşların qəbulu
             </h1>
         </div>
     </header>
     <main class="main">
         <section class="section">
-            <section class="management__office-section">
-                <div class="management__office-article">
-                    <div class="management__office-heading wow animate__animated animate__slideInLeft"
-                        data-wow-offset="100">
-                        <h1 class="management__office-heading-title">
-                            About us
+            <section class="section__register-page">
+                <section class="section__register-form">
+                    <div class="section__form-heading">
+                        <h1 class="section__form-heading-title wow animate__animated animate__slideInLeft"
+                            data-wow-offset="100">
+                            Qeydiyyatdan keçin
                         </h1>
+                        <p class="section__form-heading-description wow animate__animated animate__slideInUp"
+                            data-wow-offset="100">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been
+                            the industry's standard dummy text ever since the 1500s
+                        </p>
                     </div>
-                    <p class="management__office-main-title wow animate__animated animate__slideInLeft"
+                    <article class="register__form-container wow animate__animated animate__zoomIn"
                         data-wow-offset="100">
-                        The Project Management Office (PMO) provides directive and supportive services for the effective
-                        delivery of projects, programmes, and portfolios. We also provide project management guidance,
-                        tools and templates to assist staff and students with project delivery across the wider
-                        University.
-                        The Office is a key contact for a range of project-related tools within the University, such as
-                        the projects related with governmental organizations, projects with businesses and companies,
-                        StartUps and projects of the University staff, and projects from International Cooperations. We
-                        host a range of project-related resources such as books, planner cards for agile projects,
-                        and workshop equipment.
-                    </p>
-                </div>
-                <div class="management__office-icon wow animate__animated animate__slideInRight" data-wow-offset="100">
-                    <div class="management__office-icon-items">
-                        <h1 class="management__office-icon-title">Bizimle Elaqe</h1>
-                        <h1 class="management__office-icon-person">
-                            Cavanşir Abdullayev
-                        </h1>
-                        <a class="management__office-icon-link" href="#">
-                            <i class="ri-mail-fill"></i>
-                            <p class="management__office-icon-link-info">
-                                ddic@asoiu.edu.az
-                            </p>
+                        <form class="register__form p-1">
+                            <div class="row mb-4">
+                                <div class="col-md-4">
+                                    <label for="first_name" class="form-label">Ad</label>
+                                    <input type="text" class="form-control" id="first_name" placeholder="Placeholder"
+                                        autocomplete="off">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="last_name" class="form-label">Soyad</label>
+                                    <input type="text" class="form-control" id="last_name" placeholder="Placeholder">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="patronymic" class="form-label">Ata adı</label>
+                                    <input type="text" class="form-control" id="patronymic" placeholder="Placeholder">
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col-md-12">
+                                    <label for="passport" class="form-label">Şəxsiyyət vəsiqəsinin nömrəsi/Passport
+                                        nömrəsi</label>
+                                    <input type="text" class="form-control" id="passport" placeholder="Placeholder">
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <label for="country" class="form-label">Ölko</label>
+                                    <input type="text" class="form-control" id="country" placeholder="Placeholder"
+                                        autocomplete="off">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="city" class="form-label">Şəhər</label>
+                                    <input type="text" class="form-control" id="city" placeholder="Placeholder">
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <label for="foreign-country" class="form-label">Xarici ölkə</label>
+                                    <input type="text" class="form-control" id="foreign-country"
+                                        placeholder="Placeholder">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="foreign-city" class="form-label">Xarici şəhər adı daxil edin</label>
+                                    <input type="text" class="form-control" id="foreign-city" placeholder="Placeholder">
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col-md-12">
+                                    <label for="address" class="form-label">Ünvan</label>
+                                    <input type="text" class="form-control" id="address" placeholder="Placeholder"
+                                        autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <label for="example_input" class="form-label">Example</label>
+                                    <input type="text" class="form-control" id="example_input"
+                                        placeholder="Placeholder">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="label" class="form-label">Label</label>
+                                    <input type="text" class="form-control" id="label" placeholder="Placeholder">
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <label for="age" class="form-label">Yaşınız</label>
+                                    <input type="number" class="form-control" id="age" placeholder="Placeholder">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="gender" class="form-label">Cinsiniz</label>
+                                    <input type="text" class="form-control" id="gender" placeholder="Placeholder">
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <label for="status" class="form-label">Sosial durum</label>
+                                    <input type="text" class="form-control" id="status" placeholder="Placeholder">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="special-status" class="form-label">Vəziyyətli qısx</label>
+                                    <input type="text" class="form-control" id="special-status"
+                                        placeholder="Placeholder">
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col-md-12">
+                                    <label for="message" class="form-label col-form-label-sm">Mesaj</label>
+                                    <textarea class="form-control" id="message" rows="3"
+                                        placeholder="Placeholder"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="d-grid gap-2">
+                                        <button type="submit" class="btn d-grid btn-primary">Göndər</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </article>
+                </section>
+                <section class="section__register-quick-transition wow animate__animated animate__slideInRight"
+                    data-wow-offset="100">
+                    <form class="register-quick-transition__form">
+                        <div class="form-group mb-4">
+                            <div class="input__wrapper">
+                                <input type="text" class="form-control" placeholder="Ş/V-nin FİN nömrəsi">
+                                <button type="button" class="input__wrapper-btn">
+                                    <i class="ri-group-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="register-quick-transition__container">
+                        <a href="#" class="register-quick-transition__btn">
+                            <span class="register-quick-transition__btn-name">Qəbul günləri</span>
                         </a>
-                        <a class="management__office-icon-link" href="#">
-                            <i class="ri-phone-fill"></i>
-                            <p class="management__office-icon-link-info">
-                                +(994 12) 493 65 07
-                            </p>
-                        </a>
                     </div>
-                </div>
-            </section>
-        </section>
-        <section class="section">
-            <section class="management__office-section">
-                <div class="management__office-article">
-                    <div class="management__office-heading wow animate__animated animate__slideInLeft"
-                        data-wow-offset="100">
-                        <h1 class="management__office-heading-title">
-                            About us
-                        </h1>
+                    <div class="register-quick-transition__container">
+                        <button class="register-quick-transition__btn">
+                            <span class="register-quick-transition__btn-name">Rektor</span>
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                        <div class="register_info">
+                            <div class="register-dropdown__menu">
+                                <div class="register__info-heading">
+                                    <h1 class="register__info-headign-title">Dosent Vazeh Əskərov</h1>
+                                </div>
+                                <div class="register_info-content">
+                                    <ul class="register_info-content-list">
+                                        <li class="register__info-content-item">
+                                            <div class="register__info-content-title">
+                                                <h1 class="register__info-heading-title">
+                                                    Həftə günləri
+                                                </h1>
+                                            </div>
+                                            <div class="register__info-content-title">
+                                                <p class="register__info-heading-title">
+                                                    II
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li class="register__info-content-item">
+                                            <div class="register__info-content-title">
+                                                <h1 class="register__info-heading-title">
+                                                    Qəbul saatları
+                                                </h1>
+                                            </div>
+                                            <div class="register__info-content-title">
+                                                <p class="register__info-heading-title">
+                                                    14:00 - 16:00
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <p class="management__office-main-title wow animate__animated animate__slideInLeft"
-                        data-wow-offset="100">
-                        The Project Management Office (PMO) provides directive and supportive services for the effective
-                        delivery of projects, programmes, and portfolios. We also provide project management guidance,
-                        tools and templates to assist staff and students with project delivery across the wider
-                        University.
-                        The Office is a key contact for a range of project-related tools within the University, such as
-                        the projects related with governmental organizations, projects with businesses and companies,
-                        StartUps and projects of the University staff, and projects from International Cooperations. We
-                        host a range of project-related resources such as books, planner cards for agile projects,
-                        and workshop equipment.
-                    </p>
-                    <ul class="management__office-main-items">
-                        <li class="management__office-main-list wow animate__animated animate__slideInLeft"
-                            data-wow-offset="100">
-                            Be approachable
-                        </li>
-                        <li class="management__office-main-list wow animate__animated animate__slideInRight"
-                            data-wow-offset="100">
-                            Promote a culture where collaBe approachable boration is a core value
-                        </li class="management__office-main-list">
-                        <li class="management__office-main-list wow animate__animated animate__slideInLeft"
-                            data-wow-offset="100">
-                            Be respectful of differing ideas and values
-                        </li>
-                        <li class="management__office-main-list wow animate__animated animate__slideInRight"
-                            data-wow-offset="100">
-                            Nourish a positive and supportive environment
-                        </li>
-                        <li class="management__office-main-list wow animate__animated animate__slideInLeft"
-                            data-wow-offset="100">
-                            Be passionate about project management
-                        </li>
-                        <li class="management__office-main-list wow animate__animated animate__slideInRight"
-                            data-wow-offset="100">
-                            Support the Mission and Vision of the ASOIU
-                        </li>
-                    </ul>
-                </div>
-            </section>
-        </section>
-        <section class="section">
-            <section class="management__office-section">
-                <div class="management__office-article">
-                    <div class="management__office-heading wow animate__animated animate__slideInLeft"
-                        data-wow-offset="100">
-                        <h1 class="management__office-heading-title">
-                            Our Goals
-                        </h1>
+                    <div class="register-quick-transition__container">
+                        <button class="register-quick-transition__btn">
+                            <span class="register-quick-transition__btn-name">Prorektor</span>
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                        <div class="register_info">
+                            <div class="register-dropdown__menu">
+                                <div class="register__info-heading">
+                                    <h1 class="register__info-headign-title">Dosent Vazeh Əskərov</h1>
+                                </div>
+                                <div class="register_info-content">
+                                    <ul class="register_info-content-list">
+                                        <li class="register__info-content-item">
+                                            <div class="register__info-content-title">
+                                                <h1 class="register__info-heading-title">
+                                                    Həftə günləri
+                                                </h1>
+                                            </div>
+                                            <div class="register__info-content-title">
+                                                <p class="register__info-heading-title">
+                                                    II
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li class="register__info-content-item">
+                                            <div class="register__info-content-title">
+                                                <h1 class="register__info-heading-title">
+                                                    Qəbul saatları
+                                                </h1>
+                                            </div>
+                                            <div class="register__info-content-title">
+                                                <p class="register__info-heading-title">
+                                                    14:00 - 16:00
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="management__office-main-items">
-                        <li class="management__office-main-list wow animate__animated animate__slideInLeft"
-                            data-wow-offset="100">
-                            Build project management maturity at the organizational level.
-                        </li>
-                        <li class="management__office-main-list wow animate__animated animate__slideInRight"
-                            data-wow-offset="100">
-                            Support ASOIU Staff, and provide them coaching, mentoring,
-                            and training as a source of project management expertise in the best way possible
-                        </li class="management__office-main-list">
-                        <li class="management__office-main-list wow animate__animated animate__slideInLeft"
-                            data-wow-offset="100">
-                            Support the Mission and Vision of the ASOIU
-                        </li>
-                        <li class="management__office-main-list wow animate__animated animate__slideInRight"
-                            data-wow-offset="100">
-                            Nourish a positive and supportive environment
-                        </li>
-                        <li class="management__office-main-list wow animate__animated animate__slideInLeft"
-                            data-wow-offset="100">
-                            Promote best practice standards, quality, and methodologies into a project management
-                            discipline and provide simple and easy-to-use processes and methodology for Project
-                            Management
-                        </li>
-                        <li class="management__office-main-list wow animate__animated animate__slideInRight"
-                            data-wow-offset="100">
-                            Support the Mission and Vision of the ASOIU
-                        </li>
-                    </ul>
-                </div>
+                </section>
             </section>
         </section>
     </main>
@@ -443,7 +528,7 @@
                 <div class="footer__section">
                     <div class="footer__section-logo">
                         <a class="footer__section-logo-link" href="#">
-                            <img class="footer__section-logo-img" src="assets/img/logo.png" alt="Logo">
+                            <img class="footer__section-logo-img" src="../../assets/img/logo.png" alt="Logo">
                         </a>
                     </div>
                     <div class="footer__section-about">
@@ -560,32 +645,32 @@
                 <div class="footer__partners">
                     <div class="partner__logo">
                         <a class="partner__link" href="#">
-                            <img class="partner__logo-img" src="assets/img/partners/1.png" alt="Partner Logo">
+                            <img class="partner__logo-img" src="../../assets/img/partners/1.png" alt="Partner Logo">
                         </a>
                     </div>
                     <div class="partner__logo">
                         <a class="partner__link" href="#">
-                            <img class="partner__logo-img" src="assets/img/partners/2.png" alt="Partner Logo">
+                            <img class="partner__logo-img" src="../../assets/img/partners/2.png" alt="Partner Logo">
                         </a>
                     </div>
                     <div class="partner__logo">
                         <a class="partner__link" href="#">
-                            <img class="partner__logo-img" src="assets/img/partners/3.png" alt="Partner Logo">
+                            <img class="partner__logo-img" src="../../assets/img/partners/3.png" alt="Partner Logo">
                         </a>
                     </div>
                     <div class="partner__logo">
                         <a class="partner__link" href="#">
-                            <img class="partner__logo-img" src="assets/img/partners/4.png" alt="Partner Logo">
+                            <img class="partner__logo-img" src="../../assets/img/partners/4.png" alt="Partner Logo">
                         </a>
                     </div>
                     <div class="partner__logo">
                         <a class="partner__link" href="#">
-                            <img class="partner__logo-img" src="assets/img/partners/2.png" alt="Partner Logo">
+                            <img class="partner__logo-img" src="../../assets/img/partners/2.png" alt="Partner Logo">
                         </a>
                     </div>
                     <div class="partner__logo">
                         <a class="partner__link" href="#">
-                            <img class="partner__logo-img" src="assets/img/partners/5.png" alt="Partner Logo">
+                            <img class="partner__logo-img" src="../../assets/img/partners/5.png" alt="Partner Logo">
                         </a>
                     </div>
                 </div>
@@ -595,14 +680,14 @@
             </div>
         </section>
     </footer>
-    <script src="assets/plugins/jquery@3.7.1/jquery.min.js"></script>
-    <script src="assets/plugins/jqueryui@1.14.0/jquery-ui.min.js"></script>
-    <script src="assets/plugins/wow@1.1.3/wow.min.js"></script>
-    <script src="assets/plugins/owlcarousel@2.3.4/owl.carousel.min.js"></script>
-    <script src="assets/plugins/fancybox@5.0.36/fancybox.umd.min.js"></script>
-    <script src="assets/plugins/bootstrap@5.3.3/bootstrap.bundle.min.js"></script>
-    <script src="assets/plugins/swiper@11.1.4/swiper-bundle.min.js"></script>
-    <script defer src="assets/js/main.js"></script>
+    <script src="../../assets/plugins/jquery@3.7.1/jquery.min.js"></script>
+    <script src="../../assets/plugins/jqueryui@1.14.0/jquery-ui.min.js"></script>
+    <script src="../../assets/plugins/wow@1.1.3/wow.min.js"></script>
+    <script src="../../assets/plugins/owlcarousel@2.3.4/owl.carousel.min.js"></script>
+    <script src="../../assets/plugins/fancybox@5.0.36/fancybox.umd.min.js"></script>
+    <script src="../../assets/plugins/bootstrap@5.3.3/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/plugins/swiper@11.1.4/swiper-bundle.min.js"></script>
+    <script defer src="../../assets/js/main.js"></script>
 </body>
 
 </html>
