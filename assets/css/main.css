@@ -37,6 +37,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    margin-bottom: 48px;
     overflow: hidden;
 }
 
@@ -2520,7 +2521,7 @@ body {
 }
 
 .recent-post__time {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 26px;
     color: #676767;
@@ -3841,7 +3842,7 @@ body {
 
 .faculty__poster {
     width: 100%;
-    height: 304px;
+    height: 384px;
     border-radius: 2px;
     overflow: hidden;
 }
@@ -3860,7 +3861,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding-right: 80px;
 }
 
 .faculty__title {
@@ -4293,6 +4293,7 @@ body {
     align-items: center;
     flex-direction: column;
     background-color: #101828;
+    margin-top: 48px;
     overflow: hidden;
 }
 
@@ -4343,6 +4344,8 @@ body {
 }
 
 .footer__section-about-text {
+    font-size: 14px;
+    font-weight: 400;
     line-height: 24px;
     color: #D7D7D7;
 }
@@ -5136,6 +5139,11 @@ body {
     align-items: flex-start;
 }
 
+.act-hall__reservation > form{
+    width: 100%;
+    height: auto;
+}
+
 .act-hall__reservation-heading {
     margin-bottom: 32px;
 }
@@ -5150,14 +5158,28 @@ body {
 .reservation__container {
     width: 100%;
     height: auto;
-    display: flex;
+    display: grid;
     flex-direction: column;
-    align-items: center;
+    justify-items: center;
+    align-content: center;
     background-color: #1A2232;
-    border-radius: 4px;
+    overflow-x: auto;
+}
+
+.reservation__container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.reservation__container::-webkit-scrollbar-thumb {
+    background-color: #909090;
+}
+
+.reservation__container::-webkit-scrollbar-track {
+    background-color: #D9D9D9;
 }
 
 .reservation__table-wrapper {
+    min-width: 654px;
     margin: 20px;
 }
 
@@ -6655,7 +6677,7 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     position: relative;
-    margin: 22px 0px;
+    padding-bottom: 22px;
 
 }
 
@@ -6757,8 +6779,8 @@ body {
 }
 
 .digital__development-icon-title {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 500;
     line-height: 26px;
     color: #353535;
     margin-bottom: 14px;
@@ -6942,7 +6964,6 @@ body {
 
 .digital__development-library-information-item-link {
     font-size: 18px;
-    font-family: DM Sans;
     font-weight: 500;
     text-decoration: none;
     color: #353535;
@@ -6951,9 +6972,14 @@ body {
 
 .digital__development-library-information-item-link:hover {
     font-size: 18px;
-    font-family: DM Sans;
     font-weight: 500;
     color: #1570EF;
+}
+
+.digital__development-library-information-item-title{
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 500;
 }
 
 .digital__development-library-information-item-link.digital__development-library-information-item-title {
@@ -7538,6 +7564,7 @@ body {
 
 .digital__development-icon-link-info {
     font-size: 14px;
+    line-height: 22px;
     font-weight: 400;
     color: #0055CC;
 }
@@ -7937,6 +7964,7 @@ body {
 .digital__development-icon-person {
     font-size: 16px;
     font-weight: 500;
+    line-height: 22px;
     color: #353535;
     margin: 14px 0px;
 }
@@ -8273,6 +8301,187 @@ body {
     } */
 
 
+    /* .section{
+
+        padding: 24px 40px;
+        /* padding: 48px 80px;
+        padding:24px 40px;
+        padding:12px 20px;
+        padding 6px 10px */
+    /* }  */
+    /* .navbar__menu{
+        margia-left
+    }
+	
+	.navbar__logo{
+       margin-left: ;
+    } */
+
+    .navbar__logo {
+        width: 212px;
+        height: 40px;
+        margin-left: 16px;
+    }
+
+    .section {
+        padding: 44px 20px;
+    }
+
+    .navbar__menu {
+        padding: 44px 20px;
+    }
+
+
+
+
+    /* INDEX HTML */
+    .header__heading-title {
+        font-size: 56px;
+        line-height: 82px;
+    }
+
+    .header__heading-title .header__heading-title--separation{
+        margin-bottom: 0px;
+    }
+
+    .header__heading-vertical-separator{
+        display: none;
+    }
+
+    .header__heading-content{
+        display: none;
+    }
+
+    .header__heading-separation{
+        justify-content: center;
+    }
+
+    .header__heading-description {
+        font-size: 28px;
+        line-height: 48px;
+    }
+
+    .latest-news__detail-date {
+        font-size: 22px;
+        margin-bottom: 22px;
+    }
+
+    .latest-news__detail-title {
+        font-size: 24px;
+        line-height: 38px;
+        margin-bottom: 14px;
+    }
+
+    .latest-news__detail-description {
+        font-size: 20px;
+        line-height: 34px;
+    }
+
+    .section__recent-posts-heading-title {
+        font-size: 48px;
+        line-height: 52px;
+    }
+
+    .recent-post__link {
+        font-size: 26px;
+        line-height: 40px;
+    }
+
+    .recent-post__description {
+        font-size: 22px;
+        line-height: 32px;
+        margin-bottom: 22px;
+    }
+
+    .recent-post__time {
+        font-size: 22px;
+        line-height: 28px;
+
+    }
+
+    .section__profession-heading-title {
+        font-size: 48px;
+        line-height: 52px;
+    }
+
+    .profession__detail-title {
+        font-size: 42px;
+        margin-bottom: 24px;
+    }
+
+    .profession__detail-link>i {
+        font-size: 38px;
+    }
+
+    .profession__detail-link-name {
+        font-size: 26px;
+    }
+
+    .faq__question-text {
+        font-size: 38px;
+        line-height: 48px;
+    }
+
+    .faq__answer-text {
+        font-size: 26px;
+        line-height: 48px;
+    }
+
+    .section__partners-heading-title {
+        font-size: 48px;
+        line-height: 52px;
+    }
+
+    .section__projects-heading-title {
+        font-size: 48px;
+        line-height: 52px;
+    }
+
+    .section__act-hall{
+        grid-template-columns: 1fr;
+    }
+
+    .reservation__container {
+        order: -1;
+    }
+
+    /* 
+    .footer__section-logo {
+        width: 168px;
+        height: 40px;
+
+    }
+
+    .footer__section-icon-link>i {
+        font-size: 18px;
+    }
+
+    .footer__nav-link>i {
+        font-size: 18px;
+    }
+
+    .footer__section-about-text {
+        font-size: 16px;
+        line-height: 34px;
+    }
+
+    .footer__nav-section-title {
+        font-size: 22px;
+
+    }
+
+    .footer__nav-link {
+
+        font-size: 18px;
+    } */
+
+    /* INDEX HTML */
+
+
+    .section__latest-news-title {
+        font-size: 48px;
+    }
+
     /* index */
     .menu__quick-links {
         flex-direction: column;
@@ -8300,8 +8509,15 @@ body {
         flex-direction: column;
         overflow: auto;
         padding-right: 32px;
-        /* index */
     }
+
+    /* index */
+
+    .eazi__start {
+
+        grid-template-columns: 1fr;
+    }
+
 
     .act__zal {
         grid-template-columns: 1fr;
@@ -8327,15 +8543,176 @@ body {
         font-size: 42px;
     }
 
+    .footer__grid-layout {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .footer__copyright{
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
 }
 
 @media screen and (max-width: 991px) and (min-width: 768px) {
 
+    .header__heading-title .header__heading-title--separation{
+        margin-bottom: 0px;
+    }
+
+    .header__heading-vertical-separator{
+        display: none;
+    }
+
+    .header__heading-content{
+        display: none;
+    }
+
+    .header__heading-separation{
+        justify-content: center;
+    }
 
     /*     .header__navbar {
         padding-left: 24px;
     } */
+    .navbar__logo {
+        margin-left: 16px;
+    }
+
+    .section {
+        padding: 44px 20px;
+    }
+
+    .navbar__menu {
+        padding: 44px 20px;
+    }
+
+
+    .faculty__item {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 64px;
+    }
+
+    .section__act-hall{
+        grid-template-columns: 1fr;
+    }
+
+    .reservation__container {
+        order: -1;
+    }
+
+
+
+    .profession__list {
+
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer__grid-layout {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        gap: 80px;
+    }
+
+    .footer__copyright-text {
+
+        font-size: 18px;
+    }
+
+    .latest-news__detail-date {
+        font-size: 20px;
+        margin-bottom: 22px;
+    }
+
+    .latest-news__detail-title {
+        font-size: 22px;
+        margin-bottom: 22px;
+
+    }
+
+    .latest-news__detail-description {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .section__recent-posts-heading-title {
+        font-family: "Playfair Display", serif;
+        font-size: 42px;
+        font-weight: 500;
+    }
+
+    .recent-post__time {
+        font-size: 22px;
+    }
+
+    .recent-post__description {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .recent-post__link {
+        text-decoration: none;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 38px;
+        margin-bottom: 22px;
+    }
+
+    .section__latest-news-title {
+        font-size: 42px;
+    }
+
+    .section__profession-heading-title {
+        font-size: 42px;
+    }
+
+    .faq__question-text {
+        font-size: 34px;
+        line-height: 52px;
+    }
+
+    .faq__answer-text {
+        font-size: 22px;
+        line-height: 48px;
+    }
+
+    .section__partners-heading-title {
+        font-size: 42px;
+        line-height: 52px;
+    }
+
+    .profession__detail-title {
+        font-size: 38px;
+        margin-bottom: 22px;
+    }
+
+    .section__recent-posts-heading-link {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .profession__detail-link-name {
+        font-size: 22px;
+    }
+
+    .section {
+        padding: 44px 20px;
+    }
+
+    .navbar__menu {
+        padding: 44px 20px;
+    }
+
+    .header__heading-title {
+        font-size: 32px;
+        line-height: 52px;
+    }
+
+    .header__heading-description {
+        font-size: 22px;
+        line-height: 42px;
+    }
 
     .login__section {
         grid-template-columns: 1fr;
@@ -8381,6 +8758,57 @@ body {
 
     .faculty__title {
         font-size: 42px;
+        line-height: 52px;
+    }
+
+    .eazi__start {
+
+        grid-template-columns: 1fr;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    .footer__section-logo {
+        width: 168px;
+        height: 40px;
+
+    }
+
+    .footer__section-icon-link>i {
+        font-size: 18px;
+    }
+
+    .footer__nav-link>i {
+        font-size: 18px;
+    }
+
+    .footer__section-about-text {
+        font-size: 18px;
+        line-height: 34px;
+    }
+
+    .footer__nav-section-title {
+        font-size: 24px;
+
+    }
+
+    .footer__nav-link {
+
+        font-size: 18px;
+    }
+
+    .footer__copyright{
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     /*     .header__navbar {
@@ -8394,17 +8822,189 @@ body {
         order: -1;
     }
 
+    .student__committee-main {
 
+        grid-template-columns: 1fr;
+
+    }
 
 
 }
 
 @media screen and (max-width: 767px) and (min-width: 576px) {
 
-
     /*     .header__navbar {
         padding-left: 12px;
     } */
+
+    .header__heading-title .header__heading-title--separation{
+        margin-bottom: 0px;
+    }
+
+    .header__heading-vertical-separator{
+        display: none;
+    }
+
+    .header__heading-content{
+        display: none;
+    }
+
+    .header__heading-separation{
+        justify-content: center;
+    }
+
+    .navbar__logo {
+        margin-left: 16px;
+    }
+
+    .section {
+        padding: 44px 20px;
+    }
+
+    .navbar__menu {
+        padding: 44px 20px;
+    }
+
+    .faculty-teacher__list {
+
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .faculty-laboratory__grid-two-columns {
+
+        grid-template-columns: 1fr;
+    }
+
+    .faculty-laboratory__grid-four-columns {
+
+        grid-template-columns: 1fr;
+    }
+
+    .faculty__item {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .summer__carousel-item.half {
+        width: 100%;
+        height: 362px;
+    }
+
+    .section__act-hall{
+        grid-template-columns: 1fr;
+    }
+
+    .reservation__container {
+        order: -1;
+    }
+
+
+    .profession__list {
+
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+    .latest-news__detail-date {
+        font-size: 20px;
+        margin-bottom: 22px;
+    }
+
+    .latest-news__detail-title {
+        font-size: 22px;
+        margin-bottom: 22px;
+
+    }
+
+    .latest-news__detail-description {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .section__recent-posts-heading-title {
+        font-family: "Playfair Display", serif;
+        font-size: 42px;
+        font-weight: 500;
+    }
+
+    .recent-post__time {
+        font-size: 22px;
+    }
+
+    .recent-post__description {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .recent-post__link {
+        text-decoration: none;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 32px;
+        margin-bottom: 22px;
+    }
+
+    .profession__list {
+
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .section__latest-news-title {
+        font-size: 42px;
+    }
+
+    .section__profession-heading-title {
+        font-size: 42px;
+    }
+
+    .faq__question-text {
+        font-size: 34px;
+        line-height: 52px;
+    }
+
+    .faq__answer-text {
+        font-size: 22px;
+        line-height: 48px;
+    }
+
+    .section__partners-heading-title {
+        font-size: 42px;
+        line-height: 52px;
+    }
+
+    .profession__detail-title {
+        font-size: 38px;
+        margin-bottom: 22px;
+    }
+
+    .section__recent-posts-heading-link {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .profession__detail-link-name {
+        font-size: 22px;
+    }
+
+    .section {
+        padding: 44px 20px;
+    }
+
+    .navbar__menu {
+        padding: 44px 20px;
+    }
+
+    .header__heading-title {
+        font-size: 32px;
+        line-height: 52px;
+    }
+
+    .header__heading-description {
+        font-size: 22px;
+        line-height: 42px;
+    }
 
     .login__section {
         grid-template-columns: 1fr;
@@ -8413,6 +9013,7 @@ body {
     .login__illustration {
         display: none;
     }
+
 
     .teacher__list {
         grid-template-columns: repeat(3, 1fr);
@@ -8447,6 +9048,77 @@ body {
         /* index */
     }
 
+    .faculty__title {
+        font-size: 38px;
+        line-height: 52px;
+
+    }
+
+
+    .eazi__start {
+
+        grid-template-columns: 1fr;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .footer__grid-layout {
+        grid-template-columns: repeat(1, auto);
+        gap: 48px;
+    }
+
+    .footer__copyright{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer__section-logo {
+        width: 148px;
+        height: 40px;
+
+    }
+
+    .footer__section-icon-link>i {
+        font-size: 14px;
+    }
+
+    .footer__nav-link>i {
+        font-size: 14px;
+    }
+
+    .footer__nav-link {
+
+        font-size: 18px;
+    }
+
+    .footer__section-about-text {
+        font-size: 16px;
+        line-height: 34px;
+    }
+
+    .footer__nav-section-title {
+        font-size: 18px;
+
+    }
+
 
 
     /*     .header__navbar {
@@ -8460,12 +9132,10 @@ body {
         order: -1;
     }
 
-    /*     .header__navbar {
-        padding-left: 12px;
-    } */
-
-    .navbar__menu {
-        padding: 0px 12px;
+    .student__committee-main {
+  
+        grid-template-columns: 1fr;
+    
     }
 
 }
@@ -8486,11 +9156,52 @@ body {
 
 @media screen and (max-width: 575px) {
 
+    .header__heading-title .header__heading-title--separation{
+        margin-bottom: 0px;
+    }
+
+    .header__heading-vertical-separator{
+        display: none;
+    }
+
+    .header__heading-content{
+        display: none;
+    }
+
+    .header__heading-separation{
+        justify-content: center;
+    }
     /*     .header__navbar {
         padding-left: 12px;
     } */
 
+    /* .section{
 
+        padding: 24px 40px;
+        /* padding: 48px 80px;
+        padding:24px 40px;
+        padding:12px 20px;
+        padding 6px 10px */
+    /* }  */
+    /* .navbar__menu{
+        margia-left
+    }
+	/*  */
+
+
+
+    .navbar__logo {
+        margin-left: 8px;
+    }
+
+
+    .section {
+        padding: 16px 8px;
+    }
+
+    .navbar__menu {
+        padding: 16px 8px;
+    }
 
     .menu__container {
         display: none;
@@ -8506,7 +9217,16 @@ body {
 
 
 
+    /* NAv Title */
+    .section__act-hall{
+        grid-template-columns: 1fr;
+    }
 
+    .reservation__container {
+        order: -1;
+    }
+
+    /* NAv Title */
 
     /*     .header__navbar {
         padding-left: 12px;
@@ -8539,14 +9259,17 @@ body {
 
     .header__heading-title {
         font-size: 32px;
-        margin-bottom: unset;
+        margin-bottom: 12px;
+        line-height: 48px;
     }
 
+    /* NEW */
     .header__heading-description {
-        font-size: 14px;
-        line-height: 22px;
+        font-size: 16px;
+        line-height: 32px;
     }
 
+    /* NEW */
     .section__blank-title {
         font-size: 32px;
     }
@@ -8626,12 +9349,16 @@ body {
     }
 
 
+
+    /* FOOTER */
+
     .footer__grid-layout {
         grid-template-columns: repeat(1, 1fr);
     }
 
     .footer__copyright {
         flex-direction: column;
+        align-items: flex-start;
     }
 
     .footer__partners {
@@ -8640,6 +9367,14 @@ body {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .footer__section-about-text {
+
+        margin-bottom: 8px;
+    }
+
+
+
 
     .partner__logo {
         justify-content: center;
@@ -8703,7 +9438,10 @@ body {
 
     /* Faculty */
 
-
+    .faculty__title {
+        font-size: 28px;
+        line-height: 40px;
+    }
 
 
 
@@ -8711,6 +9449,24 @@ body {
 
     .digital__development-transition {
         overflow-x: auto;
+        padding-bottom: 18px;
+    }
+
+    /* ????? */
+
+    .digital__development-transition::-webkit-scrollbar {
+        height: 4px;
+        border-radius: 8px;
+    }
+
+    .digital__development-transitiont::-webkit-scrollbar-thumb {
+        background-color: #909090;
+        border-radius: 8px;
+    }
+
+    .digital__development-transition::-webkit-scrollbar-track {
+        background-color: #D9D9D9;
+        border-radius: 8px;
     }
 
     /* center_for_digital_development_and_innovation */
@@ -8733,8 +9489,33 @@ body {
     /* center_for_digital_development_and_innovation */
 
 
+    /* department_of_international_relations */
+    .digital__development-heading-title {
+        font-size: 22px;
+    }
+
+    .digital__development-main-title {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    /* department_of_international_relations */
 
 
+    /* LIBRARY */
+    .digital__development-heading-title {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .digital__development-library-information-item-link {
+        font-size: 18px;
+        line-height: 38px;
+    }
+    
+
+
+    /* LIBRARY */
 
 
     /* CLUBS */
@@ -8773,18 +9554,6 @@ body {
 
 
 
-
-    /* department_of_international_relations */
-    .digital__development-heading-title {
-        font-size: 22px;
-    }
-
-    .digital__development-main-title {
-        font-size: 18px;
-        line-height: 24px;
-    }
-
-    /* department_of_international_relations */
 
 
 
@@ -8950,18 +9719,7 @@ body {
 
 
 
-    /* LIBRARY */
-    .digital__development-heading-title {
-        font-size: 32px;
-        line-height: 42px;
-    }
 
-    .digital__development-library-information-item-link {
-        font-size: 18px;
-        line-height: 28px;
-    }
-
-    /* LIBRARY */
 
 
     /* NEWS */
