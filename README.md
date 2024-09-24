@@ -43,7 +43,7 @@ Otherwise, functionality is not guaranteed.
 | Error                                            | ✅        |
 | Not found                                        | ✅        |
 | Login                                            | ✅        |
-| Extra Pages                                      | ❌        |
+| Extra Pages                                      | ✅        |
 
 ### Testing Status
 
@@ -55,8 +55,8 @@ Otherwise, functionality is not guaranteed.
 | Android        | ✅      |
 | Tablet         | ✅      |
 | BlueStack      | ✅      |
-| BrowserStack   | ❌      |
-| Responsive     | ❌      |
+| BrowserStack   | ✅      |
+| Responsive     | ✅      |
 
 ### Used Libraries
 

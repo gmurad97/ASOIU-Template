@@ -1513,6 +1513,15 @@ body {
     margin-bottom: 40px;
 }
 
+.section__history-heading-date {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #F8F8F8;
+    background-color: #101214;
+    padding: 12px 48px;
+}
+
 .section__history-heading-title {
     font-family: "Playfair Display", serif;
     font-size: 32px;
@@ -4840,7 +4849,6 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     position: relative;
-    padding-bottom: 22px 0;
 }
 
 .digital__development-transition-links {
@@ -4848,7 +4856,7 @@ body {
     font-size: 16px;
     font-weight: 500;
     text-wrap: nowrap;
-    padding: 0px 16px 8px 16px;
+    padding: 8px 16px;
     transition: color 0.3s ease;
     border-bottom: 1px solid silver;
     text-decoration: none;
