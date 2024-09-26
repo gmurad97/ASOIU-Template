@@ -21,11 +21,14 @@ $(document).ready(function () {
     var $logo = $(".navbar__logo");
     var $navbarSearch = $(".navbar__search");
 
-    var initialLogoWidth = $logo.outerWidth();
-    var initialLogoMargin = $logo.css("margin-left");
+    const initialLogoMargin = $logo.css("margin-left");
 
     if ($searchButton.length) {
         $searchButton.on("click", function () {
+
+            const initialLogoWidth = $logo.outerWidth();
+            const initialLogoMargin = $logo.css("margin-left");
+
             $logo.css({
                 width: "0px",
                 marginLeft: "0px",

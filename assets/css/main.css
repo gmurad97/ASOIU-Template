@@ -37,6 +37,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    background-attachment: fixed;
     margin-bottom: 48px;
     overflow: hidden;
 }
@@ -66,7 +67,7 @@ body {
     left: 0px;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(180deg, rgba(186, 186, 186, 0.4) 0%, rgba(0, 0, 0, 0.8) 64%);
+    background-image: linear-gradient(180deg, rgba(186, 186, 186, 0.4) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 1) 95%);
     z-index: 2;
 }
 
@@ -364,7 +365,7 @@ body {
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 0px 24px;
+    padding-right: 24px;
     margin-bottom: 24px;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -429,7 +430,7 @@ body {
 
 .menu-mobile__link-name {
     font-family: "Playfair Display", serif;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 600;
     line-height: 42px;
     color: inherit;
@@ -1595,8 +1596,8 @@ body {
 }
 
 .history__seemore-title {
+    font-family: "DM Sans", sans-serif;
     font-size: 28px;
-    font-family: 'DM Sans';
     font-weight: 500;
 }
 
@@ -1722,16 +1723,16 @@ body {
 }
 
 .faq__answer-list-item-title {
+    font-family: "DM Sans", sans-serif;
     font-size: 18px;
-    font-family: "DM Sans";
     font-weight: 500;
     color: #353535;
     margin-right: 4px;
 }
 
 .faq__answer-list-item-description {
+    font-family: "DM Sans", sans-serif;
     font-size: 16px;
-    font-family: "DM Sans";
     font-weight: 400;
     line-height: 40px;
 }
@@ -2258,7 +2259,7 @@ body {
 }
 
 .teacher__modal-heading-title {
-    font-family: "Helvetica", sans-serif;
+    font-family: "DM Sans", sans-serif;
     font-size: 32px;
     font-weight: 700;
     line-height: 40px;
@@ -2566,7 +2567,7 @@ body {
 
 .register__info-headign-title {
     font-size: 14px;
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     font-weight: 700;
     margin-top: 14px;
     margin-bottom: 10px;
@@ -2633,14 +2634,14 @@ body {
 }
 
 .register__info-heading-title {
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 22px;
 }
 
 .register__info-content-title>data>time {
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 22px;
@@ -2720,16 +2721,24 @@ body {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    gap: 16px;
     background-color: transparent;
     border: none;
     outline: none;
 }
 
-.file-upload-button>img {
-    width: 42px;
-    height: 42px;
+.file-upload-button-img {
+    width: 36px;
+    height: auto;
     object-fit: contain;
     object-position: center center;
+}
+
+.file-upload-button-name {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
 }
 
 .file-upload-input {
@@ -3144,14 +3153,19 @@ body {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    gap: 16px;
     box-shadow: -2px 4px 12px 0px rgba(24, 24, 24, 0.08);
     padding: 16px;
 }
 
 .document__icon {
-    width: 155px;
+    width: 72px;
+    min-width: 72px;
     height: auto;
-    margin-right: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .document__icon-img {
@@ -3487,13 +3501,11 @@ body {
 }
 
 .accomodation__heading-warning-info {
-
     font-size: 20px;
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     font-weight: 500;
     line-height: 32px;
     text-align: left;
-
 }
 
 .accomodation__heading-warning-info {
@@ -3537,14 +3549,14 @@ body {
 }
 
 .accomodation__heading-location-link {
-    transition: color 160ms linear;
     text-decoration: none;
     color: #0055CC;
+    transition: color 160ms linear;
 }
 
 .accomodation__heading-location-link:hover {
     font-size: 16px;
-    font-family: DM Sans;
+    font-family: "DM Sans", sans-serif;
     font-weight: 500;
     color: #003073;
 }
@@ -3573,7 +3585,7 @@ body {
 
 .campus__about {
     font-size: 16px;
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     font-weight: 400;
     color: #353535;
     line-height: 24px;
@@ -3590,14 +3602,14 @@ body {
 }
 
 .campus__rooms-poster-title {
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
 }
 
 .campus__content {
-    font-family: 'DM Sans';
+    font-family: "DM Sans", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -3645,7 +3657,7 @@ body {
 }
 
 .facility__item {
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
@@ -3674,11 +3686,11 @@ body {
 }
 
 .about__header {
-    font-family: 'Playfair Display';
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: "Playfair Display", serif;
     margin-bottom: 120px;
 }
 
@@ -3930,7 +3942,7 @@ body {
 .apply__heading-title {
     width: 100%;
     height: auto;
-    font-family: 'Playfair Display';
+    font-family: "Playfair Display", serif;
     font-size: 42px;
     font-weight: 400;
     line-height: 50px;
@@ -3941,7 +3953,7 @@ body {
 .apply__heading-description {
     width: 100%;
     height: auto;
-    font-family: 'DM Sans';
+    font-family: "DM Sans", sans-serif;
     font-size: 20px;
     font-weight: 500;
     line-height: 32px;
@@ -3952,7 +3964,7 @@ body {
 .apply__heading-description-content {
     width: 100%;
     height: auto;
-    font-family: 'DM Sans';
+    font-family: "DM Sans", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -4014,14 +4026,14 @@ body {
 }
 
 .apply__deadline-description-item>span {
-    font-family: 'DM Sans';
+    font-family: "DM Sans", sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
 }
 
 .apply__deadline-description-item {
-    font-family: 'DM Sans';
+    font-family: "DM Sans", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -4029,7 +4041,7 @@ body {
 }
 
 .apply__document-list-title {
-    font-family: 'DM Sans';
+    font-family: "DM Sans", sans-serif;
     font-size: 20px;
     font-weight: 500;
     line-height: 32px;
@@ -4041,7 +4053,7 @@ body {
 }
 
 .apply__document-item {
-    font-family: 'DM Sans';
+    font-family: "DM Sans", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -4075,7 +4087,7 @@ body {
 }
 
 .cultural_programme__heading-title {
-    font-family: 'Playfair Display';
+    font-family: "Playfair Display", serif;
     font-size: 42px;
     font-weight: 400;
     line-height: 50px;
@@ -4083,7 +4095,7 @@ body {
 }
 
 .cultural_programme__heading-description {
-    font-family: 'DM Sans';
+    font-family: "DM Sans", sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 26px;
@@ -4091,7 +4103,7 @@ body {
 }
 
 .cultural_programme__event-title {
-    font-family: 'DM Sans';
+    font-family: "DM Sans", sans-serif;
     font-size: 20px;
     font-weight: 500;
     line-height: 32px;
@@ -4099,7 +4111,7 @@ body {
 }
 
 .cultural_programme__event-item {
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 26px;
@@ -4158,7 +4170,7 @@ body {
 }
 
 .fees__heading-document-item {
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 26px;
@@ -4168,14 +4180,14 @@ body {
 
 .fees__heading-title {
     font-size: 32px;
-    font-family: 'Playfair Display';
+    font-family: "Playfair Display", serif;
     font-weight: 400;
     line-height: 50px;
     margin-bottom: 16px;
 }
 
 .fees__heading-description {
-    font-family: 'DM Sans';
+    font-family: "DM Sans", sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 26px;
@@ -4218,7 +4230,7 @@ body {
 }
 
 .summer__school-heading-title {
-    font-family: "Playfair Display";
+    font-family: "Playfair Display", serif;
     font-size: 36px;
     font-weight: 500;
     text-align: center;
@@ -4337,7 +4349,7 @@ body {
 
 .section__video-text-title {
     font-size: 36px;
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     font-weight: 500;
     color: #292929;
 }
@@ -4352,7 +4364,7 @@ body {
 
 .apply__heading-title {
     font-size: 42px;
-    font-family: 'Playfair Display';
+    font-family: "Playfair Display", serif;
     font-weight: 400;
     line-height: 50px;
     color: #000000;
@@ -4360,7 +4372,7 @@ body {
 
 .apply__heading-description {
     font-size: 20px;
-    font-family: 'DM Sans';
+    font-family: "DM Sans", sans-serif;
     font-weight: 500;
     line-height: 32px;
     margin-bottom: 16px;
@@ -4397,7 +4409,7 @@ body {
 }
 
 .apply__heading-item>time {
-    font-family: DM Sans;
+    font-family: "DM Sans", sans-serif;
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
@@ -4406,7 +4418,7 @@ body {
 }
 
 .apply__heading-item {
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 26px;
@@ -4438,8 +4450,8 @@ body {
 }
 
 .apply__heading-certificate-description {
+    font-family: "DM Sans", sans-serif;
     font-size: 14px;
-    font-family: "DM Sans";
     font-style: italic;
     font-weight: 400;
     line-height: 22px;
@@ -4447,13 +4459,13 @@ body {
 }
 
 .apply__main {
-    font-family: 'DM Sans';
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    font-family: "DM Sans", sans-serif;
     margin-bottom: 42px;
 }
 
@@ -4529,7 +4541,7 @@ body {
 }
 
 .section__visa-heading-title {
-    font-family: 'Playfair Display';
+    font-family: "Playfair Display", serif;
     font-weight: 400;
     font-size: 42px;
     line-height: 50px;
@@ -4629,12 +4641,39 @@ body {
     text-decoration: underline;
 }
 
-.digital__development-section {
+.section__grid {
     width: 100%;
     height: auto;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 128px;
+    gap: 42px;
+}
+
+.section__grid-column {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.management__office-heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.digital__development-section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .digital__development-article {
@@ -4644,10 +4683,11 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    margin-bottom: 80px;
 }
 
 .digital__development-heading-title {
-    font-family: "Playfair Display";
+    font-family: "Playfair Display", serif;
     font-size: 38px;
     font-weight: 500;
     line-height: 52px;
@@ -4656,24 +4696,23 @@ body {
 }
 
 .digital__development-main-title {
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 26px;
     color: #353535;
 }
 
-.digital__development-icon {
+.digital__development-widgets {
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-top: 128px;
 }
 
-.digital__development-icon-items {
+.digital__development-widget-item {
     width: 100%;
     height: auto;
     display: flex;
@@ -4684,39 +4723,47 @@ body {
     padding: 12px 16px;
 }
 
-.digital__development-icon-person {
-    font-family: "DM Sans";
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 22px;
-    color: #353535;
-    margin: 14px 0;
+.digital__development-widget-item:not(:last-of-type) {
+    margin-bottom: 32px;
 }
 
-.digital__development-icon-link {
+.digital__development-widget-person {
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #353535;
+    margin-bottom: 14px;
+}
+
+.digital__development-widget-link {
     width: 100%;
     height: auto;
     display: flex;
     justify-content: flex-start;
     text-decoration: none;
-    margin-bottom: 14px;
 }
 
-.digital__development-icon-link>i {
+.digital__development-widget-link>i {
     color: #323232;
     margin-right: 12px;
 }
 
-.digital__development-icon-link>a {
+.digital__development-widget-link>a {
     display: flex;
     color: #323232;
 }
 
-.digital__development-icon-link-info {
-    font-family: "DM Sans";
+.digital__development-widget-link-info {
+    font-family: "DM Sans", sans-serif;
     font-size: 14px;
     font-weight: 400;
     color: #0055CC;
+    transition: color 160ms linear;
+}
+
+.digital__development-widget-link-info:hover {
+    color: #021B79;
 }
 
 .digital__development {
@@ -4731,6 +4778,43 @@ body {
     margin-bottom: 40px;
 }
 
+/* NEW */
+.digital__development-widget-link-relation {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    text-decoration: none;
+}
+
+.digital__development-widget-link-relation:not(:last-of-type) {
+    margin-bottom: 18px;
+}
+
+.digital__development-widget-link-relation>i {
+    color: #323232;
+    margin-right: 12px;
+}
+
+.digital__development-widget-link-relation>a {
+    display: flex;
+    color: #323232;
+}
+
+.digital__development-widget-link-info-relation {
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #0055CC;
+    transition: color 160ms linear;
+}
+
+.digital__development-widget-link-info-relation:hover {
+    color: #021B79;
+}
+
+/* NEW */
+
 
 .digital__development::-webkit-scrollbar {
     height: 4px;
@@ -4743,21 +4827,6 @@ body {
 }
 
 .digital__development::-webkit-scrollbar-track {
-    background-color: #D9D9D9;
-    border-radius: 8px;
-}
-
-.digital__development-transition::-webkit-scrollbar {
-    height: 4px;
-    border-radius: 8px;
-}
-
-.digital__development-transition::-webkit-scrollbar-thumb {
-    background-color: #909090;
-    border-radius: 8px;
-}
-
-.digital__development-transition::-webkit-scrollbar-track {
     background-color: #D9D9D9;
     border-radius: 8px;
 }
@@ -4786,7 +4855,7 @@ body {
 }
 
 .eazi__text-title {
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
@@ -4825,7 +4894,7 @@ body {
 
 .eazi__finish-text-title {
     font-size: 18px;
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     line-height: 24px;
     font-weight: 400;
     color: #292929;
@@ -4842,22 +4911,39 @@ body {
 }
 
 .digital__development-transition {
+    position: relative;
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    position: relative;
+    padding-bottom: 16px;
+    overflow-x: auto;
+}
+
+.digital__development-transition::-webkit-scrollbar {
+    height: 4px;
+    border-radius: 8px;
+}
+
+.digital__development-transition::-webkit-scrollbar-thumb {
+    background-color: #909090;
+    border-radius: 8px;
+}
+
+.digital__development-transition::-webkit-scrollbar-track {
+    background-color: #D9D9D9;
+    border-radius: 8px;
 }
 
 .digital__development-transition-links {
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     font-size: 16px;
     font-weight: 500;
     text-wrap: nowrap;
     padding: 8px 16px;
-    transition: color 0.3s ease;
+    transition: color 160ms linear;
     border-bottom: 1px solid silver;
     text-decoration: none;
     color: #353535;
@@ -4868,7 +4954,7 @@ body {
 }
 
 .digital__development-transition-links:hover {
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     font-size: 16px;
     font-weight: 500;
     color: #1570EF;
@@ -4886,7 +4972,7 @@ body {
 }
 
 .digital__development-about-text {
-    font-family: "Playfair Display";
+    font-family: "Playfair Display", serif;
     font-size: 32px;
     font-weight: 500;
     color: #1C1C1C;
@@ -4901,9 +4987,9 @@ body {
     align-items: flex-start;
 }
 
-.digital__development-icon-title {
+.digital__development-widget-title {
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 26px;
     color: #353535;
     margin-bottom: 14px;
@@ -4920,7 +5006,7 @@ body {
 }
 
 .digital__development-structure-title {
-    font-family: "Playfair Display";
+    font-family: "Playfair Display", serif;
     font-size: 32px;
     font-weight: 500;
     color: #1C1C1C;
@@ -4933,6 +5019,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+    margin-bottom: 40px;
 }
 
 .digital__development-stucture-items {
@@ -4994,7 +5081,7 @@ body {
     object-fit: contain;
     object-position: center center;
     filter: grayscale(100%);
-    transition: filter 0.3s ease;
+    transition: filter 160ms linear;
 }
 
 .digital__development-library-resources-items:not(:last-child) {
@@ -5032,7 +5119,7 @@ body {
     font-weight: 500;
     text-decoration: none;
     color: #353535;
-    transition: color 0.3s ease;
+    transition: color 160ms linear;
 }
 
 .digital__development-library-information-item-link:hover {
@@ -5054,9 +5141,10 @@ body {
 .management__office-section {
     width: 100%;
     height: auto;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .management__office-article {
@@ -5070,7 +5158,7 @@ body {
 
 
 .management__office-heading-title {
-    font-family: "Playfair Display";
+    font-family: "Playfair Display", serif;
     font-size: 32px;
     font-weight: 500;
     color: #1C1C1C;
@@ -5078,7 +5166,7 @@ body {
 }
 
 .management__office-main-title {
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
@@ -5108,14 +5196,14 @@ body {
 
 .management__office-icon-title {
     font-size: 28px;
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     font-weight: 500;
     color: #1C1C1C;
 }
 
 .management__office-icon-person {
     font-size: 16px;
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     font-weight: 500;
     color: #353535;
     margin: 14px 0;
@@ -5145,7 +5233,7 @@ body {
 }
 
 .management__office-icon-link-info {
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     font-size: 14px;
     font-weight: 400;
     color: #0055CC;
@@ -5162,7 +5250,7 @@ body {
 }
 
 .management__office-main-list {
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
@@ -5183,7 +5271,7 @@ body {
 }
 
 .news__heading-title {
-    font-family: "Playfair Display";
+    font-family: "Playfair Display", serif;
     font-size: 32px;
     font-weight: 400;
     line-height: 42px;
@@ -5192,7 +5280,7 @@ body {
 }
 
 .news__heading-time {
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     display: flex;
     font-size: 14px;
     font-weight: 400;
@@ -5288,32 +5376,32 @@ body {
 }
 
 .news__heading-link-text {
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     font-size: 18px;
     font-weight: 500;
     text-decoration: none;
     color: #292929;
-    transition: color 0.3s ease;
+    transition: color 160ms linear;
 }
 
 .news__heading-link-text:hover {
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     font-size: 18px;
     font-weight: 500;
     color: #1570EF;
 }
 
 .news__heading-link-title {
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     font-size: 18px;
     font-weight: 500;
     text-decoration: none;
     color: #292929;
-    transition: color 0.3s ease;
+    transition: color 160ms linear;
 }
 
 .news__heading-link-description {
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
@@ -5323,7 +5411,7 @@ body {
 }
 
 .news__heading-link-time {
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     font-size: 14px;
     font-weight: 400;
     color: #344054;
@@ -5354,7 +5442,7 @@ body {
 
 
 .summer__school-academic-heading-title {
-    font-family: "Playfair Display";
+    font-family: "Playfair Display", serif;
     font-size: 32px;
     line-height: 48px;
     font-weight: 500;
@@ -5382,7 +5470,7 @@ body {
 }
 
 .student__committee-heading-title {
-    font-family: "Playfair Display";
+    font-family: "Playfair Display", serif;
     font-size: 32px;
     font-weight: 500;
     color: #000000;
@@ -5390,14 +5478,14 @@ body {
 }
 
 .student__committee-main-poster-description {
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
 }
 
 .student__committee-heading-description {
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
@@ -5571,6 +5659,10 @@ body {
 }
 
 @media screen and (max-width: 991px) and (min-width: 768px) {
+
+    .section__grid {
+        grid-template-columns: 1fr;
+    }
 
     .navbar__logo {
         margin-left: 16px;
@@ -5755,6 +5847,13 @@ body {
 }
 
 @media screen and (max-width: 767px) and (min-width: 576px) {
+    .section__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .digital__development-article {
+        margin-bottom: 40px;
+    }
 
     .navbar__logo {
         margin-left: 16px;
@@ -5988,17 +6087,29 @@ body {
         gap: 42px;
     }
 
-    .digital__development-icon {
+    .digital__development-widget {
         margin-top: unset;
     }
 }
 
 @media screen and (max-width: 575px) {
-
-    .navbar__logo {
-        margin-left: 8px;
+    .section__grid {
+        grid-template-columns: 1fr;
     }
 
+    .digital__development-article {
+        margin-bottom: 40px;
+    }
+
+    .menu__logo {
+        width: 150px;
+    }
+
+    .navbar__logo {
+        width: 150px;
+        height: auto;
+        margin-left: 12px;
+    }
 
     .section {
         padding: 16px 8px;
@@ -6062,14 +6173,6 @@ body {
         font-size: 32px;
     }
 
-    .navbar__logo {
-        margin-left: 12px;
-    }
-
-    .navbar__logo {
-        margin-left: 12px;
-    }
-
     .header__heading-title {
         font-size: 32px;
         margin-bottom: 12px;
@@ -6098,11 +6201,6 @@ body {
 
     .summer__about-heading {
         margin-bottom: 42px;
-    }
-
-    .navbar__logo {
-        width: 136px;
-        height: auto;
     }
 
     .navbar__search {
@@ -6209,27 +6307,7 @@ body {
         margin-right: 0px;
     }
 
-    .digital__development-transition {
-        overflow-x: auto;
-        padding-bottom: 18px;
-    }
-
-    .digital__development-transition::-webkit-scrollbar {
-        height: 4px;
-        border-radius: 8px;
-    }
-
-    .digital__development-transitiont::-webkit-scrollbar-thumb {
-        background-color: #909090;
-        border-radius: 8px;
-    }
-
-    .digital__development-transition::-webkit-scrollbar-track {
-        background-color: #D9D9D9;
-        border-radius: 8px;
-    }
-
-    .digital__development-icon {
+    .digital__development-widget {
         margin: 0px;
     }
 
