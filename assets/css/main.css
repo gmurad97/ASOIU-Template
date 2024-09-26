@@ -3764,7 +3764,7 @@ body {
     margin-top: 80px;
 }
 
-.section__act-hall {
+.section__assembly-hall {
     width: 100%;
     height: auto;
     display: grid;
@@ -3772,7 +3772,7 @@ body {
     grid-template-columns: 1fr 2fr;
 }
 
-.act-hall__reservation {
+.assembly-hall__reservation {
     width: 100%;
     height: auto;
     display: flex;
@@ -3781,16 +3781,16 @@ body {
     align-items: flex-start;
 }
 
-.act-hall__reservation>form {
+.assembly-hall__reservation>form {
     width: 100%;
     height: auto;
 }
 
-.act-hall__reservation-heading {
+.assembly-hall__reservation-heading {
     margin-bottom: 32px;
 }
 
-.act-hall__reservation-heading-title {
+.assembly-hall__reservation-heading-title {
     font-size: 32px;
     font-family: "Playfair Display", serif;
     font-weight: 600;
@@ -4950,7 +4950,7 @@ body {
 }
 
 .digital__development-transition-links.active {
-    border-bottom: 0.20em solid #1570EF;
+    border-bottom: 2px solid #1570EF;
 }
 
 .digital__development-transition-links:hover {
@@ -5596,7 +5596,7 @@ body {
         line-height: 52px;
     }
 
-    .section__act-hall {
+    .section__assembly-hall {
         grid-template-columns: 1fr;
     }
 
@@ -5703,7 +5703,7 @@ body {
         gap: 64px;
     }
 
-    .section__act-hall {
+    .section__assembly-hall {
         grid-template-columns: 1fr;
     }
 
@@ -5910,7 +5910,7 @@ body {
         height: 362px;
     }
 
-    .section__act-hall {
+    .section__assembly-hall {
         grid-template-columns: 1fr;
     }
 
@@ -6147,7 +6147,7 @@ body {
         display: flex;
     }
 
-    .section__act-hall {
+    .section__assembly-hall {
         grid-template-columns: 1fr;
     }
 

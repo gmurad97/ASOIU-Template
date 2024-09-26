@@ -47,21 +47,9 @@ Otherwise, proper operability cannot be guaranteed.
 
 # Changelog
 
-## [1.0.1] - 2024-09-26 (build 1)
+## [1.0.1] - build 2
 ### Changed
-- Update icon(img) size & changed documents icon (added new icon packs)
-- Delete old main.css and added new main.css(Optimized css)
-- Minify slider shaders main.js
-- Fixed **have_a_suggestion.html** forms (col-6 to col-12) & change upload icon
-- Fixed grid system:
-    **public_relations_and_marketing_department.html**
-    **student_youth_organization.html**
-    **teaching_methodical_department.html**
-    **asoiu_summer_school_fees.html**
-    **center_for_digital_development_and_innovation.html**
-    **department_of_international_relations.html**
-    **library.html**
-- Added for header background css property (background attachment)
-- Fixed mobile menu logo + header logo
-- Added new nested elements to the mobile menu for demonstration
--  
+- Added custom.css & custom.js for overrides or add (new style or functions)
+- Updated all page
+- Compressed all image and changed format to jpg(small size)
+- 
