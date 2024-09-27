@@ -365,8 +365,8 @@ body {
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-right: 24px;
-    margin-bottom: 24px;
+    padding-right: 16px;
+    margin-bottom: 80px;
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -388,11 +388,17 @@ body {
 
 .menu-mobile__list {
     width: 100%;
-    height: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     list-style-type: none;
 }
 
 .menu-mobile__item {
+    width: 100%;
+    height: auto;
     padding-left: 16px;
 }
 
@@ -2214,7 +2220,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
-    padding: 0px 0px 12px 12px;
+    padding: 0px 0px 12px 24px;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -5604,16 +5610,16 @@ body {
         order: -1;
     }
 
-    .menu__quick-links {
+    /* .menu__quick-links {
         flex-direction: column;
-    }
+    } */
 
-    .quick-links__link:not(:last-of-type) {
+    /*  .quick-links__link:not(:last-of-type) {
         margin-right: unset;
         margin-bottom: 8px;
-    }
+    } */
 
-    .quick-links__heading {
+    /* .quick-links__heading {
         margin-bottom: 16px;
         margin-right: unset;
     }
@@ -5629,7 +5635,7 @@ body {
         flex-direction: column;
         overflow: auto;
         padding-right: 32px;
-    }
+    } */
 
     .eazi__start {
         grid-template-columns: 1fr;
@@ -5769,7 +5775,7 @@ body {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .menu__quick-links {
+    /* .menu__quick-links {
         flex-direction: column;
     }
 
@@ -5794,7 +5800,7 @@ body {
         flex-direction: column;
         overflow: auto;
         padding-right: 32px;
-    }
+    } */
 
     .eazi__start {
         grid-template-columns: 1fr;
@@ -6003,7 +6009,7 @@ body {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .menu__quick-links {
+    /* .menu__quick-links {
         flex-direction: column;
     }
 
@@ -6028,7 +6034,7 @@ body {
         flex-direction: column;
         overflow: auto;
         padding-right: 32px;
-    }
+    } */
 
     .faculty__title {
         font-size: 38px;
@@ -6149,6 +6155,18 @@ body {
 
     .section__assembly-hall {
         grid-template-columns: 1fr;
+    }
+
+    .menu__heading {
+        padding: 0px 16px;
+    }
+
+    .menu__heading {
+        margin-bottom: 48px;
+    }
+
+    .menu__close-btn-name {
+        display: none;
     }
 
     .reservation__container {

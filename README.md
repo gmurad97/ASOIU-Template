@@ -47,9 +47,11 @@ Otherwise, proper operability cannot be guaranteed.
 
 # Changelog
 
-## [1.0.1] - build 2
+## [1.0.1] - build 3
 ### Changed
-- Added custom.css & custom.js for overrides or add (new style or functions)
-- Updated all page
-- Compressed all image and changed format to jpg(small size)
-- 
+- All image fixed
+- Fix all page
+- Page **project_management_office.html** structure fixed
+- Attr **href** & **alt** fixed
+- Design and text are exactly like from the figma template -------
+- Teachers modal padding fixed
