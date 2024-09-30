@@ -47,11 +47,23 @@ Otherwise, proper operability cannot be guaranteed.
 
 # Changelog
 
-## [1.0.1] - build 3
+## [1.0.1] - build 4
 ### Changed
-- All image fixed
-- Fix all page
-- Page **project_management_office.html** structure fixed
-- Attr **href** & **alt** fixed
-- Design and text are exactly like from the figma template -------
-- Teachers modal padding fixed
+- Page **faculty.html** FancyBox.js image bug fix
+- Check **custom.css** & **custom.js**
+
+- Check all page from figma ---
+- Normalize Wow.js animation ---
+
+
+
+- Fix **logo navbar** + **logo navbar menu** + **logo navbar mobile menu**  ---
+- Fix **section** (container)(MQ) ---
+- Fix JS calculate margin logo ---
+- Fix & check all js scripts ---
+- Recheck all **СSS** + **CSS MQ** ---
+- Fix **development__transtion** nav link & anchor ---
+- Returned and restored **half_pages** ---
+- Added **prefixes** to css for full **compatibility** ---
+- Restored **section** & **navbar_menu** & **logo** & **footer** ---
+- Menu mobile & full menu active bug fix ---

@@ -5050,8 +5050,9 @@ body {
 }
 
 .digital__development-stucture-title {
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 500;
+    line-height: 26px;
     color: #353535;
     margin-bottom: 10px;
 }
@@ -5528,14 +5529,9 @@ body {
     object-position: center center;
 }
 
-
-@media screen and (min-width: 1200px) {}
-
 @media screen and (max-width: 1199px) and (min-width: 992px) {
 
     .navbar__logo {
-        width: 212px;
-        height: 40px;
         margin-left: 16px;
     }
 
