@@ -47,14 +47,15 @@ Otherwise, proper operability cannot be guaranteed.
 
 # Changelog
 
-## [1.0.1] - build 4
+## [1.0.1] - build 5
 ### Changed
 - Page **faculty.html** FancyBox.js image bug fix
 - Check **custom.css** & **custom.js**
+- Fix input label
+- Check all page from figma
+- Normalize Wow.js animation
 
-- Check all page from figma ---
-- Normalize Wow.js animation ---
-
+### Not fixed
 
 
 - Fix **logo navbar** + **logo navbar menu** + **logo navbar mobile menu**  ---
