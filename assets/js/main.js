@@ -8,6 +8,7 @@ $(document).ready(function () {
     Fancybox.bind("[data-fancybox='gallery']");
     Fancybox.bind("[data-fancybox='summer_school_about_us']");
     Fancybox.bind("[data-fancybox='news']");
+    Fancybox.bind("[data-fancybox='accomodation_room']");
     /************************* FANCYBOX.JS - ENDED *************************/
 
     /************************* NAVBAR SEARCH & MENU BUTTONS - BEGIN *************************/
@@ -84,7 +85,7 @@ $(document).ready(function () {
         });
     }
 
-    if ($menuBurgerButton.length) {
+/*     if ($menuBurgerButton.length) {
         $menuBurgerButton.on("click", function () {
             $navbarMenu.css("display", "flex");
             $("body").css("overflow", "hidden");
@@ -96,7 +97,29 @@ $(document).ready(function () {
             $navbarMenu.css("display", "none");
             $("body").css("overflow", "auto");
         });
-    }
+    } */
+
+if ($menuBurgerButton.length) {
+    $menuBurgerButton.on("click", function () {
+        $navbarMenu.stop(true, true).fadeIn(300, function() {
+            $navbarMenu.css("display", "flex"); // Устанавливаем display: flex после анимации
+        });
+        $("body").css("overflow", "hidden");
+    });
+}
+
+if ($menuBurgerButton.length) {
+    $navbarMenuCloseButton.on("click", function () {
+        $navbarMenu.stop(true, true).fadeOut(300, function() {
+            $navbarMenu.css("display", "none"); // Возвращаем display: none после скрытия
+        });
+        $("body").css("overflow", "auto");
+    });
+}
+
+        
+
+
     /************************* NAVBAR SEARCH & MENU BUTTONS - ENDED *************************/
 
     /************************* NAVBAR MENU LOGICS - BEGIN *************************/

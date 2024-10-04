@@ -15,11 +15,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #909090;
+    background-color: #203050;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #D9D9D9;
+    background-color: #101828;
 }
 
 body {
@@ -52,7 +52,7 @@ body {
 
 .header__compact>.header__navbar {
     position: static;
-    background-color: #CECCCC;
+    background-color: #BDBDBD;
 }
 
 .header__compact::before {
@@ -101,6 +101,7 @@ body {
 .navbar__logo {
     width: 175px;
     height: 30px;
+    filter: drop-shadow(2px 4px 6px #000000);
     margin-left: 80px;
     overflow: hidden;
 }
@@ -141,6 +142,11 @@ body {
     overflow: hidden;
     transition: width 160ms linear;
 }
+
+
+
+
+
 
 .navbar__search-btn {
     width: 90px;
@@ -531,6 +537,7 @@ body {
     display: flex;
     font-size: 32px;
     color: #B1B1B1;
+    margin-left: 32px;
 }
 
 .menu__item:not(:last-of-type) {
@@ -738,7 +745,7 @@ body {
 }
 
 .quick-links__link:not(:last-of-type) {
-    margin-right: 20px;
+    margin-right: 32px;
 }
 
 .header__heading {
@@ -1781,6 +1788,8 @@ body {
 .faq__answer {
     width: 100%;
     max-height: 0px;
+    border-left: 2px solid #0575E6;
+    padding-left: 24px;
     overflow: hidden;
     transition: max-height 160ms linear;
 }
@@ -2362,6 +2371,7 @@ body {
     outline: none;
     border: none;
     border-radius: 2px;
+    text-decoration: none;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
@@ -2500,6 +2510,11 @@ body {
 .owl-nav>.owl-prev:hover,
 .owl-nav>.owl-next:hover {
     background-color: rgba(21, 112, 239, 0.64) !important;
+}
+
+.owl-nav>.owl-prev:active,
+.owl-nav>.owl-next:active {
+    background-color: rgba(21, 112, 239, 1) !important;
 }
 
 .owl-nav>.owl-prev>i,
@@ -2751,7 +2766,7 @@ body {
     margin-bottom: 16px;
 }
 
-.section__suggestion-form-container{
+.section__suggestion-form-container {
     margin-top: 32px;
 }
 
@@ -3198,8 +3213,8 @@ body {
 }
 
 .document__icon {
-    width: 72px;
-    min-width: 72px;
+    width: 64px;
+    min-width: 64px;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -3327,7 +3342,7 @@ body {
 }
 
 .footer__section-icon-link:not(:last-of-type) {
-    margin-right: 12px;
+    margin-right: 24px;
 }
 
 .footer__nav {
@@ -3435,6 +3450,10 @@ body {
     height: auto;
 }
 
+.partner__logo:not(:last-of-type) {
+    margin-right: 8px;
+}
+
 .partner__link {
     width: 80px;
     height: auto;
@@ -3442,7 +3461,6 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 5px;
 }
 
 .partner__logo-img {
@@ -3450,6 +3468,12 @@ body {
     height: 100%;
     object-fit: contain;
     object-position: center center;
+    filter: grayscale(100%);
+    transition: filter 160ms linear;
+}
+
+.partner__link:hover>.partner__logo-img {
+    filter: grayscale(0%);
 }
 
 .footer__copyright-data {
@@ -3564,6 +3588,12 @@ body {
     align-items: flex-start;
 }
 
+.accomodation__heading-location>i {
+    display: flex;
+    font-size: 18px;
+    margin-right: 8px;
+}
+
 .accomodation__heading-location-list {
     width: 100%;
     height: auto;
@@ -3595,9 +3625,7 @@ body {
 
 .accomodation__heading-location-link:hover {
     font-size: 16px;
-    font-family: "DM Sans", sans-serif;
-    font-weight: 500;
-    color: #003073;
+    color: #B53471;
 }
 
 .accomodation__content {
@@ -3619,7 +3647,9 @@ body {
 .campus__rooms-poster-link {
     width: 100%;
     height: auto;
+    padding: 24px;
     margin-bottom: 24px;
+    cursor: pointer;
 }
 
 .campus__about {
@@ -3638,9 +3668,35 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    border: 1px solid #E4E4E4;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
-.campus__rooms-poster-title {
+.campus__rooms-poster-img {
+    width: 100%;
+    height: 176px;
+    object-fit: contain;
+    object-position: center center;
+}
+
+.campus__rooms-poster-footer {
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 24px;
+    background-color: #F8F8F8;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 16px;
+}
+
+.campus__rooms-poster-footer-title {
     font-family: "DM Sans", sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -3978,6 +4034,19 @@ body {
     margin-bottom: 42px;
 }
 
+.apply__heading-link {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #1570EF;
+    transition: color 160ms linear;
+}
+
+.apply__heading-link:hover{
+    color: #B53471;
+}
+
 .apply__heading-title {
     width: 100%;
     height: auto;
@@ -4311,9 +4380,12 @@ body {
 }
 
 .summer__about-heading-title {
+    font-family: "Playfair Display", serif;
     font-size: 36px;
     font-weight: 500;
-    color: #1C1C1C;
+    text-align: center;
+    color: #292929;
+    line-height: 46px;
 }
 
 .summer__gallery {
@@ -4387,10 +4459,12 @@ body {
 }
 
 .section__video-text-title {
+    font-family: "Playfair Display", serif;
     font-size: 36px;
-    font-family: "DM Sans", sans-serif;
     font-weight: 500;
+    text-align: center;
     color: #292929;
+    line-height: 46px;
 }
 
 .apply__heading {
@@ -4631,7 +4705,7 @@ body {
 .visa__contact {
     border: 1px solid #E4E4E4;
     margin-top: 30px;
-    padding: 12px;
+    padding: 16px;
 }
 
 .visa__contact-title {
@@ -4966,6 +5040,7 @@ body {
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+    padding-bottom: 4px;
     overflow-x: auto;
     overflow-y: hidden;
 }
@@ -4986,15 +5061,15 @@ body {
 }
 
 .digital__development-transition-links {
+    text-decoration: none;
+    text-wrap: nowrap;
     font-family: "DM Sans", sans-serif;
     font-size: 16px;
     font-weight: 500;
-    text-wrap: nowrap;
-    padding: 12px 24px;
-    transition: color 160ms linear;
     border-bottom: 3px solid silver;
-    text-decoration: none;
     color: #353535;
+    padding: 12px 24px;
+    transition: all 160ms linear, color 160ms linear;
 }
 
 .digital__development-transition-links.active {
@@ -5002,9 +5077,7 @@ body {
 }
 
 .digital__development-transition-links:hover {
-    font-family: "DM Sans", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
+    border-bottom: 3px solid #1570EF;
     color: #1570EF;
 }
 
@@ -5375,6 +5448,7 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center center;
+    cursor: pointer;
 }
 
 .news__heading-column {

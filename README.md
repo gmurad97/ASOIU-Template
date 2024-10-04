@@ -47,24 +47,5 @@ Otherwise, proper operability cannot be guaranteed.
 
 # Changelog
 
-## [1.0.1] - build 5
-### Changed
-- Page **faculty.html** FancyBox.js image bug fix
-- Check **custom.css** & **custom.js**
-- Fix input label
-- Check all page from figma
-- Normalize Wow.js animation
-
-### Not fixed
-
-
-- Fix **logo navbar** + **logo navbar menu** + **logo navbar mobile menu**  ---
-- Fix **section** (container)(MQ) ---
-- Fix JS calculate margin logo ---
-- Fix & check all js scripts ---
-- Recheck all **СSS** + **CSS MQ** ---
-- Fix **development__transtion** nav link & anchor ---
-- Returned and restored **half_pages** ---
-- Added **prefixes** to css for full **compatibility** ---
-- Restored **section** & **navbar_menu** & **logo** & **footer** ---
-- Menu mobile & full menu active bug fix ---
+### build 6 
+- Bugs fix (no ended)
