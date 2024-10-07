@@ -44,8 +44,3 @@ Otherwise, proper operability cannot be guaranteed.
 | Not found                                        | ✅      |
 | Login                                            | ✅      |
 | Extra Pages                                      | ✅      |
-
-# Changelog
-
-### build 6 
-- Bugs fix (no ended)

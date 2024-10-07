@@ -1,6 +1,12 @@
 $(document).ready(function () {
     /************************* WOW.JS - BEGIN *************************/
-    new WOW().init();
+    /* new WOW().init(); */
+    AOS.init({
+        useClassNames: true,
+        initClassName: false,
+        animatedClassName: 'animate__animated',
+        offset: 0
+    });
     /************************* WOW.JS - ENDED *************************/
 
     /************************* FANCYBOX.JS - BEGIN *************************/
@@ -123,53 +129,82 @@ if ($menuBurgerButton.length) {
     /************************* NAVBAR SEARCH & MENU BUTTONS - ENDED *************************/
 
     /************************* NAVBAR MENU LOGICS - BEGIN *************************/
-    $(".menu__link.active, .menu__dropdown-link.active").each(function () {
+// Показать активные меню при загрузке страницы
+$(".menu__link.active, .menu__dropdown-link.active").each(function () {
+    var $this = $(this);
+    var targetId = $this.data("dropdown-observed");
+    var $dropdown = $("#" + targetId);
+
+    if ($dropdown.length) {
+        $dropdown.show();
+    }
+
+    $this.parents(".menu__dropdown").show(); // Показать все родительские меню
+});
+
+// Функция для скрытия всех вложенных подменю
+function hideAllDropdowns() {
+    $(".menu__dropdown").hide(); // Скрыть все меню
+    $(".menu__dropdown-list ul").hide(); // Скрыть все вложенные списки
+    $(".menu a").removeClass("active"); // Убрать активный класс у всех элементов
+}
+
+// Функция для скрытия всех вложенных подменю начиная с текущего родителя
+function hideAllNestedDropdowns($parent) {
+    // Найти все элементы с атрибутом data-dropdown-observed в текущем родителе
+    $parent.find("a[data-dropdown-observed]").each(function() {
         var $this = $(this);
-        var targetId = $this.data("dropdown-observed");
-        var $dropdown = $("#" + targetId);
+        var targetId = $this.data("dropdown-observed"); // Получаем id из data атрибута
+        var $dropdown = $("#" + targetId); // Ищем соответствующий блок
 
         if ($dropdown.length) {
-            $dropdown.show();
-        }
-
-        $this.parents(".menu__dropdown").show();
-    });
-
-    $("#menu").on("click", "a[data-dropdown-observed]", function (event) {
-        event.preventDefault();
-        var $this = $(this);
-        var targetId = $this.data("dropdown-observed");
-        var $dropdown = $("#" + targetId);
-
-        $(".menu a").removeClass("active");
-
-        if ($dropdown.is(":visible")) {
-            $dropdown.hide();
-            $this.removeClass("active");
-        } else {
-            $(".menu__dropdown").hide();
-            $(".menu__dropdown-list ul").hide();
-            $dropdown.show();
-            $this.addClass("active");
+            $dropdown.hide(); // Скрываем найденное подменю
+            $this.removeClass("active"); // Убираем класс active у ссылки
+            hideAllNestedDropdowns($dropdown); // Рекурсивно скрываем все вложенные подменю в этом блоке
         }
     });
+}
 
-    $(".menu").on("click", ".menu__dropdown-link[data-dropdown-observed]", function (event) {
-        event.preventDefault();
-        var $this = $(this);
-        var targetId = $this.data("dropdown-observed");
-        var $dropdown = $("#" + targetId);
+// Обработчик кликов для родительского меню
+$("#menu").on("click", "a[data-dropdown-observed]", function (event) {
+    event.preventDefault();
+    var $this = $(this);
+    var targetId = $this.data("dropdown-observed");
+    var $dropdown = $("#" + targetId);
 
-        $(".menu__dropdown-link").removeClass("active");
+    // Если текущее меню открыто, закрыть все вложенные
+    if ($dropdown.is(":visible")) {
+        hideAllDropdowns(); // Закрыть все подменю
+    } else {
+        // Скрыть только другие верхнеуровневые меню, но оставить вложенные открытыми
+        hideAllDropdowns(); // Скрыть все
+        $dropdown.show(); // Показать текущее меню
+        $this.addClass("active");
+    }
+});
 
-        if ($dropdown.is(":visible")) {
-            $dropdown.hide();
-            $this.removeClass("active");
-        } else {
-            $dropdown.show();
-            $this.addClass("active");
-        }
-    });
+// Обработчик кликов для вложенных подменю
+$(".menu").on("click", ".menu__dropdown-link[data-dropdown-observed]", function(event) {
+    event.preventDefault();
+    var $this = $(this);
+    var targetId = $this.data("dropdown-observed");
+    var $dropdown = $("#" + targetId);
+
+    // Если текущее вложенное меню открыто, скрыть все его вложенные подменю
+    if ($dropdown.is(":visible")) {
+        hideAllNestedDropdowns($dropdown); // Скрываем все вложенные подменю
+        $dropdown.hide(); // Скрываем текущее меню
+        $this.removeClass("active"); // Убираем класс active
+    } else {
+        // Если меню не открыто, сначала скрываем все вложенные подменю
+        hideAllNestedDropdowns($this.closest(".menu__dropdown")); // Скрываем все вложенные элементы на этом уровне
+        $dropdown.show(); // Показываем текущее вложенное меню
+        $this.addClass("active"); // Добавляем класс active
+    }
+});
+
+
+
 
     $(".menu-mobile__dropdown-list").hide();
 
