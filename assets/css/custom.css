@@ -14,11 +14,3 @@
 
     Thank you for adhering to the standards and paying attention to detail!
 */
-
-[data-aos] {
-    opacity: 0;
-}
-
-[data-aos].animate__animated {
-    opacity: 1;
-}

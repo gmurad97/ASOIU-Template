@@ -5649,9 +5649,9 @@ body {
 
 @media screen and (max-width: 1199px) and (min-width: 992px) {
 
-    .navbar__logo {
+/*     .navbar__logo {
         margin-left: 16px;
-    }
+    } */
 
     .section {
         padding: 44px 20px;
@@ -5788,9 +5788,9 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .navbar__logo {
+/*     .navbar__logo {
         margin-left: 16px;
-    }
+    } */
 
     .section {
         padding: 44px 20px;
@@ -5985,9 +5985,9 @@ body {
         margin-bottom: 40px;
     }
 
-    .navbar__logo {
+/*     .navbar__logo {
         margin-left: 16px;
-    }
+    } */
 
     .section {
         padding: 44px 20px;

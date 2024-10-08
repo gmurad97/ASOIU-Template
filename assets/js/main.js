@@ -1,12 +1,14 @@
 $(document).ready(function () {
     /************************* WOW.JS - BEGIN *************************/
     /* new WOW().init(); */
-    AOS.init({
+ /*    AOS.init({
         useClassNames: true,
         initClassName: false,
         animatedClassName: 'animate__animated',
-        offset: 0
-    });
+        offset: 0,
+        /* once: true */
+    //});
+    new WOW().init();
     /************************* WOW.JS - ENDED *************************/
 
     /************************* FANCYBOX.JS - BEGIN *************************/
