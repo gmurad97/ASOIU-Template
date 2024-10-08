@@ -5037,10 +5037,10 @@ body {
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: row;
+    flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-bottom: 4px;
+    padding-bottom: 12px;
     overflow-x: auto;
     overflow-y: hidden;
 }
@@ -5061,11 +5061,14 @@ body {
 }
 
 .digital__development-transition-links {
+    background-color: transparent;
     text-decoration: none;
     text-wrap: nowrap;
     font-family: "DM Sans", sans-serif;
     font-size: 16px;
     font-weight: 500;
+    border: none;
+    outline: none;
     border-bottom: 3px solid silver;
     color: #353535;
     padding: 12px 24px;

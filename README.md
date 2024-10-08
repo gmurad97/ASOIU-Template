@@ -59,29 +59,7 @@ Otherwise, proper operability cannot be guaranteed.
 ###
 
 ### 📌Changelog
-### 🚀[1.0.2] - Release (build 7)
-
-- **FancyBox.js**: Fixed images and descriptions
-- **custom.css & custom.js**: Files reviewed
-- **Footer Section**: Adjusted padding alignment
-- **Search Button**: Fixed navigation behavior
-- **Projects & Partners Image (Carousel)**: Updated sizes (800x400) and paddings (150x75)
-- **Quick Links**: Fixed errors
-- **Transition**: Added fadeIn and fadeOut animations for opening/closing the navigation menu
-- **Menu Items**: New menu items added (example)
-- **Animate.css**: Updated the library with high-quality animations.
-- **WOW.JS**: Updated WOW.JS.
-- **All Pages**: Verified all pages according to the design from **FIGMA**
-- **Forms & Inputs**: Fixed all forms, input fields, and labels
-- **Menu Full & Mobile**: Active class & open/close bug fixed
-- **Extra Pages**: Added new and Returned and restored
-
-
-
-
-
-
-
+### 🚀[1.0.2] - Release (build 7 (bug fix (navtabs)))
 
 
 
