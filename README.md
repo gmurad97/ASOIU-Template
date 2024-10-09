@@ -26,30 +26,30 @@ Otherwise, proper operability cannot be guaranteed.
 | Klublar                                          | ✔️     |
 | Tariximiz                                        | ✔️     |
 | Rəsmi sənədlər                                   | ✔️     |
-| Kitabxana                                        | ✔️     |
+| Kitabxana                                        | ❌     |
 | Beynəlxalq əlaqələr şöbəsi                       | ✔️     |
 | Tələbə Gənclər Təşkilatı                         | ✔️     |
 | Tədris metodiki şöbə                             | ✔️     |
 | Tələbə Həmkarlar İttifaqı Komitəsi               | ✔️     |
-| Rəqəmsal İnkişaf və İnnovasiyalar Mərkəzi        | ✔️     |
+| Rəqəmsal İnkişaf və İnnovasiyalar Mərkəzi        | ❌     |
 | Tələbə elmi cəmiyyəti                            | ✔️     |
 | Vətəbdaşların qəbulu                             | ✔️     |
 | Təklifim var                                     | ✔️     |
 | eazi START                                       | ✔️     |
-| akt zal                                          | ✔️     |
+| akt zal                                          | ❌     |
 | Müəllimlər                                       | ✔️     |
 | Full-page modal                                  | ✔️     |
 | Keyfiyyət təminatı                               | ✔️     |
-| İctimaiyyətlə Əlaqələr və Marketinq Departamenti | ✔️     |
+| İctimaiyyətlə Əlaqələr və Marketinq Departamenti | ❌     |
 | Xeberler                                         | ✔️     |
 | Layihə Menecmenti Ofisi                          | ✔️     |
-| ASOIU Summer School (About Us)                   | ✔️     |
-| ASOIU Summer School (Academic Programme)         | ✔️     |
-| ASOIU Summer School (Cultural Programme)         | ✔️     |
-| ASOIU Summer School (Fees)                       | ✔️     |
-| ASOIU Summer School (Accomodation)               | ✔️     |
-| ASOIU Summer School (Apply)                      | ✔️     |
-| ASOIU Summer School (Visa)                       | ✔️     |
+| ASOIU Summer School (About Us)                   | ❌     |
+| ASOIU Summer School (Academic Programme)         | ❌     |
+| ASOIU Summer School (Cultural Programme)         | ❌     |
+| ASOIU Summer School (Fees)                       | ❌     |
+| ASOIU Summer School (Accomodation)               | ❌     |
+| ASOIU Summer School (Apply)                      | ❌     |
+| ASOIU Summer School (Visa)                       | ❌     |
 | Konfrans                                         | ✔️     |
 | Error                                            | ✔️     |
 | Not found                                        | ✔️     |
@@ -59,9 +59,10 @@ Otherwise, proper operability cannot be guaranteed.
 ###
 
 ### 📌Changelog
-### 🚀[1.0.2] - Release (build 7 (bug fix (navtabs)))
+### 🚀[1.0.2] - build 8
+- Library add nav tabs for navigation
 
-
+## Unfixed
 
 - Fix **logo navbar** + **logo navbar menu** + **logo navbar mobile menu**  ---
 - Fix JS calculate margin logo ---
