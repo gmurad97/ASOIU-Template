@@ -2740,6 +2740,11 @@ body {
     transition: transform 160ms linear;
 }
 
+.section__summer-school {
+    width: 100%;
+    height: auto;
+}
+
 .section__grow {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -3837,6 +3842,20 @@ body {
     object-fit: cover;
 }
 
+/* .about__videos{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 10px; /* Задайте нужный зазор между элементами */
+/* } */
+
+/* .about__video:only-of-type.digital__development-widget-title{
+    order: 3;
+}  */
+
 .about__video {
     width: 100%;
     height: auto;
@@ -4043,7 +4062,7 @@ body {
     transition: color 160ms linear;
 }
 
-.apply__heading-link:hover{
+.apply__heading-link:hover {
     color: #B53471;
 }
 
@@ -5116,7 +5135,7 @@ body {
     font-weight: 600;
     line-height: 26px;
     color: #353535;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
 
 .digital__development-structure-heading {
@@ -5652,7 +5671,7 @@ body {
 
 @media screen and (max-width: 1199px) and (min-width: 992px) {
 
-/*     .navbar__logo {
+    /*     .navbar__logo {
         margin-left: 16px;
     } */
 
@@ -5791,7 +5810,7 @@ body {
         grid-template-columns: 1fr;
     }
 
-/*     .navbar__logo {
+    /*     .navbar__logo {
         margin-left: 16px;
     } */
 
@@ -5988,7 +6007,7 @@ body {
         margin-bottom: 40px;
     }
 
-/*     .navbar__logo {
+    /*     .navbar__logo {
         margin-left: 16px;
     } */
 
