@@ -30,65 +30,84 @@ $(document).ready(function () {
     var $logo = $(".navbar__logo");
     var $navbarSearch = $(".navbar__search");
 
-    const initialLogoMargin = $logo.css("margin-left");
+    let initialLogoWidth = $logo.outerWidth();
+    let initialLogoHeight = $logo.outerHeight();
+    let initialLogoMargin = $logo.css("margin-left");
+
+    function updateInitialLogoDimensions() {
+        // Обновляем значения только если элемент видим
+        if ($logo.is(":visible")) {
+            initialLogoWidth = $logo.outerWidth();
+            initialLogoHeight = $logo.outerHeight();
+            initialLogoMargin = $logo.css("margin-left");
+        }
+    }
+
+    // Обновляем значения при изменении размеров экрана
+    $(window).on("resize", function() {
+        updateInitialLogoDimensions();
+    });
 
     if ($searchButton.length) {
-        $searchButton.on("click", function () {
-
-            const initialLogoWidth = $logo.outerWidth();
-            const initialLogoMargin = $logo.css("margin-left");
+        $searchButton.on("click", function() {
+            // Обновляем значения перед изменением стилей
+            updateInitialLogoDimensions();
 
             $logo.css({
                 width: "0px",
+                height: "0px",  // Устанавливаем высоту логотипа в 0 при нажатии
                 marginLeft: "0px",
             });
 
             $navbarSearch.css({
-                window: "100%",
+                width: "100%",
             });
 
             $inputContainer.css({
-                width: "100%"
+                width: "100%",
             });
 
             if ($(window).width() >= 575) {
                 $navbarNavigation.css({
-                    maxWidth: "512px"
+                    maxWidth: "512px",
                 });
+
                 $logo.css({
                     width: initialLogoWidth,
+                    height: initialLogoHeight,  // Возвращаем исходную высоту логотипа
                     marginLeft: initialLogoMargin,
                 });
             }
 
             $navbarNavigation.css({
-                width: "100%"
+                width: "100%",
             });
 
             $searchButton.css({
-                width: "0px"
+                width: "0px",
             });
         });
     }
 
     if ($closeInputContainerButton.length) {
-        $closeInputContainerButton.on("click", function () {
-
+        $closeInputContainerButton.on("click", function() {
+            // Возвращаем исходные значения
             $logo.css({
-                width: "175px",
-                marginLeft: initialLogoMargin
+                width: initialLogoWidth + "px",
+                height: initialLogoHeight + "px",  // Возвращаем исходную высоту
+                marginLeft: initialLogoMargin,
             });
 
             $navbarNavigation.css({
-                width: "0%"
+                width: "0%",
             });
 
             $inputContainer.css({
-                width: "0px"
+                width: "0px",
             });
 
             $searchButton.css({
-                width: "90px"
+                width: "90px",
             });
         });
     }
@@ -332,10 +351,10 @@ $(".menu").on("click", ".menu__dropdown-link[data-dropdown-observed]", function(
         smartSpeed: 1024,
         responsive: {
             1200: {
-                items: 7
+                items: 5
             },
             992: {
-                items: 5
+                items: 4
             },
             768: {
                 items: 3
@@ -383,11 +402,12 @@ $(".menu").on("click", ".menu__dropdown-link[data-dropdown-observed]", function(
     /************************* FAQ DROPDOWN - BEGIN *************************/
     $(".faq__list").each(function () {
         var $faqList = $(this);
-
+        $('.tab-content>.tab-pane').css('display', 'block');
         $faqList.find(".faq__item.active .faq__answer").each(function () {
             $(this).css("max-height", $(this).prop("scrollHeight") + "px");
+            console.log($(this).prop("scrollHeight"))
         });
-
+        $('.tab-content>.tab-pane').css('display', '');
         $faqList.find(".faq__question").on("click", function () {
             var parentItem = $(this).parent();
             var answer = parentItem.find(".faq__answer");

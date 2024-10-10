@@ -54,33 +54,17 @@ Otherwise, proper operability cannot be guaranteed.
 | Extra Pages                                      | ✔️     |
 
 ## 📌Changelog
-### 🚀[1.0.3] - Release (build 9)
-- **NavTabs**: Links have been replaced with tabs
-  - **library.html**
-  - **public_relations_and_marketing_department.html**
-  - **center_for_digital_development_and_innovation.html**
-  - **ASOIU Summer School**: These Pages are combined
-    - **asoiu_summer_school_about_us.html**
-    - **asoiu_summer_school_academic_program.html**
-    - **asoiu_summer_school_accomodation.html**
-    - **asoiu_summer_school_apply.html**
-    - **asoiu_summer_school_cultural_programme.html**
-    - **asoiu_summer_school_fees.html**
-    - **asoiu_summer_school_visa.html**
-- **assembly_hall.html**: JS and hidden input for sending data have been checked
-- **have_a_suggestion.html** && **reception_of_citizens.html** input fixed & add autocomplete
-
-
-
+### 🚀[1.0.3] - Release (build 10)
+- **Pages**: All pages are checked
+- **FAQ List**: Fixed the inactivity of working in tabs
+- **ASOIU Summer school Elements**: Container fixed
+- **main.js**: Fix & check all js scripts
+- Restored **section** & **navbar_menu** & **logo** & **footer**
+- Fix **logo navbar** + **logo navbar menu** + **logo navbar mobile menu**
+- Recheck all **СSS** + **CSS MQ**
 
 ## NOT FIXED
-- **Comments**: All unnecessary and unnecessary comments have been deleted (not fixed)
-- **FAQ List**: Fixed the inactivity of working in tabs (not fixed)
-- **main.css**: *postcss* & *autoprefixer* & *cssnano* & *purgecss* has been applied and minified (not fixed)
-- **ASOIU Elements**: Container fixed
-- Fix **logo navbar** + **logo navbar menu** + **logo navbar mobile menu**  ---
-- Fix JS calculate margin logo ---
-- Restored **section** & **navbar_menu** & **logo** & **footer** ---
-- Fix & check all js scripts ---
-- Fix **section** (container)(MQ) ---
-- Recheck all **СSS** + **CSS MQ** ---
+- **main.css**: *postcss* & *autoprefixer* & *cssnano* & *purgecss* has been applied and minified
+- configured and create new 3 type pages (not fixed)
+- **Comments**: All unnecessary and unnecessary comments have been deleted
+- Fix JS calculate margin logo
