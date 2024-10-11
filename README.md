@@ -54,17 +54,7 @@ Otherwise, proper operability cannot be guaranteed.
 | Extra Pages                                      | ✔️     |
 
 ## 📌Changelog
-### 🚀[1.0.3] - Release (build 10)
-- **Pages**: All pages are checked
-- **FAQ List**: Fixed the inactivity of working in tabs
-- **ASOIU Summer school Elements**: Container fixed
-- **main.js**: Fix & check all js scripts
-- Restored **section** & **navbar_menu** & **logo** & **footer**
-- Fix **logo navbar** + **logo navbar menu** + **logo navbar mobile menu**
-- Recheck all **СSS** + **CSS MQ**
-
-## NOT FIXED
-- **main.css**: *postcss* & *autoprefixer* & *cssnano* & *purgecss* has been applied and minified
-- configured and create new 3 type pages (not fixed)
+### 🚀[1.0.3] - Release (build 11)
 - **Comments**: All unnecessary and unnecessary comments have been deleted
-- Fix JS calculate margin logo
+- **Extra Pages**: Added **header_half** & **header_slider_full** & **header_slider_half** pages
+- **main.css**: News recent link hover bug fix

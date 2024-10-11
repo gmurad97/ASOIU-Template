@@ -1,13 +1,5 @@
 $(document).ready(function () {
     /************************* WOW.JS - BEGIN *************************/
-    /* new WOW().init(); */
- /*    AOS.init({
-        useClassNames: true,
-        initClassName: false,
-        animatedClassName: 'animate__animated',
-        offset: 0,
-        /* once: true */
-    //});
     new WOW().init();
     /************************* WOW.JS - ENDED *************************/
 
@@ -35,7 +27,6 @@ $(document).ready(function () {
     let initialLogoMargin = $logo.css("margin-left");
 
     function updateInitialLogoDimensions() {
-        // Обновляем значения только если элемент видим
         if ($logo.is(":visible")) {
             initialLogoWidth = $logo.outerWidth();
             initialLogoHeight = $logo.outerHeight();
@@ -43,19 +34,17 @@ $(document).ready(function () {
         }
     }
 
-    // Обновляем значения при изменении размеров экрана
-    $(window).on("resize", function() {
+    $(window).on("resize", function () {
         updateInitialLogoDimensions();
     });
 
     if ($searchButton.length) {
-        $searchButton.on("click", function() {
-            // Обновляем значения перед изменением стилей
+        $searchButton.on("click", function () {
             updateInitialLogoDimensions();
 
             $logo.css({
                 width: "0px",
-                height: "0px",  // Устанавливаем высоту логотипа в 0 при нажатии
+                height: "0px",
                 marginLeft: "0px",
             });
 
@@ -74,7 +63,7 @@ $(document).ready(function () {
 
                 $logo.css({
                     width: initialLogoWidth,
-                    height: initialLogoHeight,  // Возвращаем исходную высоту логотипа
+                    height: initialLogoHeight,
                     marginLeft: initialLogoMargin,
                 });
             }
@@ -90,11 +79,10 @@ $(document).ready(function () {
     }
 
     if ($closeInputContainerButton.length) {
-        $closeInputContainerButton.on("click", function() {
-            // Возвращаем исходные значения
+        $closeInputContainerButton.on("click", function () {
             $logo.css({
                 width: initialLogoWidth + "px",
-                height: initialLogoHeight + "px",  // Возвращаем исходную высоту
+                height: initialLogoHeight + "px",
                 marginLeft: initialLogoMargin,
             });
 
@@ -112,120 +100,89 @@ $(document).ready(function () {
         });
     }
 
-/*     if ($menuBurgerButton.length) {
+    if ($menuBurgerButton.length) {
         $menuBurgerButton.on("click", function () {
-            $navbarMenu.css("display", "flex");
+            $navbarMenu.stop(true, true).fadeIn(300, function () {
+                $navbarMenu.css("display", "flex");
+            });
             $("body").css("overflow", "hidden");
         });
     }
 
     if ($menuBurgerButton.length) {
         $navbarMenuCloseButton.on("click", function () {
-            $navbarMenu.css("display", "none");
+            $navbarMenu.stop(true, true).fadeOut(300, function () {
+                $navbarMenu.css("display", "none");
+            });
             $("body").css("overflow", "auto");
         });
-    } */
-
-if ($menuBurgerButton.length) {
-    $menuBurgerButton.on("click", function () {
-        $navbarMenu.stop(true, true).fadeIn(300, function() {
-            $navbarMenu.css("display", "flex"); // Устанавливаем display: flex после анимации
-        });
-        $("body").css("overflow", "hidden");
-    });
-}
-
-if ($menuBurgerButton.length) {
-    $navbarMenuCloseButton.on("click", function () {
-        $navbarMenu.stop(true, true).fadeOut(300, function() {
-            $navbarMenu.css("display", "none"); // Возвращаем display: none после скрытия
-        });
-        $("body").css("overflow", "auto");
-    });
-}
-
-        
-
-
+    }
     /************************* NAVBAR SEARCH & MENU BUTTONS - ENDED *************************/
 
     /************************* NAVBAR MENU LOGICS - BEGIN *************************/
-// Показать активные меню при загрузке страницы
-$(".menu__link.active, .menu__dropdown-link.active").each(function () {
-    var $this = $(this);
-    var targetId = $this.data("dropdown-observed");
-    var $dropdown = $("#" + targetId);
-
-    if ($dropdown.length) {
-        $dropdown.show();
-    }
-
-    $this.parents(".menu__dropdown").show(); // Показать все родительские меню
-});
-
-// Функция для скрытия всех вложенных подменю
-function hideAllDropdowns() {
-    $(".menu__dropdown").hide(); // Скрыть все меню
-    $(".menu__dropdown-list ul").hide(); // Скрыть все вложенные списки
-    $(".menu a").removeClass("active"); // Убрать активный класс у всех элементов
-}
-
-// Функция для скрытия всех вложенных подменю начиная с текущего родителя
-function hideAllNestedDropdowns($parent) {
-    // Найти все элементы с атрибутом data-dropdown-observed в текущем родителе
-    $parent.find("a[data-dropdown-observed]").each(function() {
+    $(".menu__link.active, .menu__dropdown-link.active").each(function () {
         var $this = $(this);
-        var targetId = $this.data("dropdown-observed"); // Получаем id из data атрибута
-        var $dropdown = $("#" + targetId); // Ищем соответствующий блок
+        var targetId = $this.data("dropdown-observed");
+        var $dropdown = $("#" + targetId);
 
         if ($dropdown.length) {
-            $dropdown.hide(); // Скрываем найденное подменю
-            $this.removeClass("active"); // Убираем класс active у ссылки
-            hideAllNestedDropdowns($dropdown); // Рекурсивно скрываем все вложенные подменю в этом блоке
+            $dropdown.show();
+        }
+
+        $this.parents(".menu__dropdown").show();
+    });
+
+    function hideAllDropdowns() {
+        $(".menu__dropdown").hide();
+        $(".menu__dropdown-list ul").hide();
+        $(".menu a").removeClass("active");
+    }
+
+    function hideAllNestedDropdowns($parent) {
+        $parent.find("a[data-dropdown-observed]").each(function () {
+            var $this = $(this);
+            var targetId = $this.data("dropdown-observed");
+            var $dropdown = $("#" + targetId);
+
+            if ($dropdown.length) {
+                $dropdown.hide();
+                $this.removeClass("active");
+                hideAllNestedDropdowns($dropdown);
+            }
+        });
+    }
+
+    $("#menu").on("click", "a[data-dropdown-observed]", function (event) {
+        event.preventDefault();
+        var $this = $(this);
+        var targetId = $this.data("dropdown-observed");
+        var $dropdown = $("#" + targetId);
+
+        if ($dropdown.is(":visible")) {
+            hideAllDropdowns();
+        } else {
+            hideAllDropdowns();
+            $dropdown.show();
+            $this.addClass("active");
         }
     });
-}
 
-// Обработчик кликов для родительского меню
-$("#menu").on("click", "a[data-dropdown-observed]", function (event) {
-    event.preventDefault();
-    var $this = $(this);
-    var targetId = $this.data("dropdown-observed");
-    var $dropdown = $("#" + targetId);
+    $(".menu").on("click", ".menu__dropdown-link[data-dropdown-observed]", function (event) {
+        event.preventDefault();
+        var $this = $(this);
+        var targetId = $this.data("dropdown-observed");
+        var $dropdown = $("#" + targetId);
 
-    // Если текущее меню открыто, закрыть все вложенные
-    if ($dropdown.is(":visible")) {
-        hideAllDropdowns(); // Закрыть все подменю
-    } else {
-        // Скрыть только другие верхнеуровневые меню, но оставить вложенные открытыми
-        hideAllDropdowns(); // Скрыть все
-        $dropdown.show(); // Показать текущее меню
-        $this.addClass("active");
-    }
-});
-
-// Обработчик кликов для вложенных подменю
-$(".menu").on("click", ".menu__dropdown-link[data-dropdown-observed]", function(event) {
-    event.preventDefault();
-    var $this = $(this);
-    var targetId = $this.data("dropdown-observed");
-    var $dropdown = $("#" + targetId);
-
-    // Если текущее вложенное меню открыто, скрыть все его вложенные подменю
-    if ($dropdown.is(":visible")) {
-        hideAllNestedDropdowns($dropdown); // Скрываем все вложенные подменю
-        $dropdown.hide(); // Скрываем текущее меню
-        $this.removeClass("active"); // Убираем класс active
-    } else {
-        // Если меню не открыто, сначала скрываем все вложенные подменю
-        hideAllNestedDropdowns($this.closest(".menu__dropdown")); // Скрываем все вложенные элементы на этом уровне
-        $dropdown.show(); // Показываем текущее вложенное меню
-        $this.addClass("active"); // Добавляем класс active
-    }
-});
-
-
-
+        if ($dropdown.is(":visible")) {
+            hideAllNestedDropdowns($dropdown);
+            $dropdown.hide();
+            $this.removeClass("active");
+        } else {
+            hideAllNestedDropdowns($this.closest(".menu__dropdown"));
+            $dropdown.show();
+            $this.addClass("active");
+        }
+    });
 
     $(".menu-mobile__dropdown-list").hide();
 
@@ -402,12 +359,11 @@ $(".menu").on("click", ".menu__dropdown-link[data-dropdown-observed]", function(
     /************************* FAQ DROPDOWN - BEGIN *************************/
     $(".faq__list").each(function () {
         var $faqList = $(this);
-        $('.tab-content>.tab-pane').css('display', 'block');
+        $(".tab-content>.tab-pane").css("display", "block");
         $faqList.find(".faq__item.active .faq__answer").each(function () {
             $(this).css("max-height", $(this).prop("scrollHeight") + "px");
-            console.log($(this).prop("scrollHeight"))
         });
-        $('.tab-content>.tab-pane').css('display', '');
+        $(".tab-content>.tab-pane").css("display", "");
         $faqList.find(".faq__question").on("click", function () {
             var parentItem = $(this).parent();
             var answer = parentItem.find(".faq__answer");
